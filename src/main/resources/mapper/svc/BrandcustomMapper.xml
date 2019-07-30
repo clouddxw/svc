@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iresearch.svc.mapper.svc.BrandcustomMapper">
+
+
+    <select id="getBrandshowdt" statementType="CALLABLE"   resultType="com.iresearch.svc.bean.Brandshowdt">
+             <![CDATA[
+      { call sp_svc_brandshow_detail(#{norm.sex, mode=IN, jdbcType=VARCHAR},
+                                #{norm.agegroup, mode=IN, jdbcType=VARCHAR},
+                                #{norm.citylevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showlevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.type ,mode=IN ,jdbcType=VARCHAR},
+                                #{norm.brandtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.sponsortype, mode=IN, jdbcType=VARCHAR},
+                                #{brandname, mode=IN, jdbcType=VARCHAR},
+                                #{norm.begindate, mode=IN, jdbcType=DATE},
+                                #{norm.enddate, mode=IN, jdbcType=DATE}) }
+       ]]>
+    </select>
+
+
+
+</mapper>

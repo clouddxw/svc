@@ -1,0 +1,367 @@
+*{margin:0px ; padding:0px}
+
+body{
+	font-family: "Arial 宋体";
+	font-size:15px;
+	font-weight:bolder;
+	color:#7e7e7e;
+}
+
+
+.headerr {
+	background-color: #fff;
+	padding: 5px;
+	float: none;
+	height: 100px;
+	width: 1190px;
+	margin: 0 auto;
+	overflow:hidden;
+}
+
+.headerr .ir_log{float:left;
+width:550px;
+height:70px;
+overflow:hidden;
+margin:15px 0px;
+}
+
+.headerr .date_selet{float:right;
+width:200px;
+height:90px;
+overflow:hidden;
+}
+
+.date_selet li{
+height:35px;
+display:block;
+}
+
+.date_selet .title{text-align:right;
+      height:20px;
+      padding-right:20px;
+      line-height:20px;
+}
+
+.bar1{
+	 width:1190px;
+	 height:50px;
+	 background-color:#eee;
+	 color:#000;
+	 text-align:left;
+	 line-height:50px;
+     margin:0px auto;
+     padding-left:5px;
+ }
+ 
+ .bar1 strong{
+ font-size:30px;
+ }
+
+.bar1 .dropdown li{
+ display:block;
+ height:30px;
+ margin:15px 0px;
+ line-height:30px;
+ }
+ 
+
+ .norm_tag{
+     float:left;
+	 width:70px;
+	 height:30px;
+	 text-align:center;
+	 line-height:30px;
+	 margin:0px 15px;
+	 background-color:#1d914d;
+	 color:#fff;
+	 padding:2px;
+ }
+
+.bar1 label{
+    font-size:12px;
+
+}
+
+      .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 13px;
+            background: #fff;
+            color:#1d914d;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide  a{
+            font-size:16px;
+            color:#000;
+        }
+
+        .swiper-btn{
+            width: 20px;
+            height: 20px;
+            background-size: contain;
+            margin-top:-10px;
+
+        }
+
+        .showcomparea{
+      		height:650px;
+      		width:1190px;
+              margin:0 auto;
+              overflow:hidden;
+      		margin-top:30px;
+          }
+
+           .brandcomparea{
+      		max-height:850px;
+      		width:1190px;
+              margin:20px auto;
+      		overflow:hidden;
+          }
+
+         .bar2{
+      	 width:1190px;
+      	 height:50px;
+      	 background-color:#eee;
+      	 color:#000;
+      	 text-align:left;
+      	 line-height:50px;
+         margin:30px auto;
+         padding-left:5px;
+       }
+       
+        .bar2 strong{
+		 font-size:30px;
+		 }
+		 
+.bar3{
+     height:40px;width:1190px;
+  	 background-color:#eee;
+	 margin:10px auto;
+     text-align: center;
+     line-height:40px;
+     color:#20924e;
+ }
+ 
+ .bar3 strong{
+ font-size:20px;
+ }
+		 
+      	.showtitl{
+      	 float:left;
+      	 width:224px;
+      	 height:630px;
+      	}
+      	.showtitl div{
+      	width:100%;
+      	height:266px;
+      	}
+
+          .theadsx{
+              display:block;
+              list-style:none;
+              width:100%;
+              height:364px;
+              border-top:2px #eee solid;
+              border-left:2px #eee solid;
+              border-bottom:2px #eee solid;
+
+      	}
+
+          .theadsx li{
+              display:block;
+              height:30px;
+              line-height:30px;
+          }
+
+
+
+      	.showcomp{
+      	float:left;
+      	width:966px;
+      	height:630px;
+      	overflow:hidden;
+      	}
+
+          .selected{
+              width:322px;
+              height:630px;
+      		float:left;
+
+          }
+
+          .selecterx{
+              display:block;
+              width:320px;
+              height:68px;
+          }
+
+
+          #showcomp_l{
+          height:562px;
+          border:2px #eee solid;
+          }
+
+          #showcomp_m{
+          height:562px;
+          border-top:2px #eee solid;
+          border-right:2px #eee solid;
+          border-bottom:2px #eee solid;
+          }
+
+
+          #showcomp_r{
+          height:562px;
+          border-top:2px #eee solid;
+          border-right:2px #eee solid;
+          border-bottom:2px #eee solid;
+          }
+
+
+          #brandshowcomp_l{
+          height:622px;
+          border:2px #eee solid;
+          overflow:hidden;
+          }
+
+          #brandshowcomp_m{
+          height:622px;
+          border-top:2px #eee solid;
+          border-right:2px #eee solid;
+          border-bottom:2px #eee solid;
+          overflow:hidden;
+          }
+
+
+          #brandshowcomp_r{
+          height:622px;
+          border-top:2px #eee solid;
+          border-right:2px #eee solid;
+          border-bottom:2px #eee solid;
+          overflow:hidden;
+          }
+
+          .showdetail{
+              list-style: none;
+              display:block;
+              height:196px;
+              width:322px;
+      		padding-left:3px;
+          }
+
+          .showdetail div{
+              float:left;
+              width:120px;
+              height:170px;
+              margin:13px;
+          }
+
+          .showdetail ul{
+              float:left;
+              list-style:none;
+              display:block;
+              width:160px;
+              height:182px;
+              margin:6px 0px;
+              font-size:13px;
+          }
+
+          .showdetail ul li{
+              display:block;
+              height:26px;
+              line-height:26px;
+          }
+
+          .contentx{
+              display:block;
+              list-style:none;
+              width:322px;
+              height:364px;
+              border-top:2px #eee solid;
+          }
+          .contentx li{
+              display:block;
+              height:30px;
+              line-height:30px;
+              text-align:center;
+          }
+
+          .s1title{
+              background-color:#fbe3d6;
+              color:red;
+              text-align:left;
+              font-size:18px;
+              font-weight:bolder;
+              color:#da4353;
+          }
+          .s2title{
+              background-color:#e1eed9;
+              color:green;
+              text-align:left;
+              font-weight:16px;
+              font-weight:bold;
+              color:#1d914d;
+          }
+
+
+          .brandshowtitl{
+      	 float:left;
+      	 width:224px;
+      	 height:690px;
+      	}
+      	.brandshowtitl div{
+      	width:100%;
+      	height:326px;
+      	}
+
+
+          .brandshowcomp{
+      	float:left;
+      	width:966px;
+      	height:690px;
+      	overflow:hidden;
+      	}
+
+          .swaperlist{
+          width:320px;
+          height:60px;
+          border-bottom:2px #eee solid;
+          }
+
+          .maxdisp{
+          display:none;
+          }
+          .avgdisp{
+          display:none;
+          }
+
+          .oshowdisp{
+          display:none;
+          }
+
+          .swaperli{
+          width:320px;
+          height:60px;
+          border-bottom:2px #eee solid;
+          }
+          
+.undisp{
+	display:none;
+}

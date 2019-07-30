@@ -1,0 +1,18 @@
+2019-03-07 09:23:55,886 INFO  SvcApplication:50 -Starting SvcApplication on mac-clouddxw.local with PID 30127 (/Users/clouddxw/IdeaProjects/svc/target/classes started by clouddxw in /Users/clouddxw/IdeaProjects/svc)
+2019-03-07 09:23:55,893 INFO  SvcApplication:675 -No active profile set, falling back to default profiles: default
+2019-03-07 09:23:57,325 INFO  Http11NioProtocol:173 -Initializing ProtocolHandler ["http-nio-9095"]
+2019-03-07 09:23:57,345 INFO  StandardService:173 -Starting service [Tomcat]
+2019-03-07 09:23:57,346 INFO  StandardEngine:173 -Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-03-07 09:23:57,354 INFO  AprLifecycleListener:173 -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/clouddxw/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-03-07 09:23:57,455 INFO  [/]:173 -Initializing Spring embedded WebApplicationContext
+2019-03-07 09:23:58,849 INFO  Http11NioProtocol:173 -Starting ProtocolHandler ["http-nio-9095"]
+2019-03-07 09:23:58,915 INFO  SvcApplication:59 -Started SvcApplication in 28.383 seconds (JVM running for 39.552)
+2019-03-07 09:45:11,615 INFO  SvcApplication:50 -Starting SvcApplication on mac-clouddxw.local with PID 30181 (/Users/clouddxw/IdeaProjects/svc/target/classes started by clouddxw in /Users/clouddxw/IdeaProjects/svc)
+2019-03-07 09:45:11,620 INFO  SvcApplication:675 -No active profile set, falling back to default profiles: default
+2019-03-07 09:45:12,747 INFO  Http11NioProtocol:173 -Initializing ProtocolHandler ["http-nio-9095"]
+2019-03-07 09:45:12,756 INFO  StandardService:173 -Starting service [Tomcat]
+2019-03-07 09:45:12,756 INFO  StandardEngine:173 -Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-03-07 09:45:12,762 INFO  AprLifecycleListener:173 -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/clouddxw/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-03-07 09:45:12,834 INFO  [/]:173 -Initializing Spring embedded WebApplicationContext
+2019-03-07 09:45:13,862 INFO  Http11NioProtocol:173 -Starting ProtocolHandler ["http-nio-9095"]
+2019-03-07 09:45:13,906 INFO  SvcApplication:59 -Started SvcApplication in 27.53 seconds (JVM running for 38.429)

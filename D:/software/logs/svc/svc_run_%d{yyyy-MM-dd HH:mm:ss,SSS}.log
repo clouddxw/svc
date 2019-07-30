@@ -1,0 +1,9 @@
+2019-03-07 09:41:54,032 INFO  SvcApplication:50 -Starting SvcApplication on mac-clouddxw.local with PID 30168 (/Users/clouddxw/IdeaProjects/svc/target/classes started by clouddxw in /Users/clouddxw/IdeaProjects/svc)
+2019-03-07 09:41:54,038 INFO  SvcApplication:675 -No active profile set, falling back to default profiles: default
+2019-03-07 09:41:55,117 INFO  Http11NioProtocol:173 -Initializing ProtocolHandler ["http-nio-9095"]
+2019-03-07 09:41:55,127 INFO  StandardService:173 -Starting service [Tomcat]
+2019-03-07 09:41:55,127 INFO  StandardEngine:173 -Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-03-07 09:41:55,134 INFO  AprLifecycleListener:173 -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/clouddxw/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-03-07 09:41:55,211 INFO  [/]:173 -Initializing Spring embedded WebApplicationContext
+2019-03-07 09:41:56,303 INFO  Http11NioProtocol:173 -Starting ProtocolHandler ["http-nio-9095"]
+2019-03-07 09:41:56,349 INFO  SvcApplication:59 -Started SvcApplication in 27.571 seconds (JVM running for 38.44)

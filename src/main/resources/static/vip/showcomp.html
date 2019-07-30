@@ -1,0 +1,674 @@
+
+ 
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<title>节目/品牌对比</title>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
+<link href="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+<link href="https://cdn.bootcss.com/Swiper/4.4.6/css/swiper.min.css" rel="stylesheet">
+<link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/showcomp.css">
+<link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/ajaxloading.css">
+
+
+<script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/browser_check.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/Swiper/4.4.6/js/swiper.min.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="headerr">
+	<a href="index.html"><div class="ir_log"><img src="http://svc.iresearch.cn/img/svclogo1.png" style="width:100%;height:100%"></div></a>
+</div>
+
+
+
+<div class="bar1"> 
+<strong>节目对比</strong>
+<nav class="navbar navbar-default" role="navigation" style="float:right;height:50px;">
+   <div>
+      <ul class="nav navbar-nav">
+         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"  id="filtermenu"> Filter <strong class="caret"></strong> </a>
+         
+           <ul class="dropdown-menu dropdown-menu-right" style="min-width:920px;" data-stopPropagation="true" id="filter" >
+            </ul>
+         </li>
+         <li class="dropdown" ><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="normmenu"> Norm <strong class="caret"></strong> </a>
+         <ul class="dropdown-menu dropdown-menu-right" style="min-width:920px;" data-stopPropagation="true" id="normcon">
+         </ul>       
+         </li>
+      </ul>
+   </div>
+</nav>
+</div>
+
+<div class="showcomparea">
+     <div class="showtitl">
+	    <div></div>
+        <ul class="theadsx">
+            <li class="s1title">SVC综合指数</li>
+            <li class="s2title">节目价值指数</li>
+            <li>收视热度</li>
+            <li>重复收视</li>
+            <li>口碑传播</li>
+            <li class="s2title">节目-品牌关联指数</li>
+            <li>回忆度</li>
+            <li>相关度</li>
+            <li class="s2title">品牌资产提升指数</li>
+            <li>认知提升</li>
+            <li>喜爱提升</li>
+            <li>推荐提升</li>
+        </ul>
+    </div>
+    <div class="showcomp">
+        <div class="selected">
+            <div class="selecterx">
+		    <div style="width:200px;height:30px;float:left;margin-top:2px;margin-right:20px;margin-left:30px;">
+		     <select id='showname_l' name="showname" style="width:100%" >
+
+			 </select>
+			 </div>
+            <button type="button"
+            onclick="getshow('showname_l','#showdtl','#showindexl','avg');"
+            style="width:45px;height:26px;float:left;text-align:center;line-height:26px;font-size:12px;margin-top:3px;margin-left:5px">搜索</button>
+            </div>
+            <div id="showcomp_l">
+            <div id='showdtl' class="showdetail" >
+                <div class="imgx">
+                    
+                </div>
+                <ul>
+                    <li>SVC综合指数排名：</li>
+                    <li>节目流量等级：</li>
+                    <li>首播：</li>
+                    <li>期数：</li>
+                    <li>终端：</li>
+                    <li>平台：</li>
+                    <li>类型：</li>
+                </ul>
+            </div>
+            <div id="showindexl">
+			<ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+			</div>
+        </div>
+        <div class="selected">
+            <div class="selecterx">
+		    <div style="width:200px;height:30px;float:left;margin-top:2px;margin-right:20px;margin-left:30px;">
+		     <select id='showname_m' name="showname" style="width:100%" >
+
+			 </select>
+			 </div>
+            <button type="button"
+            onclick="getshow('showname_m','#showdtm','#showindexm','avg');"
+            style="width:45px;height:26px;float:left;text-align:center;line-height:26px;font-size:12px;margin-top:3px;margin-left:5px">搜索</button>
+            </div>
+            <div id="showcomp_m">
+            <div id='showdtm' class="showdetail" >
+                <div class="imgx">
+                    
+                </div>
+                <ul>
+                    <li>SVC综合指数排名：</li>
+                    <li>节目流量等级：</li>
+                    <li>首播：</li>
+                    <li>期数：</li>
+                    <li>终端：</li>
+                    <li>平台：</li>
+                    <li>类型：</li>
+                </ul>
+            </div>
+            <div id="showindexm">
+			<ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+			</div>
+
+        </div>
+        <div class="selected">
+            <div class="selecterx">
+		    <div style="width:200px;height:30px;float:left;margin-top:2px;margin-right:20px;margin-left:30px;">
+		     <select id='showname_r' name="showname" style="width:100%" >
+
+			 </select>
+			 </div>
+             <button type="button"
+            onclick="getshow('showname_r','#showdtr','#showindexr','avg');"
+            style="width:45px;height:26px;float:left;text-align:center;line-height:26px;font-size:12px;margin-top:3px;margin-left:5px">搜索</button>
+            </div>
+            <div id="showcomp_r">
+            <div id='showdtr' class="showdetail" >
+                <div class="imgx">
+                    
+                </div>
+                <ul>
+                    <li>SVC综合指数排名：</li>
+                    <li>节目流量等级：</li>
+                    <li>首播：</li>
+                    <li>期数：</li>
+                    <li>终端：</li>
+                    <li>平台：</li>
+                    <li>类型：</li>
+                </ul>
+            </div>
+            <div id="showindexr">
+			<ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+			</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="bar2">
+<strong>品牌对比</strong>
+<div class="btn-group" style="float:right;height:50px;margin-right:20px;">
+    <button type="button" class="btn btn-default" style="height:50px;"  id="selectavg"
+    onclick="settval('dispara','avg');chgbg('selectavg','#1d914d','#fff');chgbg('selectmax','#dddddd','#222');chgbg('selectsum','#dddddd','#222');
+    	     chgclassdisp('maxdisp','none');chgclassdisp('sumdisp','none');chgclassdisp('oshowdisp','none');chgclassdisp('avgdisp','block');">平均值</button>
+    <button type="button" class="btn btn-default" style="height:50px;" id="selectmax" 
+    onclick="settval('dispara','max');chgbg('selectmax','#1d914d','#fff');chgbg('selectavg','#dddddd','#222');chgbg('selectsum','#dddddd','#222');
+    	     chgclassdisp('avgdisp','none');chgclassdisp('sumdisp','none');chgclassdisp('oshowdisp','none');chgclassdisp('maxdisp','block');">最大值</button>
+    <button type="button" class="btn btn-default" style="height:50px;background:#1d914d;color:#fff;" id="selectsum" 
+    onclick="settval('dispara','sum');chgbg('selectsum','#1d914d','#fff');chgbg('selectmax','#dddddd','#222');chgbg('selectavg','#dddddd','#222');
+    	     chgclassdisp('maxdisp','none');chgclassdisp('avgdisp','none');chgclassdisp('oshowdisp','none');chgclassdisp('sumdisp','block');">加总值</button>
+</div>
+</div>
+
+<input  id="dispara" value="sum" style="display:none" >
+
+<div  class="brandcomparea">
+<div class="brandshowtitl">
+	    <div></div>
+        <ul class="theadsx">
+            <li class="s1title">SVC综合指数</li>
+            <li class="s2title">节目价值指数</li>
+            <li>收视热度</li>
+            <li>重复收视</li>
+            <li>口碑传播</li>
+            <li class="s2title">节目-品牌关联指数</li>
+            <li>回忆度</li>
+            <li>相关度</li>
+            <li class="s2title">品牌资产提升指数</li>
+            <li>认知提升</li>
+            <li>喜爱提升</li>
+            <li>推荐提升</li>
+        </ul>
+    </div>
+    <div class="brandshowcomp">
+        <div class="selected">
+            <div class="selecterx">
+		    <div style="width:200px;height:30px;float:left;margin-top:2px;margin-right:20px;margin-left:30px;">
+		     <select id='brandname_l' name="brandname" style="width:100%" >
+
+			 </select>
+			 </div>
+           <button type="button"
+            onclick="getbrand('brandname_l','l');"
+            style="width:45px;height:26px;float:left;text-align:center;line-height:26px;font-size:12px;margin-top:3px;margin-left:5px">搜索</button>
+            </div>
+            <div id="brandshowcomp_l">
+            <div class="swaperlist"  >
+                    <div class="swiper-container swapl">
+	                    <div class="swiper-wrapper"  id="swapconl">
+				            <div class="swiper-slide" >
+				                <div></div>
+				            </div>
+				        </div>
+				        <!-- Add Pagination -->
+				        <div class="swiper-pagination"></div>
+				        <!-- Add Arrows -->
+				        <div class="swiper-button-next swiper-btn"></div>
+				        <div class="swiper-button-prev swiper-btn"></div>
+		            </div>
+            </div>
+            <div id='brandswdtl' class="showdetail" >
+                <div class="imgx">
+                    
+                </div>
+                <ul>
+                    <li>SVC综合指数排名：</li>
+                    <li>节目流量等级：</li>
+                    <li>首播：</li>
+                    <li>期数：</li>
+                    <li>终端：</li>
+                    <li>平台：</li>
+                    <li>类型：</li>
+                </ul>
+            </div>
+            <div id="brandswindexl">
+            <div class="sumdisp" id="sumindexl">
+            <ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+            <div class="maxdisp" id="maxindexl">
+            <ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+            <div class="avgdisp" id="avgindexl">
+            <ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+            <div class="oshowdisp" id="oshowindexl">
+            <ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+			</div>
+			</div>
+        </div>
+        <div class="selected">
+            <div class="selecterx">
+		    <div style="width:200px;height:30px;float:left;margin-top:2px;margin-right:20px;margin-left:30px;">
+		     <select id='brandname_m' name="brandname" style="width:100%" >
+
+			 </select>
+			 </div>
+            <button type="button"
+            onclick="getbrand('brandname_m','m');"
+            style="width:45px;height:26px;float:left;text-align:center;line-height:26px;font-size:12px;margin-top:3px;margin-left:5px">搜索</button>
+            </div>
+            <div id="brandshowcomp_m">
+            <div class="swaperlist" >
+                    <div class="swiper-container swapm">
+	                    <div class="swiper-wrapper" id="swapconm">
+				            <div class="swiper-slide" >
+				                <div></div>
+				            </div>
+				        </div>
+				        <!-- Add Pagination -->
+				        <div class="swiper-pagination"></div>
+				        <!-- Add Arrows -->
+				        <div class="swiper-button-next swiper-btn"></div>
+				        <div class="swiper-button-prev swiper-btn"></div>
+		            </div>
+            </div>
+            <div id='brandswdtm' class="showdetail" >
+                <div class="imgx">
+                    
+                </div>
+                <ul>
+                    <li>SVC综合指数排名：</li>
+                    <li>节目流量等级：</li>
+                    <li>首播：</li>
+                    <li>期数：</li>
+                    <li>终端：</li>
+                    <li>平台：</li>
+                    <li>类型：</li>
+                </ul>
+            </div>
+            <div id="brandswindexm">
+            <div class="sumdisp" id="sumindexm">
+            <ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+            <div class="maxdisp" id="maxindexm">
+            <ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+            <div class="avgdisp" id="avgindexm">
+            <ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+            <div class="oshowdisp" id="oshowindexm">
+            <ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+			</div>
+			</div>
+
+        </div>
+        <div class="selected">
+            <div class="selecterx">
+		    <div style="width:200px;height:30px;float:left;margin-top:2px;margin-right:20px;margin-left:30px;">
+		     <select id='brandname_r' name="brandname" style="width:100%" >
+
+			 </select>
+			 </div>
+            <button type="button"
+            onclick="getbrand('brandname_r','r');"
+            style="width:45px;height:26px;float:left;text-align:center;line-height:26px;font-size:12px;margin-top:3px;margin-left:5px">搜索</button>
+            </div>
+            <div id="brandshowcomp_r">
+            <div class="swaperlist">
+                     <div class="swiper-container swapr">
+	                    <div class="swiper-wrapper" id="swapconr">
+				            <div class="swiper-slide" >
+	
+				            </div>
+				        </div>
+				        <!-- Add Pagination -->
+				        <div class="swiper-pagination"></div>
+				        <!-- Add Arrows -->
+				        <div class="swiper-button-next swiper-btn"></div>
+				        <div class="swiper-button-prev swiper-btn"></div>
+		            </div>
+            </div>
+            <div id='brandswdtr' class="showdetail" >
+                <div class="imgx">
+                    
+                </div>
+                <ul>
+                    <li>SVC综合指数排名：</li>
+                    <li>节目流量等级：</li>
+                    <li>首播：</li>
+                    <li>期数：</li>
+                    <li>终端：</li>
+                    <li>平台：</li>
+                    <li>类型：</li>
+                </ul>
+            </div>
+            <div id="brandswindexr">
+            <div class="sumdisp" id="sumindexr">
+            <ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+            <div class="maxdisp" id="maxindexr">
+            <ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+            <div class="avgdisp" id="avgindexr">
+            <ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+            <div class="oshowdisp" id="oshowindexr">
+            <ul class="contentx">
+            <li class="s1title"></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li class="s2title"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+            </div>
+            </div>
+			</div>
+        </div>
+    </div>
+</div>
+
+
+<input id="storeallshowrk" class="undisp" value="" >
+<input id="storebrandl" class="undisp" value="" >
+<input id="storebrandm" class="undisp" value="" >
+<input id="storebrandr" class="undisp" value="" >
+
+<div id="loading" class="loadingdiv">
+        <img src="http://svc.iresearch.cn/img/loading.gif" alt="loading···" />
+</div>
+
+<div style="width:1190px;height:30px;margin:50px auto;position:relative;">
+ <div style="height:0px;width:1088px;border:1px #eee solid;margin:7px 0px;position:absolute;left:0px;top:4px;z-index:10"></div>
+ <div style="height:30px;max-width:350px;background:#fff;color:#555;padding:0px 5px;position:absolute;left:410px;top:0px;z-index:100">
+ 	<Strong >
+ 		<div style="float:left">Copyright&nbsp©2018</div>
+ 		<div style="float:left;height:20px;width:40px;"><img src="http://svc.iresearch.cn/img/Irlogo.jpg" style="width:100%;height:100%">
+    		</div>
+    		All rights reserved.
+    	</Strong>
+    </div>
+</div>
+
+ <script type="text/javascript">
+   $(document).ready(function () {
+     $('#showname_l').select2();
+     $('#showname_m').select2();
+     $('#showname_r').select2();
+     $('#brandname_l').select2();
+     $('#brandname_m').select2();
+     $('#brandname_r').select2();
+
+   });
+</script>
+
+
+
+<!-- <script type="text/javascript" src="http://svc.iresearch.cn/imp/js/filternorm.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/udfbox.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/keepcheck.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/allshow_chart.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/showcompload.js"></script> -->
+
+   <script src="http://svc.iresearch.cn/imp/js/swiper.min.js"></script>
+
+    <script>
+    var swiperl = new Swiper('.swiper-container.swapl', {
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    var swiperm = new Swiper('.swiper-container.swapm', {
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    var swiperr = new Swiper('.swiper-container.swapr', {
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    </script>
+
+
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/ajaxloading.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/filternorm.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/udfbox.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/keepcheck.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/allshow_chart.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/showcompload.js"></script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+

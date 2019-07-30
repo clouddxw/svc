@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iresearch.svc.mapper.svc.AllbrandMapper">
+
+    <!--id对应接口中的方法，名字要一样，parameterType是方法的参数类型，
+    resultType是查询返回的类型，需要注意的是，这里的SQL语句后面不能加分号，变量不能加引号-->
+    <!--<select id="getById" parameterType="int" resultType="User">-->
+        <!--select * from user where id = #{id}-->
+    <!--</select>-->
+
+    <!--<insert id="insert" parameterType="string">-->
+        <!--insert into user(name) values(#{name})-->
+    <!--</insert>-->
+
+
+    <select id="getAllbrand" statementType="CALLABLE" parameterType="com.iresearch.svc.bean.Norm" resultType="com.iresearch.svc.bean.Brand">
+        <![CDATA[
+      { call     sp_svc_allbrand(#{sex, mode=IN, jdbcType=VARCHAR},
+                                #{agegroup, mode=IN, jdbcType=VARCHAR},
+                                #{citylevel, mode=IN, jdbcType=VARCHAR},
+                                #{showtype, mode=IN, jdbcType=VARCHAR},
+                                #{showlevel, mode=IN, jdbcType=VARCHAR},
+                                #{type ,mode=IN ,jdbcType=VARCHAR},
+                                #{brandtype, mode=IN, jdbcType=VARCHAR},
+                                #{sponsortype, mode=IN, jdbcType=VARCHAR},
+                                #{begindate, mode=IN, jdbcType=DATE},
+                                #{enddate, mode=IN, jdbcType=DATE}) }
+       ]]>
+    </select>
+
+
+    <select id="getBrandtype" parameterType="string"  resultType="com.iresearch.svc.bean.Brandtype">
+        select * from brand where brandname=#{brand}
+    </select>
+
+    <select id="getBrandshow" statementType="CALLABLE"   resultType="com.iresearch.svc.bean.Brandshow">
+             <![CDATA[
+      { call     sp_svc_brandshow(#{norm.sex, mode=IN, jdbcType=VARCHAR},
+                                #{norm.agegroup, mode=IN, jdbcType=VARCHAR},
+                                #{norm.citylevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showlevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.type ,mode=IN ,jdbcType=VARCHAR},
+                                #{norm.brandtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.sponsortype, mode=IN, jdbcType=VARCHAR},
+                                #{brand, mode=IN, jdbcType=VARCHAR},
+                                #{norm.begindate, mode=IN, jdbcType=DATE},
+                                #{norm.enddate, mode=IN, jdbcType=DATE}) }
+       ]]>
+    </select>
+
+
+    <select id="getBrandtrend" statementType="CALLABLE"   resultType="com.iresearch.svc.bean.Brandtrend">
+             <![CDATA[
+      { call     sp_svc_brandtrend(#{norm.sex, mode=IN, jdbcType=VARCHAR},
+                                #{norm.agegroup, mode=IN, jdbcType=VARCHAR},
+                                #{norm.citylevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showlevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.type ,mode=IN ,jdbcType=VARCHAR},
+                                #{norm.brandtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.sponsortype, mode=IN, jdbcType=VARCHAR},
+                                #{brand, mode=IN, jdbcType=VARCHAR},
+                                #{norm.begindate, mode=IN, jdbcType=DATE},
+                                #{norm.enddate, mode=IN, jdbcType=DATE}) }
+       ]]>
+    </select>
+
+
+    <select id="getAllbrand_Basic" statementType="CALLABLE" parameterType="com.iresearch.svc.bean.Norm" resultType="com.iresearch.svc.bean.Brand">
+        <![CDATA[
+      { call     sproc_svc_allbrand(#{sex, mode=IN, jdbcType=VARCHAR},
+                                #{agegroup, mode=IN, jdbcType=VARCHAR},
+                                #{citylevel, mode=IN, jdbcType=VARCHAR},
+                                #{showtype, mode=IN, jdbcType=VARCHAR},
+                                #{showlevel, mode=IN, jdbcType=VARCHAR},
+                                #{type ,mode=IN ,jdbcType=VARCHAR},
+                                #{brandtype, mode=IN, jdbcType=VARCHAR},
+                                #{sponsortype, mode=IN, jdbcType=VARCHAR},
+                                #{begindate, mode=IN, jdbcType=DATE},
+                                #{enddate, mode=IN, jdbcType=DATE}) }
+       ]]>
+    </select>
+
+
+
+    <select id="getBrandshow_Basic" statementType="CALLABLE"   resultType="com.iresearch.svc.bean.Brandshow">
+             <![CDATA[
+      { call     sproc_svc_brandshow(#{norm.sex, mode=IN, jdbcType=VARCHAR},
+                                #{norm.agegroup, mode=IN, jdbcType=VARCHAR},
+                                #{norm.citylevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showlevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.type ,mode=IN ,jdbcType=VARCHAR},
+                                #{norm.brandtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.sponsortype, mode=IN, jdbcType=VARCHAR},
+                                #{brand, mode=IN, jdbcType=VARCHAR},
+                                #{norm.begindate, mode=IN, jdbcType=DATE},
+                                #{norm.enddate, mode=IN, jdbcType=DATE}) }
+       ]]>
+    </select>
+
+
+    <select id="getBrandtrend_Basic" statementType="CALLABLE"   resultType="com.iresearch.svc.bean.Brandtrend">
+             <![CDATA[
+      { call     sproc_svc_brandtrend(#{norm.sex, mode=IN, jdbcType=VARCHAR},
+                                #{norm.agegroup, mode=IN, jdbcType=VARCHAR},
+                                #{norm.citylevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showlevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.type ,mode=IN ,jdbcType=VARCHAR},
+                                #{norm.brandtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.sponsortype, mode=IN, jdbcType=VARCHAR},
+                                #{brand, mode=IN, jdbcType=VARCHAR},
+                                #{norm.begindate, mode=IN, jdbcType=DATE},
+                                #{norm.enddate, mode=IN, jdbcType=DATE}) }
+       ]]>
+    </select>
+
+
+
+
+    <!--<update id="updateUser" parameterType="User">-->
+        <!--update user set name=#{name} where id = #{id}-->
+    <!--</update>-->
+    <!--<delete id="deleteAllUsers">-->
+        <!--delete from user-->
+    <!--</delete>-->
+    <!--<delete id="deleteUser" parameterType="int">-->
+        <!--delete from user where id = #{id}-->
+    <!--</delete>-->
+
+</mapper>

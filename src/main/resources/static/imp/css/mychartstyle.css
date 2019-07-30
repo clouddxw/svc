@@ -1,0 +1,30 @@
+@keyframes grow-padding-left {
+  from {
+    padding-left: 0;
+  }
+}
+@keyframes grow-padding-right {
+  from {
+    padding-right: 0;
+  }
+}
+
+
+.scalbar_sty2 {
+  list-style-type: none;
+  padding: 0;
+}
+
+.seleeddd{
+  color: white;
+  background: cornflowerblue;
+  padding: 6px;
+  width: 80%;
+  border-radius: 4px;
+  animation: grow-padding-right 2s;
+  -webkit-animation:grow-padding-right 2s;
+}
+
+
+
+

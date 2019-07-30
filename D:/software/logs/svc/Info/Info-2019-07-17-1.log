@@ -1,0 +1,355 @@
+[2019-07-17 10:04:46,272][main][INFO][com.iresearch.svc.SvcApplication:50] Starting SvcApplication on mac-clouddxw.local with PID 26601 (/Users/clouddxw/IdeaProjects/svc/target/classes started by clouddxw in /Users/clouddxw/IdeaProjects/svc)
+[2019-07-17 10:04:46,306][main][INFO][com.iresearch.svc.SvcApplication:675] No active profile set, falling back to default profiles: default
+[2019-07-17 10:04:47,068][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:244] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2019-07-17 10:04:47,080][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:126] Bootstrapping Spring Data repositories in DEFAULT mode.
+[2019-07-17 10:04:47,121][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:182] Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+[2019-07-17 10:04:47,430][main][INFO][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c801f362] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-07-17 10:04:47,768][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] Tomcat initialized with port(s): 9095 (http)
+[2019-07-17 10:04:47,785][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9095"]
+[2019-07-17 10:04:47,794][main][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2019-07-17 10:04:47,794][main][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.14]
+[2019-07-17 10:04:47,802][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/clouddxw/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2019-07-17 10:04:47,893][main][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2019-07-17 10:04:47,893][main][INFO][org.springframework.web.context.ContextLoader:296] Root WebApplicationContext: initialization completed in 1543 ms
+[2019-07-17 10:04:48,868][main][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171] Initializing ExecutorService 'applicationTaskExecutor'
+[2019-07-17 10:04:48,951][main][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208] Shutting down ExecutorService 'applicationTaskExecutor'
+[2019-07-17 10:04:48,966][main][INFO][org.apache.catalina.core.StandardService:173] Stopping service [Tomcat]
+[2019-07-17 10:04:48,974][main][INFO][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:142] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2019-07-17 10:07:24,532][main][INFO][com.iresearch.svc.SvcApplication:50] Starting SvcApplication on mac-clouddxw.local with PID 26622 (/Users/clouddxw/IdeaProjects/svc/target/classes started by clouddxw in /Users/clouddxw/IdeaProjects/svc)
+[2019-07-17 10:07:24,539][main][INFO][com.iresearch.svc.SvcApplication:675] No active profile set, falling back to default profiles: default
+[2019-07-17 10:07:25,303][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:244] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2019-07-17 10:07:25,307][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:126] Bootstrapping Spring Data repositories in DEFAULT mode.
+[2019-07-17 10:07:25,340][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:182] Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+[2019-07-17 10:07:25,660][main][INFO][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8d68f012] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-07-17 10:07:26,004][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] Tomcat initialized with port(s): 9095 (http)
+[2019-07-17 10:07:26,017][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9095"]
+[2019-07-17 10:07:26,026][main][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2019-07-17 10:07:26,027][main][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.14]
+[2019-07-17 10:07:26,034][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/clouddxw/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2019-07-17 10:07:26,112][main][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2019-07-17 10:07:26,112][main][INFO][org.springframework.web.context.ContextLoader:296] Root WebApplicationContext: initialization completed in 1518 ms
+[2019-07-17 10:07:27,037][main][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171] Initializing ExecutorService 'applicationTaskExecutor'
+[2019-07-17 10:07:27,575][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9095"]
+[2019-07-17 10:07:27,626][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] Tomcat started on port(s): 9095 (http) with context path ''
+[2019-07-17 10:07:27,632][main][INFO][com.iresearch.svc.SvcApplication:59] Started SvcApplication in 3.461 seconds (JVM running for 4.699)
+[2019-07-17 10:09:13,900][http-nio-9095-exec-1][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2019-07-17 10:09:13,901][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:524] Initializing Servlet 'dispatcherServlet'
+[2019-07-17 10:09:13,909][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:546] Completed initialization in 8 ms
+[2019-07-17 10:25:18,408][http-nio-9095-exec-5][INFO][io.lettuce.core.EpollProvider:68] Starting without optional epoll library
+[2019-07-17 10:25:18,410][http-nio-9095-exec-5][INFO][io.lettuce.core.KqueueProvider:70] Starting without optional kqueue library
+[2019-07-17 10:25:18,993][http-nio-9095-exec-5][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2019-07-17 10:25:19,272][http-nio-9095-exec-5][INFO][com.zaxxer.hikari.pool.PoolBase:525] HikariPool-1 - Driver does not support get/set network timeout for connections. (不支持此操作。)
+[2019-07-17 10:25:19,323][http-nio-9095-exec-5][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2019-07-17 10:25:19,436][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@b16bbeb
+[2019-07-17 10:28:00,361][Thread-11][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208] Shutting down ExecutorService 'applicationTaskExecutor'
+[2019-07-17 10:28:01,487][Thread-11][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2019-07-17 10:28:01,489][Thread-11][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+[2019-07-17 10:28:03,954][main][INFO][com.iresearch.svc.SvcApplication:50] Starting SvcApplication on mac-clouddxw.local with PID 26790 (/Users/clouddxw/IdeaProjects/svc/target/classes started by clouddxw in /Users/clouddxw/IdeaProjects/svc)
+[2019-07-17 10:28:03,961][main][INFO][com.iresearch.svc.SvcApplication:675] No active profile set, falling back to default profiles: default
+[2019-07-17 10:28:04,543][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:244] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2019-07-17 10:28:04,545][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:126] Bootstrapping Spring Data repositories in DEFAULT mode.
+[2019-07-17 10:28:04,570][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:182] Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
+[2019-07-17 10:28:04,799][main][INFO][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8c53c712] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-07-17 10:28:05,061][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] Tomcat initialized with port(s): 9095 (http)
+[2019-07-17 10:28:05,073][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9095"]
+[2019-07-17 10:28:05,082][main][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2019-07-17 10:28:05,083][main][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.14]
+[2019-07-17 10:28:05,089][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/clouddxw/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2019-07-17 10:28:05,161][main][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2019-07-17 10:28:05,161][main][INFO][org.springframework.web.context.ContextLoader:296] Root WebApplicationContext: initialization completed in 1164 ms
+[2019-07-17 10:28:05,900][main][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171] Initializing ExecutorService 'applicationTaskExecutor'
+[2019-07-17 10:28:06,278][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9095"]
+[2019-07-17 10:28:06,319][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] Tomcat started on port(s): 9095 (http) with context path ''
+[2019-07-17 10:28:06,324][main][INFO][com.iresearch.svc.SvcApplication:59] Started SvcApplication in 2.67 seconds (JVM running for 3.801)
+[2019-07-17 10:28:23,163][http-nio-9095-exec-1][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2019-07-17 10:28:23,163][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:524] Initializing Servlet 'dispatcherServlet'
+[2019-07-17 10:28:23,171][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:546] Completed initialization in 7 ms
+[2019-07-17 10:28:47,708][http-nio-9095-exec-3][INFO][io.lettuce.core.EpollProvider:68] Starting without optional epoll library
+[2019-07-17 10:28:47,710][http-nio-9095-exec-3][INFO][io.lettuce.core.KqueueProvider:70] Starting without optional kqueue library
+[2019-07-17 10:28:47,830][http-nio-9095-exec-3][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2019-07-17 10:28:48,103][http-nio-9095-exec-3][INFO][com.zaxxer.hikari.pool.PoolBase:525] HikariPool-1 - Driver does not support get/set network timeout for connections. (不支持此操作。)
+[2019-07-17 10:28:48,145][http-nio-9095-exec-3][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2019-07-17 10:28:48,253][http-nio-9095-exec-3][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@59d518cf
+[2019-07-17 10:31:06,469][http-nio-9095-exec-7][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@67b2d17d
+[2019-07-17 10:31:50,776][http-nio-9095-exec-1][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@7b01ea78
+[2019-07-17 11:34:18,524][Thread-10][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208] Shutting down ExecutorService 'applicationTaskExecutor'
+[2019-07-17 11:34:19,665][Thread-10][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2019-07-17 11:34:19,667][Thread-10][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+[2019-07-17 11:34:22,051][main][INFO][com.iresearch.svc.SvcApplication:50] Starting SvcApplication on mac-clouddxw.local with PID 27463 (/Users/clouddxw/IdeaProjects/svc/target/classes started by clouddxw in /Users/clouddxw/IdeaProjects/svc)
+[2019-07-17 11:34:22,058][main][INFO][com.iresearch.svc.SvcApplication:675] No active profile set, falling back to default profiles: default
+[2019-07-17 11:34:22,817][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:244] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2019-07-17 11:34:22,821][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:126] Bootstrapping Spring Data repositories in DEFAULT mode.
+[2019-07-17 11:34:22,852][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:182] Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+[2019-07-17 11:34:23,163][main][INFO][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$83a4fed3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-07-17 11:34:23,486][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] Tomcat initialized with port(s): 9095 (http)
+[2019-07-17 11:34:23,498][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9095"]
+[2019-07-17 11:34:23,508][main][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2019-07-17 11:34:23,509][main][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.14]
+[2019-07-17 11:34:23,515][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/clouddxw/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2019-07-17 11:34:23,592][main][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2019-07-17 11:34:23,592][main][INFO][org.springframework.web.context.ContextLoader:296] Root WebApplicationContext: initialization completed in 1496 ms
+[2019-07-17 11:34:24,324][main][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171] Initializing ExecutorService 'applicationTaskExecutor'
+[2019-07-17 11:34:24,688][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9095"]
+[2019-07-17 11:34:24,740][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] Tomcat started on port(s): 9095 (http) with context path ''
+[2019-07-17 11:34:24,744][main][INFO][com.iresearch.svc.SvcApplication:59] Started SvcApplication in 3.004 seconds (JVM running for 4.032)
+[2019-07-17 11:35:08,214][http-nio-9095-exec-3][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2019-07-17 11:35:08,215][http-nio-9095-exec-3][INFO][org.springframework.web.servlet.DispatcherServlet:524] Initializing Servlet 'dispatcherServlet'
+[2019-07-17 11:35:08,221][http-nio-9095-exec-3][INFO][org.springframework.web.servlet.DispatcherServlet:546] Completed initialization in 6 ms
+[2019-07-17 11:35:08,352][http-nio-9095-exec-3][INFO][io.lettuce.core.EpollProvider:68] Starting without optional epoll library
+[2019-07-17 11:35:08,354][http-nio-9095-exec-3][INFO][io.lettuce.core.KqueueProvider:70] Starting without optional kqueue library
+[2019-07-17 11:35:08,461][http-nio-9095-exec-3][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2019-07-17 11:35:08,744][http-nio-9095-exec-3][INFO][com.zaxxer.hikari.pool.PoolBase:525] HikariPool-1 - Driver does not support get/set network timeout for connections. (不支持此操作。)
+[2019-07-17 11:35:08,783][http-nio-9095-exec-3][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2019-07-17 11:35:08,884][http-nio-9095-exec-3][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@4e58d77
+[2019-07-17 11:35:50,916][http-nio-9095-exec-8][INFO][com.iresearch.svc.controller.IndexController:115] |@|0:0:0:0:0:0:0:1|null|首页|打开页面|@|
+[2019-07-17 11:39:17,992][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@7d624fea
+[2019-07-17 11:39:19,804][http-nio-9095-exec-1][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 11:39:19,804][http-nio-9095-exec-1][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 11:39:20,091][http-nio-9095-exec-2][INFO][com.iresearch.svc.controller.IndexController:115] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@516aedde|首页|打开页面|@|
+[2019-07-17 11:43:56,180][Thread-9][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208] Shutting down ExecutorService 'applicationTaskExecutor'
+[2019-07-17 11:43:57,312][Thread-9][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2019-07-17 11:43:57,314][Thread-9][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+[2019-07-17 11:44:02,547][main][INFO][com.iresearch.svc.SvcApplication:50] Starting SvcApplication on mac-clouddxw.local with PID 27560 (/Users/clouddxw/IdeaProjects/svc/target/classes started by clouddxw in /Users/clouddxw/IdeaProjects/svc)
+[2019-07-17 11:44:02,555][main][INFO][com.iresearch.svc.SvcApplication:675] No active profile set, falling back to default profiles: default
+[2019-07-17 11:44:03,253][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:244] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2019-07-17 11:44:03,257][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:126] Bootstrapping Spring Data repositories in DEFAULT mode.
+[2019-07-17 11:44:03,286][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:182] Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+[2019-07-17 11:44:03,551][main][INFO][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff3ac9af] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-07-17 11:44:03,837][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] Tomcat initialized with port(s): 9095 (http)
+[2019-07-17 11:44:03,849][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9095"]
+[2019-07-17 11:44:03,859][main][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2019-07-17 11:44:03,859][main][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.14]
+[2019-07-17 11:44:03,866][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/clouddxw/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2019-07-17 11:44:03,943][main][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2019-07-17 11:44:03,943][main][INFO][org.springframework.web.context.ContextLoader:296] Root WebApplicationContext: initialization completed in 1333 ms
+[2019-07-17 11:44:04,660][main][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171] Initializing ExecutorService 'applicationTaskExecutor'
+[2019-07-17 11:44:04,997][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9095"]
+[2019-07-17 11:44:05,034][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] Tomcat started on port(s): 9095 (http) with context path ''
+[2019-07-17 11:44:05,038][main][INFO][com.iresearch.svc.SvcApplication:59] Started SvcApplication in 2.856 seconds (JVM running for 4.482)
+[2019-07-17 11:44:20,165][http-nio-9095-exec-1][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2019-07-17 11:44:20,166][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:524] Initializing Servlet 'dispatcherServlet'
+[2019-07-17 11:44:20,175][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:546] Completed initialization in 9 ms
+[2019-07-17 11:44:42,911][http-nio-9095-exec-4][INFO][io.lettuce.core.EpollProvider:68] Starting without optional epoll library
+[2019-07-17 11:44:42,912][http-nio-9095-exec-4][INFO][io.lettuce.core.KqueueProvider:70] Starting without optional kqueue library
+[2019-07-17 11:44:43,070][http-nio-9095-exec-4][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@2423531f
+[2019-07-17 11:44:45,502][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.IndexController:115] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@51805978|首页|打开页面|@|
+[2019-07-17 11:45:11,302][http-nio-9095-exec-4][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@3674905
+[2019-07-17 11:45:12,832][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 11:45:12,832][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 11:45:13,055][http-nio-9095-exec-10][INFO][com.iresearch.svc.controller.IndexController:115] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@29bb86a6|首页|打开页面|@|
+[2019-07-17 12:06:01,416][Thread-10][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208] Shutting down ExecutorService 'applicationTaskExecutor'
+[2019-07-17 12:06:09,186][main][INFO][com.iresearch.svc.SvcApplication:50] Starting SvcApplication on mac-clouddxw.local with PID 27760 (/Users/clouddxw/IdeaProjects/svc/target/classes started by clouddxw in /Users/clouddxw/IdeaProjects/svc)
+[2019-07-17 12:06:09,203][main][INFO][com.iresearch.svc.SvcApplication:675] No active profile set, falling back to default profiles: default
+[2019-07-17 12:06:09,834][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:244] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2019-07-17 12:06:09,837][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:126] Bootstrapping Spring Data repositories in DEFAULT mode.
+[2019-07-17 12:06:09,864][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:182] Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+[2019-07-17 12:06:10,110][main][INFO][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1d35473c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-07-17 12:06:10,402][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] Tomcat initialized with port(s): 9095 (http)
+[2019-07-17 12:06:10,414][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9095"]
+[2019-07-17 12:06:10,422][main][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2019-07-17 12:06:10,423][main][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.14]
+[2019-07-17 12:06:10,429][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/clouddxw/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2019-07-17 12:06:10,501][main][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2019-07-17 12:06:10,502][main][INFO][org.springframework.web.context.ContextLoader:296] Root WebApplicationContext: initialization completed in 1255 ms
+[2019-07-17 12:06:11,212][main][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171] Initializing ExecutorService 'applicationTaskExecutor'
+[2019-07-17 12:06:11,549][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9095"]
+[2019-07-17 12:06:11,585][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] Tomcat started on port(s): 9095 (http) with context path ''
+[2019-07-17 12:06:11,589][main][INFO][com.iresearch.svc.SvcApplication:59] Started SvcApplication in 2.666 seconds (JVM running for 3.876)
+[2019-07-17 12:06:55,119][http-nio-9095-exec-1][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2019-07-17 12:06:55,120][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:524] Initializing Servlet 'dispatcherServlet'
+[2019-07-17 12:06:55,126][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:546] Completed initialization in 6 ms
+[2019-07-17 12:07:13,360][http-nio-9095-exec-7][INFO][io.lettuce.core.EpollProvider:68] Starting without optional epoll library
+[2019-07-17 12:07:13,362][http-nio-9095-exec-7][INFO][io.lettuce.core.KqueueProvider:70] Starting without optional kqueue library
+[2019-07-17 12:07:13,522][http-nio-9095-exec-7][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@5d180de1
+[2019-07-17 12:07:15,134][http-nio-9095-exec-8][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 12:07:15,134][http-nio-9095-exec-8][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 12:07:15,402][http-nio-9095-exec-4][INFO][com.iresearch.svc.controller.IndexController:115] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@6d6a672|首页|打开页面|@|
+[2019-07-17 12:09:31,865][Thread-9][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208] Shutting down ExecutorService 'applicationTaskExecutor'
+[2019-07-17 12:09:35,774][main][INFO][com.iresearch.svc.SvcApplication:50] Starting SvcApplication on mac-clouddxw.local with PID 27790 (/Users/clouddxw/IdeaProjects/svc/target/classes started by clouddxw in /Users/clouddxw/IdeaProjects/svc)
+[2019-07-17 12:09:35,782][main][INFO][com.iresearch.svc.SvcApplication:675] No active profile set, falling back to default profiles: default
+[2019-07-17 12:09:36,446][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:244] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2019-07-17 12:09:36,449][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:126] Bootstrapping Spring Data repositories in DEFAULT mode.
+[2019-07-17 12:09:36,480][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:182] Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+[2019-07-17 12:09:36,789][main][INFO][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6852f687] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-07-17 12:09:37,100][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] Tomcat initialized with port(s): 9095 (http)
+[2019-07-17 12:09:37,113][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9095"]
+[2019-07-17 12:09:37,122][main][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2019-07-17 12:09:37,123][main][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.14]
+[2019-07-17 12:09:37,129][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/clouddxw/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2019-07-17 12:09:37,202][main][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2019-07-17 12:09:37,202][main][INFO][org.springframework.web.context.ContextLoader:296] Root WebApplicationContext: initialization completed in 1378 ms
+[2019-07-17 12:09:37,955][main][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171] Initializing ExecutorService 'applicationTaskExecutor'
+[2019-07-17 12:09:38,315][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9095"]
+[2019-07-17 12:09:38,353][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] Tomcat started on port(s): 9095 (http) with context path ''
+[2019-07-17 12:09:38,357][main][INFO][com.iresearch.svc.SvcApplication:59] Started SvcApplication in 2.892 seconds (JVM running for 4.421)
+[2019-07-17 14:01:20,710][http-nio-9095-exec-1][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2019-07-17 14:01:20,711][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:524] Initializing Servlet 'dispatcherServlet'
+[2019-07-17 14:01:20,724][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:546] Completed initialization in 13 ms
+[2019-07-17 14:01:53,427][http-nio-9095-exec-6][INFO][io.lettuce.core.EpollProvider:68] Starting without optional epoll library
+[2019-07-17 14:01:53,429][http-nio-9095-exec-6][INFO][io.lettuce.core.KqueueProvider:70] Starting without optional kqueue library
+[2019-07-17 14:01:53,995][http-nio-9095-exec-6][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2019-07-17 14:01:54,286][http-nio-9095-exec-6][INFO][com.zaxxer.hikari.pool.PoolBase:525] HikariPool-1 - Driver does not support get/set network timeout for connections. (不支持此操作。)
+[2019-07-17 14:01:54,333][http-nio-9095-exec-6][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2019-07-17 14:01:54,455][http-nio-9095-exec-6][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@404adbbd
+[2019-07-17 14:01:56,028][http-nio-9095-exec-7][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 14:01:56,029][http-nio-9095-exec-7][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 14:01:57,261][http-nio-9095-exec-2][INFO][com.iresearch.svc.controller.IndexController:115] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@7f30b781|首页|打开页面|@|
+[2019-07-17 14:03:43,161][Thread-10][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208] Shutting down ExecutorService 'applicationTaskExecutor'
+[2019-07-17 14:03:44,296][Thread-10][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2019-07-17 14:03:44,300][Thread-10][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+[2019-07-17 14:03:48,308][main][INFO][com.iresearch.svc.SvcApplication:50] Starting SvcApplication on mac-clouddxw.local with PID 28384 (/Users/clouddxw/IdeaProjects/svc/target/classes started by clouddxw in /Users/clouddxw/IdeaProjects/svc)
+[2019-07-17 14:03:48,317][main][INFO][com.iresearch.svc.SvcApplication:675] No active profile set, falling back to default profiles: default
+[2019-07-17 14:03:48,998][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:244] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2019-07-17 14:03:49,002][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:126] Bootstrapping Spring Data repositories in DEFAULT mode.
+[2019-07-17 14:03:49,033][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:182] Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+[2019-07-17 14:03:49,343][main][INFO][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8d2d15cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-07-17 14:03:49,610][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] Tomcat initialized with port(s): 9095 (http)
+[2019-07-17 14:03:49,622][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9095"]
+[2019-07-17 14:03:49,630][main][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2019-07-17 14:03:49,630][main][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.14]
+[2019-07-17 14:03:49,636][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/clouddxw/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2019-07-17 14:03:49,707][main][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2019-07-17 14:03:49,708][main][INFO][org.springframework.web.context.ContextLoader:296] Root WebApplicationContext: initialization completed in 1345 ms
+[2019-07-17 14:03:50,406][main][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171] Initializing ExecutorService 'applicationTaskExecutor'
+[2019-07-17 14:03:50,739][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9095"]
+[2019-07-17 14:03:50,775][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] Tomcat started on port(s): 9095 (http) with context path ''
+[2019-07-17 14:03:50,778][main][INFO][com.iresearch.svc.SvcApplication:59] Started SvcApplication in 2.782 seconds (JVM running for 3.867)
+[2019-07-17 14:04:14,237][http-nio-9095-exec-1][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2019-07-17 14:04:14,237][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:524] Initializing Servlet 'dispatcherServlet'
+[2019-07-17 14:04:14,245][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:546] Completed initialization in 7 ms
+[2019-07-17 14:04:46,478][http-nio-9095-exec-4][INFO][io.lettuce.core.EpollProvider:68] Starting without optional epoll library
+[2019-07-17 14:04:46,480][http-nio-9095-exec-4][INFO][io.lettuce.core.KqueueProvider:70] Starting without optional kqueue library
+[2019-07-17 14:04:46,655][http-nio-9095-exec-4][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@474388a8
+[2019-07-17 14:04:48,602][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 14:04:48,602][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 14:04:48,686][http-nio-9095-exec-6][INFO][com.iresearch.svc.controller.IndexController:115] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@75573ec4|首页|打开页面|@|
+[2019-07-17 14:06:09,924][Thread-9][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208] Shutting down ExecutorService 'applicationTaskExecutor'
+[2019-07-17 14:06:15,215][main][INFO][com.iresearch.svc.SvcApplication:50] Starting SvcApplication on mac-clouddxw.local with PID 28404 (/Users/clouddxw/IdeaProjects/svc/target/classes started by clouddxw in /Users/clouddxw/IdeaProjects/svc)
+[2019-07-17 14:06:15,221][main][INFO][com.iresearch.svc.SvcApplication:675] No active profile set, falling back to default profiles: default
+[2019-07-17 14:06:15,786][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:244] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2019-07-17 14:06:15,789][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:126] Bootstrapping Spring Data repositories in DEFAULT mode.
+[2019-07-17 14:06:15,815][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:182] Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+[2019-07-17 14:06:16,046][main][INFO][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a969bb26] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-07-17 14:06:16,314][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] Tomcat initialized with port(s): 9095 (http)
+[2019-07-17 14:06:16,328][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9095"]
+[2019-07-17 14:06:16,338][main][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2019-07-17 14:06:16,339][main][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.14]
+[2019-07-17 14:06:16,359][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/clouddxw/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2019-07-17 14:06:16,428][main][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2019-07-17 14:06:16,429][main][INFO][org.springframework.web.context.ContextLoader:296] Root WebApplicationContext: initialization completed in 1176 ms
+[2019-07-17 14:06:17,112][main][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171] Initializing ExecutorService 'applicationTaskExecutor'
+[2019-07-17 14:06:17,437][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9095"]
+[2019-07-17 14:06:17,473][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] Tomcat started on port(s): 9095 (http) with context path ''
+[2019-07-17 14:06:17,477][main][INFO][com.iresearch.svc.SvcApplication:59] Started SvcApplication in 2.505 seconds (JVM running for 4.018)
+[2019-07-17 14:06:25,116][http-nio-9095-exec-1][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2019-07-17 14:06:25,116][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:524] Initializing Servlet 'dispatcherServlet'
+[2019-07-17 14:06:25,121][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:546] Completed initialization in 5 ms
+[2019-07-17 14:06:35,161][http-nio-9095-exec-4][INFO][io.lettuce.core.EpollProvider:68] Starting without optional epoll library
+[2019-07-17 14:06:35,163][http-nio-9095-exec-4][INFO][io.lettuce.core.KqueueProvider:70] Starting without optional kqueue library
+[2019-07-17 14:06:36,098][http-nio-9095-exec-4][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@5d10c8b2
+[2019-07-17 14:06:37,954][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 14:06:37,954][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 14:06:38,027][http-nio-9095-exec-6][INFO][com.iresearch.svc.controller.IndexController:115] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@4d96c9d1|首页|打开页面|@|
+[2019-07-17 14:06:56,279][http-nio-9095-exec-8][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 14:06:56,279][http-nio-9095-exec-8][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 14:06:56,328][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.IndexController:115] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@4d96c9d1|首页|打开页面|@|
+[2019-07-17 14:07:02,230][http-nio-9095-exec-10][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 14:07:02,230][http-nio-9095-exec-10][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 14:07:02,274][http-nio-9095-exec-1][INFO][com.iresearch.svc.controller.IndexController:115] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@4d96c9d1|首页|打开页面|@|
+[2019-07-17 14:07:04,368][http-nio-9095-exec-2][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 14:07:04,368][http-nio-9095-exec-2][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 14:07:04,405][http-nio-9095-exec-3][INFO][com.iresearch.svc.controller.IndexController:115] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@4d96c9d1|首页|打开页面|@|
+[2019-07-17 14:07:07,996][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 14:07:07,996][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 14:07:08,036][http-nio-9095-exec-6][INFO][com.iresearch.svc.controller.IndexController:115] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@4d96c9d1|首页|打开页面|@|
+[2019-07-17 14:07:09,239][http-nio-9095-exec-7][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 14:07:09,240][http-nio-9095-exec-7][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 14:07:09,267][http-nio-9095-exec-8][INFO][com.iresearch.svc.controller.IndexController:115] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@4d96c9d1|首页|打开页面|@|
+[2019-07-17 14:07:11,373][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 14:07:11,373][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 14:07:11,402][http-nio-9095-exec-10][INFO][com.iresearch.svc.controller.IndexController:115] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@4d96c9d1|首页|打开页面|@|
+[2019-07-17 14:08:25,673][http-nio-9095-exec-4][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2019-07-17 14:08:26,141][http-nio-9095-exec-4][INFO][com.zaxxer.hikari.pool.PoolBase:525] HikariPool-1 - Driver does not support get/set network timeout for connections. (不支持此操作。)
+[2019-07-17 14:08:26,184][http-nio-9095-exec-4][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2019-07-17 14:08:26,246][http-nio-9095-exec-4][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@39b2e667
+[2019-07-17 14:08:26,255][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_v:78] admin
+[2019-07-17 14:08:26,256][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_v:80] 1
+[2019-07-17 14:33:09,130][Thread-9][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208] Shutting down ExecutorService 'applicationTaskExecutor'
+[2019-07-17 14:33:10,275][Thread-9][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2019-07-17 14:33:10,279][Thread-9][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+[2019-07-17 16:29:45,536][main][INFO][com.iresearch.svc.SvcApplication:50] Starting SvcApplication on mac-clouddxw.local with PID 29955 (/Users/clouddxw/IdeaProjects/svc/target/classes started by clouddxw in /Users/clouddxw/IdeaProjects/svc)
+[2019-07-17 16:29:45,544][main][INFO][com.iresearch.svc.SvcApplication:675] No active profile set, falling back to default profiles: default
+[2019-07-17 16:29:46,235][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:244] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2019-07-17 16:29:46,247][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:126] Bootstrapping Spring Data repositories in DEFAULT mode.
+[2019-07-17 16:29:46,282][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:182] Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+[2019-07-17 16:29:46,534][main][INFO][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9c23726a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-07-17 16:29:46,853][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] Tomcat initialized with port(s): 9095 (http)
+[2019-07-17 16:29:46,871][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9095"]
+[2019-07-17 16:29:46,879][main][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2019-07-17 16:29:46,879][main][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.14]
+[2019-07-17 16:29:46,887][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/clouddxw/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2019-07-17 16:29:46,978][main][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2019-07-17 16:29:46,978][main][INFO][org.springframework.web.context.ContextLoader:296] Root WebApplicationContext: initialization completed in 1378 ms
+[2019-07-17 16:29:47,877][main][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171] Initializing ExecutorService 'applicationTaskExecutor'
+[2019-07-17 16:29:48,299][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9095"]
+[2019-07-17 16:29:48,339][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] Tomcat started on port(s): 9095 (http) with context path ''
+[2019-07-17 16:29:48,343][main][INFO][com.iresearch.svc.SvcApplication:59] Started SvcApplication in 3.082 seconds (JVM running for 4.235)
+[2019-07-17 16:30:13,774][http-nio-9095-exec-1][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2019-07-17 16:30:13,774][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:524] Initializing Servlet 'dispatcherServlet'
+[2019-07-17 16:30:13,780][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:546] Completed initialization in 5 ms
+[2019-07-17 16:30:18,739][http-nio-9095-exec-3][INFO][io.lettuce.core.EpollProvider:68] Starting without optional epoll library
+[2019-07-17 16:30:18,740][http-nio-9095-exec-3][INFO][io.lettuce.core.KqueueProvider:70] Starting without optional kqueue library
+[2019-07-17 16:30:18,896][http-nio-9095-exec-3][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2019-07-17 16:30:19,171][http-nio-9095-exec-3][INFO][com.zaxxer.hikari.pool.PoolBase:525] HikariPool-1 - Driver does not support get/set network timeout for connections. (不支持此操作。)
+[2019-07-17 16:30:19,222][http-nio-9095-exec-3][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2019-07-17 16:30:19,331][http-nio-9095-exec-3][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@3525afd1
+[2019-07-17 16:30:19,351][http-nio-9095-exec-4][INFO][com.iresearch.svc.controller.LoginInterceptor_v:78] admin
+[2019-07-17 16:30:19,351][http-nio-9095-exec-4][INFO][com.iresearch.svc.controller.LoginInterceptor_v:80] 1
+[2019-07-17 16:30:45,745][http-nio-9095-exec-7][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@fe5e7b3
+[2019-07-17 16:30:47,263][http-nio-9095-exec-8][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:30:47,263][http-nio-9095-exec-8][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:31:13,907][http-nio-9095-exec-8][INFO][com.iresearch.svc.controller.LoginController:165] com.iresearch.svc.controller.LoginController$1Checkres@211fd643
+[2019-07-17 16:31:15,388][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:31:15,388][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:31:48,941][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:31:48,942][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:31:49,217][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:31:49,218][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:31:50,613][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.Allshow_BasicController:250] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@3c99709f|节目排名与详情|打开页面|@|
+[2019-07-17 16:32:25,584][http-nio-9095-exec-10][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:32:25,590][http-nio-9095-exec-10][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:32:26,365][http-nio-9095-exec-10][INFO][com.iresearch.svc.controller.Allshow_BasicController:552] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@3c99709f|节目排名与详情|节目搜索|@|
+[2019-07-17 16:32:28,013][http-nio-9095-exec-1][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:32:28,014][http-nio-9095-exec-1][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:32:28,838][http-nio-9095-exec-1][INFO][com.iresearch.svc.controller.Allshow_BasicController:552] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@3c99709f|节目排名与详情|节目搜索|@|
+[2019-07-17 16:32:30,128][http-nio-9095-exec-2][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:32:30,128][http-nio-9095-exec-2][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:32:30,828][http-nio-9095-exec-2][INFO][com.iresearch.svc.controller.Allshow_BasicController:552] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@3c99709f|节目排名与详情|节目搜索|@|
+[2019-07-17 16:32:32,006][http-nio-9095-exec-4][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:32:32,007][http-nio-9095-exec-4][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:32:32,697][http-nio-9095-exec-4][INFO][com.iresearch.svc.controller.Allshow_BasicController:552] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@3c99709f|节目排名与详情|节目搜索|@|
+[2019-07-17 16:32:33,953][http-nio-9095-exec-3][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:32:33,954][http-nio-9095-exec-3][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:32:34,656][http-nio-9095-exec-3][INFO][com.iresearch.svc.controller.Allshow_BasicController:552] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@3c99709f|节目排名与详情|节目搜索|@|
+[2019-07-17 16:32:35,910][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:32:35,910][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:32:36,570][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.Allshow_BasicController:552] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@3c99709f|节目排名与详情|节目搜索|@|
+[2019-07-17 16:32:38,532][http-nio-9095-exec-6][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:32:38,533][http-nio-9095-exec-6][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:32:39,220][http-nio-9095-exec-6][INFO][com.iresearch.svc.controller.Allshow_BasicController:552] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@3c99709f|节目排名与详情|节目搜索|@|
+[2019-07-17 16:32:40,680][http-nio-9095-exec-7][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:32:40,680][http-nio-9095-exec-7][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:32:41,433][http-nio-9095-exec-7][INFO][com.iresearch.svc.controller.Allshow_BasicController:552] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@3c99709f|节目排名与详情|节目搜索|@|
+[2019-07-17 16:32:46,903][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:32:46,908][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:32:47,153][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.Allshow_BasicController:552] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@3c99709f|节目排名与详情|节目搜索|@|
+[2019-07-17 16:32:57,386][http-nio-9095-exec-1][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:32:57,387][http-nio-9095-exec-1][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:32:57,530][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-07-17 16:32:57,531][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-07-17 16:32:59,464][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.AllbrandController:311] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@3c99709f|品牌排名与详情|打开页面|@|
+[2019-07-17 16:39:13,589][Thread-10][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208] Shutting down ExecutorService 'applicationTaskExecutor'
+[2019-07-17 16:39:14,718][Thread-10][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2019-07-17 16:39:14,721][Thread-10][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.

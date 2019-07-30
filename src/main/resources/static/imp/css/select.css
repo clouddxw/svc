@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+.divclassss{ background-color:#09F;cursor:pointer;}
+.divmovercla{ background-color:#09F;cursor:pointer;}
+.divmoveroutcla{ background:#CCC;cursor:pointer;}
+div[objid]{margin-top:3px; bottom:5px;}
+div[objid]:hover{ background-color:#09F;}
+div[scros=scroll]{
+	scrollBar-width:3px;
+	scrollBar-face-color:#0FF; 
+	scrollBar-hightLight-color:red; 
+	scrollBar-3dLight-color: orange; 
+	scrollBar-darkshadow-color:blue; 
+	/*scrollBar-shadow-color:yellow; */
+	scrollBar-arrow-color:purple; 
+	scrollBar-track-color:#555;
+	scrollBar-base-color:pink; 
+}
+.textfont{color:#666;}

@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Class-Path: mybatis-3.5.0.jar tomcat-embed-core-9.0.14.jar log4j-slf4j
+ -impl-2.11.1.jar mybatis-spring-2.0.0.jar validation-api-2.0.1.Final.
+ jar lettuce-core-5.1.3.RELEASE.jar snakeyaml-1.23.jar netty-resolver-
+ 4.1.31.Final.jar classmate-1.4.0.jar spring-aop-5.1.4.RELEASE.jar sql
+ jdbc42.jar commons-collections-3.2.2.jar spring-data-redis-2.1.4.RELE
+ ASE.jar tomcat-embed-el-9.0.14.jar spring-jdbc-5.1.4.RELEASE.jar drui
+ d-1.1.0.jar spring-oxm-5.1.4.RELEASE.jar spring-boot-starter-freemark
+ er-2.1.2.RELEASE.jar spring-core-5.1.4.RELEASE.jar jackson-module-par
+ ameter-names-2.9.8.jar spring-boot-starter-tomcat-2.1.2.RELEASE.jar n
+ etty-buffer-4.1.31.Final.jar jackson-datatype-jdk8-2.9.8.jar spring-b
+ oot-2.1.2.RELEASE.jar spring-boot-starter-2.1.2.RELEASE.jar jackson-c
+ ore-2.9.8.jar spring-boot-autoconfigure-2.1.2.RELEASE.jar netty-commo
+ n-4.1.31.Final.jar jul-to-slf4j-1.7.25.jar log4j-jul-2.11.1.jar sprin
+ g-boot-starter-json-2.1.2.RELEASE.jar tools.jar log4j-api-2.11.1.jar 
+ freemarker-2.3.28.jar spring-jcl-5.1.4.RELEASE.jar spring-tx-5.1.4.RE
+ LEASE.jar netty-transport-4.1.31.Final.jar jackson-datatype-jsr310-2.
+ 9.8.jar log4j-core-2.11.1.jar mybatis-spring-boot-starter-2.0.0.jar s
+ pring-context-support-5.1.4.RELEASE.jar HikariCP-3.2.0.jar reactor-co
+ re-3.2.5.RELEASE.jar hibernate-validator-6.0.14.Final.jar tomcat-embe
+ d-websocket-9.0.14.jar jboss-logging-3.3.2.Final.jar spring-expressio
+ n-5.1.4.RELEASE.jar spring-boot-starter-web-2.1.2.RELEASE.jar jackson
+ -annotations-2.9.0.jar jconsole.jar netty-codec-4.1.31.Final.jar spri
+ ng-boot-starter-data-redis-2.1.2.RELEASE.jar netty-handler-4.1.31.Fin
+ al.jar spring-data-commons-2.1.4.RELEASE.jar spring-context-5.1.4.REL
+ EASE.jar slf4j-api-1.7.25.jar spring-web-5.1.4.RELEASE.jar spring-boo
+ t-starter-log4j2-2.1.2.RELEASE.jar spring-boot-starter-jdbc-2.1.2.REL
+ EASE.jar spring-beans-5.1.4.RELEASE.jar spring-data-keyvalue-2.1.4.RE
+ LEASE.jar spring-webmvc-5.1.4.RELEASE.jar reactive-streams-1.0.2.jar 
+ javax.annotation-api-1.3.2.jar mybatis-spring-boot-autoconfigure-2.0.
+ 0.jar jackson-databind-2.9.8.jar
+Main-Class: com.iresearch.svc.SvcApplication
+

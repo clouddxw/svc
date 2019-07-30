@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="no-referrer">
+<title>品牌详情</title>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
+<link href="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/allbrand.css">
+<link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/ajaxloading.css">
+
+
+<script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/browser_check.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+
+
+</head>
+<body>
+<div class="headerr">
+	<a href="index.html"><div class="ir_log"><img src="http://svc.iresearch.cn/img/svclogo1.png" style="width:100%;height:100%"></div></a>
+
+</div>
+
+
+
+<div class="bar1"> 
+<strong>品牌排行</strong>
+<nav class="navbar navbar-default" role="navigation" style="float:right;height:50px;">
+   <div>
+      <ul class="nav navbar-nav">
+         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="filtermenu"> Filter <strong class="caret"></strong> </a>
+         
+           <ul class="dropdown-menu dropdown-menu-right" style="min-width:980px;" data-stopPropagation="true" id="filter" >
+            </ul>
+         </li>
+         <li class="dropdown" ><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="normmenu"> Norm <strong class="caret"></strong> </a>
+         <ul class="dropdown-menu dropdown-menu-right" style="min-width:980px;" data-stopPropagation="true" id="normcon">
+         </ul>       
+         </li>
+      </ul>
+   </div>
+</nav>
+<div class="btn-group" style="float:right;height:50px;margin-right:20px;">
+    <button type="button" class="btn " style="height:50px;font-weight:bold;background:#dddddd;color:#222;"  id="selectavg"
+    onClick="chgclassdisp('maxdisp','none');chgclassdisp('avgdisp','block');chgbg('selectavg','#1d914d','#fff');chgbg('selectmax','#dddddd','#222');">平均值</button>
+    <button type="button" class="btn " style="height:50px;font-weight:bold;background:#1d914d;color:#fff" id="selectmax"
+    onClick="chgclassdisp('avgdisp','none');chgclassdisp('maxdisp','block');chgbg('selectmax','#1d914d','#fff');chgbg('selectavg','#dddddd','#222');">最大值</button>
+</div>
+
+     <div class="divserach" style="float:right;width:320px;height:50px;margin:0px;padding:0px;padding-right:30px;">
+     <div style="width:200px;height:30px;float:left;margin-top:-2px;">
+     <select id='serbrand' name="brandname" style="width:180px;" >
+	 </select>
+	 </div>
+	 <button onclick="searchbrand();" class="btn btn-default" style="float:left;padding:0px;margin:11px 5px;width:50px;height:26px;text-align:center;font-size:13px;">搜索</button>
+     </div>
+
+</div>
+
+<div class="brandrank maxdisp" id="brandrankmax">
+
+</div>
+<!--          节目排行加权值         -->
+<div class="brandrank avgdisp" id="brandrankavg">
+
+</div>
+
+<!--                                Top50Brand                                  -->
+<!--         top50品牌最大值    -->
+<div class="top50titl">点击下列海报显示对品牌的详细信息</div>
+<div class="top50brand maxdisp" id="top50brandmax">
+
+</div>	
+
+<!--         top50品牌加权值   -->
+<div class="top50brand avgdisp" id="top50brandavg">
+
+</div>	
+	
+	
+<div class="bar2">
+<strong>品牌详情</strong>
+</div>
+
+<!--                              品牌详情                     -->
+<!--       品牌详情最大值       -->
+<div class="branddeatil maxdisp" id="branddeatilmax">
+	    <div class="branddeatil_l" id="branddtlmax">
+	            <div class="branddeatil_l1"></div>
+	            <div class="branddeatil_l2"></div>
+	            <ul class="branddeatil_l3">
+	                <li><span>品类：</span></li>
+	                <li><span>赞助等级：</span></li>
+	                <li><span>节目流量等级：</span></li>
+	            </ul>
+	    </div>
+	     <div class="branddeatil_r">
+	        <div class="branddeatil_r1">
+	            <div class="branddeatil_r1l">点击下列海报显示对应节目的详细信息</div>
+	            <div class="branddeatil_r1r" id='bdcustommax'><a href="" class="btn btn-danger disabled" role="button">品牌定制监测</a></div>
+	        </div>
+	        
+			<ul  class="branddeatil_r2" id="showlistmax"></ul>
+		</div> 
+</div>
+
+<!--            品牌详情加权值       -->
+<div class="branddeatil avgdisp" id="branddeatilavg">
+	    <div class="branddeatil_l" id="branddtlavg">
+	            <div class="branddeatil_l1"></div>
+	            <div class="branddeatil_l2"></div>
+	            <ul class="branddeatil_l3">
+	                <li><span>品类：</span></li>
+	                <li id="bdswspontypeavg"><span>赞助等级：</span></li>
+	                <li id="bdswshowlvavg"><span>节目流量等级：</span></li>
+	            </ul>
+	    </div>
+	     <div class="branddeatil_r">
+	        <div class="branddeatil_r1">
+	            <div class="branddeatil_r1l">点击下列海报显示对应节目的详细信息</div>
+	            <div class="branddeatil_r1r" id='bdcustomavg'><a href="" class="btn btn-danger disabled" role="button">品牌定制监测</a></div>
+	        </div>
+	        
+			<ul  class="branddeatil_r2" id="showlistavg"></ul>
+		</div> 
+ 
+</div>
+<!--                                 节目详情                         -->
+
+<!--      节目详情最大值          -->
+<div class="showdeatil maxdisp" id="showdeatilmax">
+ 
+</div>
+
+<!--      节目详情加权值          -->
+
+
+<div class="showdeatil avgdisp" id="showdeatilavg">
+ 
+</div>
+
+<div class="bar3" ><strong>节目口碑传播指数与收看人群画像</strong></div>
+<div class="maxdisp">
+<div  class="chart">
+<div class="index_chart">
+    <div id="bdindexmax">
+        
+    </div>
+    <div id="wbindexmax">
+    
+    </div>
+    <div id="wxindexmax">
+</div>    
+</div>
+<div class="proertychart">
+
+    <div id="sex_chartmax">
+
+    </div>
+    <div id="age_chartmax">
+
+    </div>
+    <div id="city_chartmax">
+
+    </div>
+</div>
+</div>
+</div>
+
+<div class="avgdisp">
+<div  class="chart">
+<div class="index_chart">
+    <div id="bdindexavg">
+        
+    </div>
+    <div id="wbindexavg">
+    
+    </div>
+    <div id="wxindexavg">
+    </div>   
+</div>
+<div class="proertychart">
+    <div id="sex_chartavg">
+
+    </div>
+    <div id="age_chartavg">
+
+    </div>
+    <div id="city_chartavg">
+
+    </div>
+</div>
+</div>
+</div>
+
+<input id="storeallbrandmax" class="undisp" value="" >
+<input id="storeallbrandavg" class="undisp" value="" >
+<input id="storeallshowrk" class="undisp" value="" >
+<input id="storebdshowmax"  class="undisp" value="" >
+<input id="storebdshowavg" class="undisp"  value="" >
+<input id="storecustombrands"  class="undisp" value="" >
+<input id="storecustomshows" class="undisp"  value="" >
+
+
+<div id="loading" class="loadingdiv">
+        <img src="http://svc.iresearch.cn/img/loading.gif" alt="loading···" />
+</div>
+
+  <div style="width:1050px;height:30px;margin:50px auto;position:relative;">
+   <div style="height:0px;width:1048px;border:1px #eee solid;margin:7px 0px;position:absolute;left:0px;top:4px;z-index:10"></div>
+   <div style="height:30px;max-width:350px;background:#fff;color:#555;padding:0px 5px;position:absolute;left:350px;top:0px;z-index:100">
+   	<Strong >
+   		<div style="float:left">Copyright&nbsp©2018</div>
+   		<div style="float:left;height:20px;width:40px;"><img src="http://svc.iresearch.cn/img/Irlogo.jpg" style="width:100%;height:100%">
+    		</div>
+    		All rights reserved.
+    	</Strong>
+    </div>
+</div>
+
+
+
+ <script type="text/javascript">
+
+   $(document).ready(function () {
+     $('#serbrand').select2();
+
+   });
+
+ </script>
+
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/ajaxloading.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/filternorm.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/udfbox.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/keepcheck.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/allshow_chart.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/allbrandcharts.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/allbrandload.js"></script>
+
+
+
+
+</body>
+</html>

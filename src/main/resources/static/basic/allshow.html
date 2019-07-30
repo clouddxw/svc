@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="no-referrer">
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
+<link href="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/allshow.css">
+<link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/ajaxloading.css">
+
+<script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/browser_check.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+
+
+
+
+<title>节目详情</title>
+</head>
+<body>
+
+
+<div class="headerr">
+	<a href="index.html"><div class="ir_log"><img src="http://svc.iresearch.cn/img/svclogo1.png" style="width:100%;height:100%"></div></a>
+</div>
+
+
+
+<div class="bar1">
+<strong>节目排行</strong>
+<nav class="navbar navbar-default" role="navigation" style="float:right;height:50px;">
+   <div>
+      <ul class="nav navbar-nav">
+         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="filtermenu"> Filter <strong class="caret"></strong> </a>
+
+           <ul class="dropdown-menu dropdown-menu-right" style="min-width:990px;" data-stopPropagation="true" id="filter" >
+            </ul>
+         </li>
+         <li class="dropdown" ><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="normmenu"> Norm <strong class="caret"></strong> </a>
+         <ul class="dropdown-menu dropdown-menu-right" style="min-width:990px;" data-stopPropagation="true" id="normcon">
+         </ul>
+         </li>
+      </ul>
+   </div>
+</nav>
+<div class="btn-group" style="float:right;height:50px;margin-right:20px;">
+    <button type="button" class="btn " style="height:50px;font-weight:bold;background:#dddddd;color:#222;"  id="selectavg"
+    onClick="chgclassdisp('maxdisp','none');chgclassdisp('avgdisp','block');chgbg('selectavg','#1d914d','#fff');chgbg('selectmax','#dddddd','#222');">平均值</button>
+    <button type="button" class="btn " style="height:50px;font-weight:bold;background:#1d914d;color:#fff" id="selectmax"
+    onClick="chgclassdisp('avgdisp','none');chgclassdisp('maxdisp','block');chgbg('selectmax','#1d914d','#fff');chgbg('selectavg','#dddddd','#222');">最大值</button>
+</div>
+
+<div  style="float:right;width:300px;height:50px;margin:0px;padding:0px;padding-right:30px;">
+<div style="width:200px;height:30px;float:left;margin-top:-2px;">
+   <select id='sershow' name="showname"  style="width:180px;">
+
+   </select>
+</div>
+<button onclick="searchshow();" class="btn btn-default" style="float:left;padding:0px;margin:11px 0px;width:50px;height:26px;text-align:center;font-size:13px;">搜索</button>
+</div>
+
+</div>
+
+<div class="maxdisp" style="margin-top:20px;">
+<div class="showsurvey" id="showsvmax">
+<div class="showsurvey_l">
+<div class="showsurvey_l1"></div>
+<div class="showsurvey_l2"></div>
+<ul  class="showsurvey_l3">
+<li><span>SVC综合指数排名</span>：</li>
+<li><span>节目流量等级</span>：</li>
+<li><span>终端</span>：</li>
+<li><span>平台</span>：</li>
+<li><span>类型</span>：</li>
+<li><span>首播</span>：</li>
+<li><span>期数</span>：</li>
+<li><span>监测植入品牌数</span>：</li>
+</ul>
+</div>
+<div class="showsurvey_r">
+<div class="showsurvey_r1"><span></span>&nbsp(SVC综合指数)</div>
+<ul class="showsurvey_r2">
+<li><span></span><br/>节目价值指数</li>
+<li><span></span><br/>节目-品牌关联指数</li>
+<li><span></span><br/>品牌资产提升指数</li>
+</ul>
+<div class="showsurvey_r3">
+<div class="showsurvey_r3l">植入品牌SVC综合指数:</div>
+<div class="spontype"><div class="starimg" ><img src="http://svc.iresearch.cn/img/star2.png" ></div>其他</div>
+<div class="spontype"><div class="starimg" ><img src="http://svc.iresearch.cn/img/star1.png" ></div>总冠名</div>
+</div>
+<div class="showsurvey_r4">
+<div class="showsurvey_r4l">
+<table class="table  table-striped" >
+</tbody>
+</table>
+</div>
+<div class="showsurvey_r4r">
+<table class="table  table-striped" >
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="avgdisp" style="margin-top:20px;">
+<div class="showsurvey" id="showsvavg">
+<div class="showsurvey_l">
+<div class="showsurvey_l1"></div>
+<div class="showsurvey_l2"></div>
+<ul  class="showsurvey_l3">
+<li><span>SVC综合指数排名</span>：</li>
+<li><span>节目流量等级</span>：</li>
+<li><span>终端</span>：</li>
+<li><span>平台</span>：</li>
+<li><span>类型</span>：</li>
+<li><span>首播</span>：</li>
+<li><span>期数</span>：</li>
+<li><span>监测植入品牌数</span>：</li>
+</ul>
+</div>
+<div class="showsurvey_r">
+<div class="showsurvey_r1"><span></span>&nbsp(SVC综合指数)</div>
+<ul class="showsurvey_r2">
+<li><span></span><br/>节目价值指数</li>
+<li><span></span><br/>节目-品牌关联指数</li>
+<li><span></span><br/>品牌资产提升指数</li>
+</ul>
+<div class="showsurvey_r3">
+<div class="showsurvey_r3l">植入品牌SVC综合指数:</div>
+<div class="spontype"><div class="starimg" ><img src="http://svc.iresearch.cn/img/star2.png" ></div>其他</div>
+<div class="spontype"><div class="starimg" ><img src="http://svc.iresearch.cn/img/star1.png" ></div>总冠名</div>
+</div>
+<div class="showsurvey_r4">
+<div class="showsurvey_r4l">
+<table class="table  table-striped" >
+</tbody>
+</table>
+</div>
+<div class="showsurvey_r4r">
+<table class="table  table-striped" >
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="top50titl">点击下列海报显示对应节目的详细信息</div>
+<div class="maxdisp">
+<div class="top50show" id="top50max">
+</div>
+</div>
+<div class="avgdisp">
+<div class="top50show" id="top50avg">
+</div>
+</div>
+
+
+<div class="bar2">
+<strong>节目详情</strong>
+</div>
+<div class="maxdisp">
+<div class="showdeatil" id="showdtmax">
+<div class="box_l">
+		<div class="box_l1"></div>
+		<div class="box_l2"></div>
+		<ul class="box_l3">
+			<li><span>SVC综合指数排名：</span></li>
+			<li><span>节目流量等级：</span></li>
+			<li><span>首播：</span></li>
+			<li><span>期数：</span></li>
+			<li><span>终端：</span></li>
+			<li><span>平台：</span></li>
+			<li><span>类型：</span></li>
+		</ul>
+</div>
+<div class="box_r">
+	<div class="box_r1">
+		<div class="box_r1l"><span></span>&nbsp&nbsp&nbsp&nbsp(SVC综合指数)</div>
+		<div class="box_r1r"><a href="" class="btn btn-danger disabled" role="button">节目定制监测</a></div>
+	</div>
+	<ul class="box_r2">
+		<li style="width:80px;line-height:22.5px;color:#7e7e7e;">二<br/>级<br/>指<br/>数</li>
+		<li><span></span><br/>节目价值</li>
+		<li><span></span><br/>节目-品牌关联</li>
+		<li><span></span><br/>品牌资产提升</li>
+	</ul>
+	<ul class="box_r3">
+		<li style="width:80px;line-height:22.5px;color:#7e7e7e;">三<br />级<br />指<br />数</li>
+		<li><span></span>&nbsp&nbsp收视热度<br /><span></span>&nbsp&nbsp重复收视<br><span></span>&nbsp&nbsp口碑传播</li>
+		<li><span></span>&nbsp&nbsp回忆度<br/><span></span>&nbsp&nbsp相关度<br></li>
+		<li><span></span>&nbsp&nbsp认知提升<br/><span></span>&nbsp&nbsp喜爱提升<br><span></span>&nbsp&nbsp推荐提升</li>
+	</ul>
+</div>
+</div>
+</div>
+
+<div class="avgdisp">
+<div class="showdeatil" id="showdtavg">
+<div class="box_l">
+		<div class="box_l1"></div>
+		<div class="box_l2"></div>
+		<ul class="box_l3">
+			<li><span>SVC综合指数排名：</span></li>
+			<li><span>节目流量等级：</span></li>
+			<li><span>首播：</span></li>
+			<li><span>期数：</span></li>
+			<li><span>终端：</span></li>
+			<li><span>平台：</span></li>
+			<li><span>类型：</span></li>
+		</ul>
+</div>
+<div class="box_r">
+	<div class="box_r1">
+		<div class="box_r1l"><span></span>&nbsp&nbsp&nbsp&nbsp(SVC综合指数)</div>
+		<div class="box_r1r"><a href="" class="btn btn-danger disabled" role="button">节目定制监测</a></div>
+	</div>
+	<ul class="box_r2">
+		<li style="width:80px;line-height:22.5px;color:#7e7e7e;">二<br/>级<br/>指<br/>数</li>
+		<li><span></span><br/>节目价值</li>
+		<li><span></span><br/>节目-品牌关联</li>
+		<li><span></span><br/>品牌资产提升</li>
+	</ul>
+	<ul class="box_r3">
+		<li style="width:80px;line-height:22.5px;color:#7e7e7e;">三<br />级<br />指<br />数</li>
+		<li><span></span>&nbsp&nbsp收视热度<br /><span></span>&nbsp&nbsp重复收视<br><span></span>&nbsp&nbsp口碑传播</li>
+		<li><span></span>&nbsp&nbsp回忆度<br/><span></span>&nbsp&nbsp相关度<br></li>
+		<li><span></span>&nbsp&nbsp认知提升<br/><span></span>&nbsp&nbsp喜爱提升<br><span></span>&nbsp&nbsp推荐提升</li>
+	</ul>
+</div>
+</div>
+</div>
+
+<div class="maxdisp">
+<div class="showbrand" id="showbdmax">
+<div class="showbrand_l" id="showbdlmax">
+<div style="overflow:hidden;">
+	<div class="showbrand_l1">
+		<div class="showbrand_l1l">节目赞助品牌表现</div>
+		<div class="showbrand_l1r">其他<img src="http://svc.iresearch.cn/img/star2.png" style="width:20px;height:20px;float:right;margin-right:25px;margin-top:15px;"></div>
+		<div class="showbrand_l1r">总冠名<img src="http://svc.iresearch.cn/img/star1.png" style="width:20px;height:20px;float:right;margin-right:25px;margin-top:15px;"></div>
+	</div>
+<div class="brandtable" >
+		<ul class="bdtbth" >
+				<li id="bdtbthnummax" style="width:160px">品牌数量:</li>
+				<li style="width:50px;"></li>
+				<li style="width:90px;">期数</li>
+				<li style="width:110px;">SVC综合指数</li>
+				<li style="width:90px;">节目价值</li>
+				<li style="width:120px;">节目品牌关联</li>
+				<li style="width:120px;">品牌资产提升</li>
+		</ul>
+		<div class="context">
+        <table class="table table-striped" >
+
+		<tbody id="brandtbconmax"  ></tbody>
+       </table>
+       </div>
+</div>
+</div>
+</div>
+<div class="showbrand_r" id="showbdrmax">
+<div style="overflow:hidden;">
+<div class="showbrand_r1">
+<a href="" class="btn btn-danger disabled" role="button">品牌定制监测</a>
+</div>
+
+<div class="t1brandl" >
+<ul class="top1brandl" style="color:#7e7f7e;padding:0px 20px;margin-top:5px;">
+	<li class="uli1" >
+		<div class="imag" ></div>
+		<div style="display:block;"><div style="height:40px;line-height:55px;font-size:22px;"></div><div style="height:36px;line-height:20px;font-size:15px;"></div></div>
+	</li >
+	<li class="uli2" >
+		<div ></div>&nbsp&nbspSVC综合指数
+	</li>
+	<li class="uli3" >
+		<span >SVC二级指数</span>
+		<span >SVC三级指数</span>
+	</li>
+	<li class="uli4" >
+		<div class="firtag" >
+			<div class="score" ></div>
+			<div class="tag" >节目价值</div>
+		</div>
+		<ul style="">
+			<li ><span></span>&nbsp&nbsp收视热度</li>
+			<li ><span></span>&nbsp&nbsp重复收视</li>
+			<li ><span></span>&nbsp&nbsp口碑传播</li>
+		</ul>
+	</li>
+	<li class="uli5">
+		<div class="firtag" >
+			<div class="score" ></div>
+			<div class="tag" >节目-品牌关联</div>
+		</div>
+		<ul >
+			<li ><span></span>&nbsp&nbsp回忆度</li>
+			<li ><span></span>&nbsp&nbsp相关度</li>
+		</ul>
+	</li>
+	<li class="uli6" >
+		<div class="firtag" style="width:50%;">
+			<div class="score" ></div>
+			<div class="tag" >品牌资产提升</div>
+		</div>
+		<ul style="width:50%;">
+			<li style=""><span></span>&nbsp&nbsp认知提升</li>
+			<li ><span></span>&nbsp&nbsp喜爱提升</li>
+			<li ><span></span>&nbsp&nbsp推荐提升</li>
+		</ul>
+	</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="avgdisp">
+<div class="showbrand" id="showbdavg">
+<div class="showbrand_l" id="showbdlavg">
+<div style="overflow:hidden;">
+	<div class="showbrand_l1">
+		<div class="showbrand_l1l">节目赞助品牌表现</div>
+		<div class="showbrand_l1r">其他<img src="http://svc.iresearch.cn/img/star2.png" style="width:20px;height:20px;float:right;margin-right:25px;margin-top:15px;"></div>
+		<div class="showbrand_l1r">总冠名<img src="http://svc.iresearch.cn/img/star1.png" style="width:20px;height:20px;float:right;margin-right:25px;margin-top:15px;"></div>
+	</div>
+<div class="brandtable" >
+		<ul class="bdtbth" >
+				<li id="bdtbthnumavg" style="width:120px">品牌数量:</li>
+				<li style="width:60px;"></li>
+				<li style="width:100px;">期数</li>
+				<li style="width:120px;">SVC综合指数</li>
+				<li style="width:100px;">节目价值</li>
+				<li style="width:120px;">节目品牌关联</li>
+				<li style="width:120px;">品牌资产提升</li>
+		</ul>
+		<div class="context">
+        <table class="table table-striped" >
+
+		<tbody id="brandtbconavg"  ></tbody>
+
+        </table>
+		</div>
+</div>
+</div>
+</div>
+<div class="showbrand_r" id="showbdravg">
+<div style="overflow:hidden;">
+<div class="showbrand_r1">
+<a href="" class="btn btn-danger disabled" role="button">品牌定制监测</a>
+</div>
+
+<div class="t1brandl" >
+<ul class="top1brandl" style="color:#7e7f7e;padding:0px 20px;margin-top:5px;">
+	<li class="uli1" >
+		<div class="imag" ></div>
+		<div style="display: float;"><div style="height:40px;line-height:55px;font-size:22px;"></div><div style="height:36px;line-height:20px;font-size:15px;"></div></div>
+	</li >
+	<li class="uli2" >
+		<div ></div>&nbsp&nbspSVC综合指数
+	</li>
+	<li class="uli3" >
+		<span >SVC二级指数</span>
+		<span >SVC三级指数</span>
+	</li>
+	<li class="uli4" >
+		<div class="firtag" >
+			<div class="score" ></div>
+			<div class="tag" >节目价值</div>
+		</div>
+		<ul style="">
+			<li ><span></span>&nbsp&nbsp收视热度</li>
+			<li ><span></span>&nbsp&nbsp重复收视</li>
+			<li ><span></span>&nbsp&nbsp口碑传播</li>
+		</ul>
+	</li>
+	<li class="uli5">
+		<div class="firtag" >
+			<div class="score" ></div>
+			<div class="tag" >节目-品牌关联</div>
+		</div>
+		<ul >
+			<li ><span></span>&nbsp&nbsp回忆度</li>
+			<li ><span></span>&nbsp&nbsp相关度</li>
+		</ul>
+	</li>
+	<li class="uli6" >
+		<div class="firtag" style="width:50%;">
+			<div class="score" ></div>
+			<div class="tag" >品牌资产提升</div>
+		</div>
+		<ul style="width:50%;">
+			<li style=""><span></span>&nbsp&nbsp认知提升</li>
+			<li ><span></span>&nbsp&nbsp喜爱提升</li>
+			<li ><span></span>&nbsp&nbsp推荐提升</li>
+		</ul>
+	</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bar3" ><strong>节目口碑传播指数与收看人群画像</strong></div>
+<div class="maxdisp">
+<div  class="chart">
+<div class="index_chart">
+    <div id="bdindexmax">
+
+    </div>
+    <div id="wbindexmax">
+
+    </div>
+    <div id="wxindexmax">
+</div>
+</div>
+<div class="proertychart">
+
+    <div id="sex_chartmax">
+
+    </div>
+    <div id="age_chartmax">
+
+    </div>
+    <div id="city_chartmax">
+
+    </div>
+</div>
+</div>
+</div>
+
+<div class="avgdisp">
+<div  class="chart">
+<div class="index_chart">
+    <div id="bdindexavg">
+
+    </div>
+    <div id="wbindexavg">
+
+    </div>
+    <div id="wxindexavg">
+    </div>
+</div>
+<div class="proertychart">
+    <div id="sex_chartavg">
+
+    </div>
+    <div id="age_chartavg">
+
+    </div>
+    <div id="city_chartavg">
+
+    </div>
+</div>
+</div>
+</div>
+
+
+<input id="storedata" class="undisp" value="" >
+<input id="storeallshowmax" class="undisp" value="" >
+<input id="storeallshowavg" class="undisp" value="" >
+<!--  input id="storenormcondi" class="undisp" value="" -->
+<input id="storeshowbdmax"  class="undisp" value="" >
+<input id="storeshowbdavg" class="undisp"  value="" >
+<input id="storecustombrands"  class="undisp" value="" >
+<input id="storecustomshows" class="undisp"  value="" >
+
+
+<div id="loading" class="loadingdiv">
+        <img src="http://svc.iresearch.cn/img/loading.gif" alt="loading···" />
+</div>
+
+
+
+
+<div style="width:1050px;height:30px;margin:50px auto;position:relative;">
+   <div style="height:0px;width:1048px;border:1px #eee solid;margin:7px 0px;position:absolute;left:0px;top:4px;z-index:10"></div>
+   <div style="height:30px;max-width:350px;background:#fff;color:#555;padding:0px 5px;position:absolute;left:350px;top:0px;z-index:100">
+   	<Strong >
+   		<div style="float:left">Copyright&nbsp©2018</div>
+   		<div style="float:left;height:20px;width:40px;"><img src="http://svc.iresearch.cn/img/Irlogo.jpg" style="width:100%;height:100%">
+    		</div>
+    		All rights reserved.
+    	</Strong>
+    </div>
+</div>
+
+
+
+ <script type="text/javascript">
+
+   $(document).ready(function () {
+     $('#sershow').select2();
+
+   });
+
+ </script>
+
+
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/ajaxloading.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/filternorm.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/udfbox.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/keepcheck.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/allshow_chart.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/allshowload_basic.js"></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

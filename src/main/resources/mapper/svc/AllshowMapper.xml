@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iresearch.svc.mapper.svc.AllshowMapper">
+
+    <!--id对应接口中的方法，名字要一样，parameterType是方法的参数类型，
+    resultType是查询返回的类型，需要注意的是，这里的SQL语句后面不能加分号，变量不能加引号-->
+    <!--<select id="getById" parameterType="int" resultType="User">-->
+        <!--select * from user where id = #{id}-->
+    <!--</select>-->
+
+    <!--<insert id="insert" parameterType="string">-->
+        <!--insert into user(name) values(#{name})-->
+    <!--</insert>-->
+
+
+    <select id="getAllshow" statementType="CALLABLE" parameterType="com.iresearch.svc.bean.Norm" resultType="com.iresearch.svc.bean.Show">
+        <![CDATA[
+      { call     sp_svc_allshow(#{sex, mode=IN, jdbcType=VARCHAR},
+                                #{agegroup, mode=IN, jdbcType=VARCHAR},
+                                #{citylevel, mode=IN, jdbcType=VARCHAR},
+                                #{showtype, mode=IN, jdbcType=VARCHAR},
+                                #{showlevel, mode=IN, jdbcType=VARCHAR},
+                                #{type ,mode=IN ,jdbcType=VARCHAR},
+                                #{brandtype, mode=IN, jdbcType=VARCHAR},
+                                #{sponsortype, mode=IN, jdbcType=VARCHAR},
+                                #{begindate, mode=IN, jdbcType=DATE},
+                                #{enddate, mode=IN, jdbcType=DATE}) }
+       ]]>
+    </select>
+
+
+    <select id="getShowtype" parameterType="string"  resultType="com.iresearch.svc.bean.Showtype">
+        select showname show,type,platform,showlevel,showtype,episode,
+        convert(varchar(100),begin_date,121) begindate from show
+        where showname=#{show}
+    </select>
+
+    <select id="getShowbrand" statementType="CALLABLE"   resultType="com.iresearch.svc.bean.Showbrand">
+             <![CDATA[
+      { call     sp_svc_showbrand(#{norm.sex, mode=IN, jdbcType=VARCHAR},
+                                #{norm.agegroup, mode=IN, jdbcType=VARCHAR},
+                                #{norm.citylevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showlevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.type ,mode=IN ,jdbcType=VARCHAR},
+                                #{norm.brandtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.sponsortype, mode=IN, jdbcType=VARCHAR},
+                                #{show, mode=IN, jdbcType=VARCHAR},
+                                #{norm.begindate, mode=IN, jdbcType=DATE},
+                                #{norm.enddate, mode=IN, jdbcType=DATE}) }
+       ]]>
+    </select>
+
+
+    <select id="getBdindex" parameterType="string"  resultType="com.iresearch.svc.bean.Bdindex">
+        select date time,datavalue value
+        from [SVC_compute].[dbo].[eco_SpiderBaidu] a
+          join SVC.dbo.show c
+           on a.keywords = c.keyword
+           and a.date&gt;=c.Begin_Date
+           and a.date&lt;=c.end_Date
+           and c.showname=#{showname} order by time
+    </select>
+
+    <select id="getWbindex" parameterType="string"  resultType="com.iresearch.svc.bean.Wbindex">
+        select convert(varchar(100),date,112) time,cast(datavalue as int) value
+          from [SVC_compute].[dbo].[eco_SpiderWeibo] a join SVC.dbo.show c
+            on a.keywords = c.keyword
+           and a.date&gt;=c.Begin_Date
+           and a.date&lt;=c.end_Date
+           and c.showname=#{showname} order by time
+    </select>
+
+    <select id="getWxindex" parameterType="string"  resultType="com.iresearch.svc.bean.Wxindex">
+        select convert(varchar(100),date,112) time,cast(datavalue as int) value
+         from  [SVC_compute].[dbo].[eco_SpiderWeixin] a join SVC.dbo.show c
+           on a.keywords = c.keyword
+           and a.date&gt;=c.Begin_Date
+           and a.date&lt;=c.end_Date
+          and c.showname =#{showname} order by time
+    </select>
+
+    <select id="getShowtgi" parameterType="string"  resultType="com.iresearch.svc.bean.Showtgi">
+        select * from svc_tgi_display  where  show = #{show}
+    </select>
+
+
+
+    <select id="getAllshow_Basic" statementType="CALLABLE" parameterType="com.iresearch.svc.bean.Norm" resultType="com.iresearch.svc.bean.Show">
+        <![CDATA[
+      { call     sproc_svc_allshow(#{sex, mode=IN, jdbcType=VARCHAR},
+                                #{agegroup, mode=IN, jdbcType=VARCHAR},
+                                #{citylevel, mode=IN, jdbcType=VARCHAR},
+                                #{showtype, mode=IN, jdbcType=VARCHAR},
+                                #{showlevel, mode=IN, jdbcType=VARCHAR},
+                                #{type ,mode=IN ,jdbcType=VARCHAR},
+                                #{brandtype, mode=IN, jdbcType=VARCHAR},
+                                #{sponsortype, mode=IN, jdbcType=VARCHAR},
+                                #{begindate, mode=IN, jdbcType=DATE},
+                                #{enddate, mode=IN, jdbcType=DATE}) }
+       ]]>
+    </select>
+
+
+    <select id="getShowbrand_Basic" statementType="CALLABLE"   resultType="com.iresearch.svc.bean.Showbrand">
+             <![CDATA[
+      { call     sproc_svc_showbrand(#{norm.sex, mode=IN, jdbcType=VARCHAR},
+                                #{norm.agegroup, mode=IN, jdbcType=VARCHAR},
+                                #{norm.citylevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showlevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.type ,mode=IN ,jdbcType=VARCHAR},
+                                #{norm.brandtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.sponsortype, mode=IN, jdbcType=VARCHAR},
+                                #{show, mode=IN, jdbcType=VARCHAR},
+                                #{norm.begindate, mode=IN, jdbcType=DATE},
+                                #{norm.enddate, mode=IN, jdbcType=DATE}) }
+       ]]>
+    </select>
+
+
+
+    <!--<update id="updateUser" parameterType="User">-->
+        <!--update user set name=#{name} where id = #{id}-->
+    <!--</update>-->
+    <!--<delete id="deleteAllUsers">-->
+        <!--delete from user-->
+    <!--</delete>-->
+    <!--<delete id="deleteUser" parameterType="int">-->
+        <!--delete from user where id = #{id}-->
+    <!--</delete>-->
+
+</mapper>

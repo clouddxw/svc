@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iresearch.svc.mapper.svc.ShowlibMapper">
+
+    <select id="getShowsimilar" statementType="CALLABLE"  resultType="com.iresearch.svc.bean.Showsimilar">
+         <![CDATA[
+      { call   sp_svc_show_similar(#{norm.sex, mode=IN, jdbcType=VARCHAR},
+                                #{norm.agegroup, mode=IN, jdbcType=VARCHAR},
+                                #{norm.citylevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showtype, mode=IN, jdbcType=VARCHAR},
+                                #{norm.showlevel, mode=IN, jdbcType=VARCHAR},
+                                #{norm.type ,mode=IN ,jdbcType=VARCHAR},
+                                #{norm.brandtype, mode=IN, jdbcType=VARCHAR},
+                                #{showname, mode=IN, jdbcType=VARCHAR},
+                                #{norm.begindate, mode=IN, jdbcType=DATE},
+                                #{norm.enddate, mode=IN, jdbcType=DATE}) }
+       ]]>
+    </select>
+    <select id="getShowbd" parameterType="string"  resultType="com.iresearch.svc.bean.Libshowbd">
+        select t.showname,
+               t.brandname,
+               case when (t.sponsortype='' or t.sponsortype is null) then '其他'
+                    else t.sponsortype
+               end sponsortype,
+               t1.logo
+			from  showbrand t, brand t1
+			where t.brandname=t1.brandname
+			  and t.showname=#{showname}
+			  order by sponsortype desc
+    </select>
+
+
+
+</mapper>
