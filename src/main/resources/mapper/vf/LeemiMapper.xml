@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iresearch.svc.mapper.vf.LeemiMapper">
+
+
+    <select id="getItems" parameterType="string" resultType="com.iresearch.svc.bean.LeeproductItem">
+       select * from  lee_ods.dbo.rpt_mi_product_t10link_m
+       where date=convert(date,#{date})
+         and type=#{type}
+         and industry_en=#{industry_en}
+         and industry2=#{industry2}
+       order by brandrn asc ;
+    </select>
+
+    <!--<select id="getCbsItems" parameterType="string" resultType="com.iresearch.svc.bean.ItemDemo">-->
+             <!--select brandrn,-->
+                    <!--brandnum,-->
+                    <!--t1_picpath t1link,-->
+                    <!--t2_picpath t2link,-->
+                    <!--t3_picpath t3link,-->
+                    <!--t4_picpath t4link,-->
+                    <!--t5_picpath t5link-->
+             <!--from-->
+             <!--vf_dm.dbo.dm_vf_cbs_top5_m t1-->
+            <!--where t1.type=#{type}-->
+              <!--and date=convert(date,#{date}) order by brandrn asc;-->
+    <!--</select>-->
+
+
+
+
+
+    <!--<update id="updateUser" parameterType="User">-->
+        <!--update user set name=#{name} where id = #{id}-->
+    <!--</update>-->
+    <!--<delete id="deleteAllUsers">-->
+        <!--delete from user-->
+    <!--</delete>-->
+    <!--<delete id="deleteUser" parameterType="int">-->
+        <!--delete from user where id = #{id}-->
+    <!--</delete>-->
+
+</mapper>

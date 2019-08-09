@@ -35,7 +35,7 @@ function divitem(link,backcolor){
 
 
     Con='<li style="background:'+backcolor+'">'+
-		   '<div class="imag"><img src="http://svc.iresearch.cn/file-img/'+link+'"></div>'+
+		   '<div class="imag"><img src="http://svc.iresearch.cn/vf_mi_img/'+link+'"></div>'+
 		'</li>';
 	return Con;
 }

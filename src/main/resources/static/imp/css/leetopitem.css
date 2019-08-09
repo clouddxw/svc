@@ -1,0 +1,32 @@
+*{margin:0;
+padding:0
+}
+.mainarea{
+width:620px;height:636px;background:#fff;
+}
+
+.top5list{
+list-style:none;
+display:block;
+width:620px;
+height:106px;
+}
+
+.top5list li{
+float:left;
+display:block;
+height:106px;
+width:62px;
+}
+.top5list li .imag{
+float:left;
+display:block;
+height:56px;
+width:56px;
+margin:0 3px;
+margin-top:6px;
+}
+.top5list li .imag img{
+width:100%;
+height:100%;
+}

@@ -105,6 +105,8 @@ public class LoginInterceptor_v extends HandlerInterceptorAdapter {
         notLoginPaths.add("/img/**");
         notLoginPaths.add("/vf/**");
         notLoginPaths.add("/VF/**");
+        notLoginPaths.add("/lee/**");
+        notLoginPaths.add("/Lee/**");
 
         if(notLoginPaths.contains(path)) return false;
         return true;

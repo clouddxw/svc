@@ -30,7 +30,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     /**
      * 不需要登录拦截的url:登录注册和验证码
      */
-    final String[] notLoginInterceptPaths = {"/login/**","/login.html**","/imp/css/**","/imp/js/**","/img/**","/index/**","/vf/**","/VF/**"};//"/", "/login/**", "/person/**", "/register/**", "/validcode", "/captchaCheck", "/file/**", "/contract/htmltopdf", "/questions/**", "/payLog/**", "/error/**" };
+    final String[] notLoginInterceptPaths = {"/login/**","/login.html**","/imp/css/**","/imp/js/**","/img/**","/index/**","/vf/**","/VF/**","/lee/**","/Lee/**"};//"/", "/login/**", "/person/**", "/register/**", "/validcode", "/captchaCheck", "/file/**", "/contract/htmltopdf", "/questions/**", "/payLog/**", "/error/**" };
     final String[] nLoginInterceptPaths = {"/basic/**"};
 
     @Override
