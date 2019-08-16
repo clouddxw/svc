@@ -1,0 +1,56 @@
+[2019-08-15 12:31:26,354][main][INFO][com.iresearch.svc.SvcApplication:50] Starting SvcApplication on mac-clouddxw.local with PID 3748 (/Users/clouddxw/IdeaProjects/svc/target/classes started by clouddxw in /Users/clouddxw/IdeaProjects/svc)
+[2019-08-15 12:31:26,402][main][INFO][com.iresearch.svc.SvcApplication:675] No active profile set, falling back to default profiles: default
+[2019-08-15 12:31:27,110][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:244] Multiple Spring Data modules found, entering strict repository configuration mode!
+[2019-08-15 12:31:27,116][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:126] Bootstrapping Spring Data repositories in DEFAULT mode.
+[2019-08-15 12:31:27,154][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:182] Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+[2019-08-15 12:31:27,445][main][INFO][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$58b69901] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-08-15 12:31:27,811][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] Tomcat initialized with port(s): 9095 (http)
+[2019-08-15 12:31:27,830][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9095"]
+[2019-08-15 12:31:27,841][main][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2019-08-15 12:31:27,841][main][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.14]
+[2019-08-15 12:31:27,849][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/clouddxw/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[2019-08-15 12:31:27,936][main][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2019-08-15 12:31:27,936][main][INFO][org.springframework.web.context.ContextLoader:296] Root WebApplicationContext: initialization completed in 1489 ms
+[2019-08-15 12:31:28,853][main][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:171] Initializing ExecutorService 'applicationTaskExecutor'
+[2019-08-15 12:31:29,305][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9095"]
+[2019-08-15 12:31:29,345][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] Tomcat started on port(s): 9095 (http) with context path ''
+[2019-08-15 12:31:29,349][main][INFO][com.iresearch.svc.SvcApplication:59] Started SvcApplication in 3.4 seconds (JVM running for 4.663)
+[2019-08-15 12:31:36,151][http-nio-9095-exec-1][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2019-08-15 12:31:36,151][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:524] Initializing Servlet 'dispatcherServlet'
+[2019-08-15 12:31:36,159][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:546] Completed initialization in 7 ms
+[2019-08-15 12:32:03,495][http-nio-9095-exec-5][INFO][io.lettuce.core.EpollProvider:68] Starting without optional epoll library
+[2019-08-15 12:32:03,496][http-nio-9095-exec-5][INFO][io.lettuce.core.KqueueProvider:70] Starting without optional kqueue library
+[2019-08-15 12:32:03,637][http-nio-9095-exec-5][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2019-08-15 12:32:03,968][http-nio-9095-exec-5][INFO][com.zaxxer.hikari.pool.PoolBase:525] HikariPool-1 - Driver does not support get/set network timeout for connections. (不支持此操作。)
+[2019-08-15 12:32:04,011][http-nio-9095-exec-5][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2019-08-15 12:32:04,121][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.LoginController:159] com.iresearch.svc.controller.LoginController$1Checkres@1154574d
+[2019-08-15 12:32:06,107][http-nio-9095-exec-6][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-08-15 12:32:06,108][http-nio-9095-exec-6][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-08-15 12:32:06,983][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.IndexController:109] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|首页|打开页面|@|
+[2019-08-15 12:32:09,523][http-nio-9095-exec-3][INFO][com.iresearch.svc.controller.IndexController:109] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|首页|打开页面|@|
+[2019-08-15 12:32:15,545][http-nio-9095-exec-4][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-08-15 12:32:15,545][http-nio-9095-exec-4][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-08-15 12:32:15,966][http-nio-9095-exec-2][INFO][com.iresearch.svc.controller.IndexController:109] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|首页|打开页面|@|
+[2019-08-15 12:32:17,772][http-nio-9095-exec-10][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-08-15 12:32:17,772][http-nio-9095-exec-10][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-08-15 12:32:18,181][http-nio-9095-exec-1][INFO][com.iresearch.svc.controller.IndexController:109] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|首页|打开页面|@|
+[2019-08-15 12:32:19,525][http-nio-9095-exec-6][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-08-15 12:32:19,526][http-nio-9095-exec-6][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-08-15 12:32:19,971][http-nio-9095-exec-7][INFO][com.iresearch.svc.controller.IndexController:109] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|首页|打开页面|@|
+[2019-08-15 12:32:22,315][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.IndexController:109] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|首页|打开页面|@|
+[2019-08-15 12:32:23,811][http-nio-9095-exec-8][INFO][com.iresearch.svc.controller.IndexController:109] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|首页|打开页面|@|
+[2019-08-15 12:32:40,903][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.IndexController:109] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|首页|打开页面|@|
+[2019-08-15 12:32:53,735][http-nio-9095-exec-3][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-08-15 12:32:53,736][http-nio-9095-exec-3][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-08-15 12:32:54,339][http-nio-9095-exec-1][INFO][com.iresearch.svc.controller.LoginInterceptor_n:78] normal
+[2019-08-15 12:32:54,339][http-nio-9095-exec-1][INFO][com.iresearch.svc.controller.LoginInterceptor_n:80] 2
+[2019-08-15 12:32:59,020][http-nio-9095-exec-1][INFO][com.iresearch.svc.controller.Allshow_BasicController:250] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|节目排名与详情|打开页面|@|
+[2019-08-15 12:33:35,665][http-nio-9095-exec-3][INFO][com.iresearch.svc.controller.IndexController:109] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|首页|打开页面|@|
+[2019-08-15 12:33:39,041][http-nio-9095-exec-4][INFO][com.iresearch.svc.controller.IndexController:109] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|首页|打开页面|@|
+[2019-08-15 12:33:58,369][http-nio-9095-exec-10][INFO][com.iresearch.svc.controller.IndexController:109] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|首页|打开页面|@|
+[2019-08-15 12:34:00,293][http-nio-9095-exec-1][INFO][com.iresearch.svc.controller.IndexController:109] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|首页|打开页面|@|
+[2019-08-15 12:48:56,088][http-nio-9095-exec-5][INFO][com.iresearch.svc.controller.IndexController:109] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|首页|打开页面|@|
+[2019-08-15 12:49:10,671][http-nio-9095-exec-9][INFO][com.iresearch.svc.controller.IndexController:109] |@|0:0:0:0:0:0:0:1|com.iresearch.svc.bean.LoginUser@61575202|首页|打开页面|@|
+[2019-08-15 18:50:49,451][Thread-11][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208] Shutting down ExecutorService 'applicationTaskExecutor'
+[2019-08-15 18:50:49,480][Thread-11][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2019-08-15 18:50:49,481][Thread-11][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
