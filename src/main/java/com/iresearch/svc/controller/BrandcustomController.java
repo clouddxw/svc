@@ -151,6 +151,8 @@ public class BrandcustomController {
                 redisUtils.set(tgikey,showtgi,3600);
             }
 
+
+            System.out.println(allshowrk.get(0).getSvcavgrk());
             Brandcustom brandcustom=new Brandcustom();
             brandcustom.setAllshowrk(allshowrk);
             brandcustom.setBrandtype(brandtype);

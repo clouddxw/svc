@@ -14,7 +14,7 @@ public class Normmap {
         out+=str.replace("谈话/脱口秀类","0").replace("生活观察类","1").
                 replace("综合游戏类","2").replace("才艺竞演类","3").
                 replace("文化类","4").replace("美食类","5").
-                replace("亲子/儿童互动类","6").replace("明星竞演类","7").
+                replace("亲子/儿童互动","6").replace("明星竞演类","7").
                 replace("喜剧类","8").replace("创意类","9").replace("其他","10");
         return out;
     }

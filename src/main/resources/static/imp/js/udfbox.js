@@ -225,3 +225,25 @@ function deepClone(obj){
     return objClone
 }
 
+
+function str_br(sStr, iPerLineLen ,lf){
+    //var sStr=document.getElementById(id).innerHTML;
+    if(sStr.replace(/[^\x00-\xff]/g,"xx").length <= iPerLineLen){
+        return -1;
+    }
+
+    var str="";
+    var l=0;
+    var schar;
+    for(var i=0;schar=sStr.charAt(i);i++){
+        str+=schar;
+        l+=(schar.match(/[^\x00-\xff]/)!=null?2:1);
+        if(l>= iPerLineLen){
+            //str+="\n";
+            str+=lf;
+            l=0;
+        }
+    }
+    //document.getElementById(id).innerHTML=str;
+    return str;
+}

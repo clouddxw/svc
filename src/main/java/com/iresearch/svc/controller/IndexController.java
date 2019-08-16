@@ -90,7 +90,7 @@ public class IndexController {
                 redisUtils.set(custombrandkey,custombrand,3600);
             }
 
-            String allshowrkkey="allshowrk_"+Normmap.normmap(norm);
+            String allshowrkkey="allshowlib_"+Normmap.normmap(norm);
             List<Showname> allshow=new ArrayList<>();
             if(redisUtils.hasKey(allshowrkkey)){
                 allshow=(List<Showname>)redisUtils.get(allshowrkkey);

@@ -308,6 +308,7 @@ margin:0 auto;
 display:inline-block;
 width:105px;
 height:150px;
+overflow: hidden;
 }
 
 .top50show li .imag{
@@ -355,12 +356,12 @@ height:40px;
 text-align:center;
 color:#1d914d;
 line-height:20px;
-font-size:12px;
+font-size:10px;
 }
 
 .top50show li .conte span{
 color:#7e7e7e;
-font-size:12px;
+font-size:10px;
 text-align:center;
 }
 

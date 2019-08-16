@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品版本对比</title>
+    <style>
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+.box{
+	margin-top: 80px;
+	width: 100%;
+	height: 600px;
+
+	position: relative;
+}
+
+.box .list{
+	width: 1200px;
+	height: 600px;
+	overflow: hidden;
+	position: absolute;
+	left: 50%;
+	margin-left: -600px;
+}
+
+.btn{
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	width: 60px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	background: rgba(0,255,0,.5);
+	cursor: pointer;
+}
+.next{
+	right: 0;
+}
+
+li{
+	position: absolute;
+	top: 0;
+	left: 0;
+	list-style: none;
+	opacity: 0;
+	transition: all 0.3s ease-out;
+}
+
+.box img{
+	width: 800px;
+	height: 450px;
+	border:none;
+	float: left;
+}
+
+.p1{
+	transform:translate3d(0px,0,0) scale(0.81);
+	transform-origin:0 50%;
+	opacity: 0.8;
+	z-index: 2;
+}
+.p2{
+	transform:translate3d(200px,0,0) scale(1);
+	z-index: 3;
+	opacity: 1;
+}
+.p3{
+	transform:translate3d(400px,0,0) scale(0.81);
+	transform-origin:100% 50%;
+	opacity: 0.8;
+	z-index: 2;
+}
+
+
+.buttons{
+	position: absolute;
+	width: 1200px;
+	height: 30px;
+	bottom: 0;
+	left: 50%;
+	margin-left: -600px;
+	text-align: center;
+	padding-top: 10px;
+}
+.buttons a{
+	display: inline-block;
+	width: 35px;
+	height: 5px;
+	padding-top: 4px;
+	cursor: pointer;
+}
+span{
+	display: block;
+	width: 35px;
+	height: 1px;
+	background: red;
+}
+.blue{
+	background: blue;
+}
+
+
+
+        .crontrast_p1 {
+            width:94%;
+            height:50px;
+            margin-left: 6%;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .crontrast_p1 .icon_t{
+            float:left;
+            width:24px;
+            height:20px;
+            margin:0 15px;
+        }
+
+        .crontrast_p1 .icon_f{
+            float:left;
+            width:24px;
+            height:24px;
+            margin:0 13px;
+        }
+
+        .crontrast_p1 img{
+            width:100%;
+            height:100%;
+        }
+
+    </style>
+<script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="main" style="width: 1280px;margin:0 auto;">
+    <div style="width:1280px;height:50px;line-height:50px;font-size:30px;font-weight:900;">产品版本差异对比</div>
+    <hr style="width:1280px;">
+    <div style="width:1280px;height:600px;">
+        <div style="float:left;width:480px;height:600px;margin:0 80px;">
+            <div style="height:150px;width:100%;margin-top: 20px;">
+                <div style="width:100px;height:89px;margin:0 auto;"><img src="http://svc.iresearch.cn/img/greyD.png"></div>
+                <div style="text-align: center;line-height: 61px;font-size: 20px;font-weight: 600;">免费版</div>
+            </div>
+            <hr style="width:100%;">
+            <div class="crontrast_p1" style="margin-top: 20px"><div class="icon_t"><img src="http://svc.iresearch.cn/img/green_true.png"></div>节目排名与详情（可查看2019年开播节目）</div>
+            <div class="crontrast_p1"><div class="icon_t"><img src="http://svc.iresearch.cn/img/green_true.png"></div>品牌排名与详情</div>
+            <div class="crontrast_p1"><div class="icon_f"><img src="http://svc.iresearch.cn/img/red_false.png"></div>节目/品牌对比</div>
+            <div class="crontrast_p1"><div class="icon_f"><img src="http://svc.iresearch.cn/img/red_false.png"></div>定制节目详情</div>
+            <div class="crontrast_p1"><div class="icon_f"><img src="http://svc.iresearch.cn/img/red_false.png"></div>定制品牌详情</div>
+            <div class="crontrast_p1"><div class="icon_f"><img src="http://svc.iresearch.cn/img/red_false.png"></div>节目库</div>
+            <div class="crontrast_p1"><div class="icon_f"><img src="http://svc.iresearch.cn/img/red_false.png"></div>NORM值功能</div>
+        </div>
+        <div style="float:left;width:480px;height:600px;margin:0 80px;">
+            <div style="height:150px;width:100%;margin-top: 20px;">
+                <div style="width:100px;height:89px;margin:0 auto;"><img src="http://svc.iresearch.cn/img/greenD.png"></div>
+                <div style="text-align: center;line-height: 30px;font-size: 20px;font-weight: 600;">升级版<br>（同一账号可20台电脑同时登陆）</div>
+            </div>
+            <hr style="width:100%;">
+            <div class="crontrast_p1" style="margin-top: 20px;"><div class="icon_t"><img src="http://svc.iresearch.cn/img/green_true.png"></div>节目排名与详情（可查看全部节目）</div>
+            <div class="crontrast_p1"><div class="icon_t"><img src="http://svc.iresearch.cn/img/green_true.png"></div>品牌排名与详情</div>
+            <div class="crontrast_p1"><div class="icon_t"><img src="http://svc.iresearch.cn/img/green_true.png"></div>节目/品牌对比</div>
+            <div class="crontrast_p1"><div class="icon_t"><img src="http://svc.iresearch.cn/img/green_true.png"></div>定制节目详情</div>
+            <div class="crontrast_p1"><div class="icon_t"><img src="http://svc.iresearch.cn/img/green_true.png"></div>定制品牌详情</div>
+            <div class="crontrast_p1"><div class="icon_t"><img src="http://svc.iresearch.cn/img/green_true.png"></div>节目库</div>
+            <div class="crontrast_p1"><div class="icon_t"><img src="http://svc.iresearch.cn/img/green_true.png"></div>NORM值功能</div>
+        </div>
+
+    </div>
+
+    <div style="float:right;height:50px;width:1280px;text-align: right;font-size: 20px;font-weight: 600;color: green">账号申请及升级请联系：IRS.SVC@iresearch.com.cn 或咨询相关销售同事。</div>
+
+
+</div>
+
+	<div class="box">
+
+	<div class="list">
+		<ul>
+			<li class="p3"><a href="#"><img src="http://svc.iresearch.cn/img/vercontrast1.jpg" alt="" /></a></li>
+			<li class="p2"><a href="#"><img src="http://svc.iresearch.cn/img/vercontrast2.jpg" alt="" /></a></li>
+			<li class="p1"><a href="#"><img src="http://svc.iresearch.cn/img/vercontrast3.jpg" alt="" /></a></li>
+		</ul>
+	</div>
+
+	<a href="javascript:;" class="prev btn"><</a>
+	<a href="javascript:;" class="next btn">></a>
+
+	<div class="buttons">
+		<a href="javascript:;"><span class="blue"></span></a>
+		<a href="javascript:;"><span></span></a>
+		<a href="javascript:;"><span></span></a>
+	</div>
+	</div>
+
+
+<script type="text/javascript">
+var $a=$(".buttons a");
+var $s=$(".buttons span");
+var cArr=["p3","p2","p1"];
+var index=0;
+$(".next").click(
+	function(){
+	nextimg();
+	}
+)
+$(".prev").click(
+	function(){
+	previmg();
+	}
+)
+//上一张
+function previmg(){
+	cArr.unshift(cArr[2]);
+	cArr.pop();
+	//i是元素的索引，从0开始
+	//e为当前处理的元素
+	//each循环，当前处理的元素移除所有的class，然后添加数组索引i的class
+	$("li").each(function(i,e){
+		$(e).removeClass().addClass(cArr[i]);
+	})
+	index--;
+	if (index<0) {
+		index=2;
+	}
+	show();
+}
+
+//下一张
+function nextimg(){
+	cArr.push(cArr[0]);
+	cArr.shift();
+	$("li").each(function(i,e){
+		$(e).removeClass().addClass(cArr[i]);
+	})
+	index++;
+	if (index>2) {
+		index=0;
+	}
+	show();
+}
+
+//通过底下按钮点击切换
+$a.each(function(){
+	$(this).click(function(){
+		var myindex=$(this).index();
+		var b=myindex-index;
+		if(b==0){
+			return;
+		}
+		else if(b>0) {
+			/*
+			 * splice(0,b)的意思是从索引0开始,取出数量为b的数组
+			 * 因为每次点击之后数组都被改变了,所以当前显示的这个照片的索引才是0
+			 * 所以取出从索引0到b的数组,就是从原本的这个照片到需要点击的照片的数组
+			 * 这时候原本的数组也将这部分数组进行移除了
+			 * 再把移除的数组添加的原本的数组的后面
+			 */
+			var newarr=cArr.splice(0,b);
+			cArr=$.merge(cArr,newarr);
+			$("li").each(function(i,e){
+			$(e).removeClass().addClass(cArr[i]);
+			})
+			index=myindex;
+			show();
+		}
+		else if(b<0){
+			/*
+			 * 因为b<0,所以取数组的时候是倒序来取的,也就是说我们可以先把数组的顺序颠倒一下
+			 * 而b现在是负值,所以取出索引0到-b即为需要取出的数组
+			 * 也就是从原本的照片到需要点击的照片的数组
+			 * 然后将原本的数组跟取出的数组进行拼接
+			 * 再次倒序,使原本的倒序变为正序
+			 */
+			cArr.reverse();
+			var oldarr=cArr.splice(0,-b)
+			cArr=$.merge(cArr,oldarr);
+			cArr.reverse();
+			$("li").each(function(i,e){
+			$(e).removeClass().addClass(cArr[i]);
+			})
+			index=myindex;
+			show();
+		}
+	})
+})
+
+//改变底下按钮的背景色
+function show(){
+		$($s).eq(index).addClass("blue").parent().siblings().children().removeClass("blue");
+}
+
+//点击class为p2的元素触发上一张照片的函数
+$(document).on("click",".p1",function(){
+	previmg();
+	return false;//返回一个false值，让a标签不跳转
+});
+
+//点击class为p4的元素触发下一张照片的函数
+$(document).on("click",".p3",function(){
+	nextimg();
+	return false;
+});
+
+//			鼠标移入box时清除定时器
+$(".box").mouseover(function(){
+	clearInterval(timer);
+})
+
+//			鼠标移出box时开始定时器
+$(".box").mouseleave(function(){
+	timer=setInterval(nextimg,4000);
+})
+
+//			进入页面自动开始定时器
+timer=setInterval(nextimg,4000);
+</script>
+
+<!-- <div style="text-align:center;clear:both">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div> -->
+
+
+
+
+
+
+
+</body>
+</html>

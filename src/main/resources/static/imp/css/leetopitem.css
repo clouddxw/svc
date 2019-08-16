@@ -6,25 +6,33 @@ width:620px;height:636px;background:#fff;
 }
 
 .top5list{
-list-style:none;
-display:block;
+white-space: nowrap;
 width:620px;
 height:106px;
+overflow: hidden;
+font-size: 8px;
+}
+
+.top5list .units{
+    width:100%;
+    text-align:center;
+}
+
+.top5list:hover{
+    overflow-x: auto;
 }
 
 .top5list li{
-float:left;
-display:block;
-height:106px;
-width:62px;
+display:inline-block;
+height:100px;
+width:124px;
 }
 .top5list li .imag{
-float:left;
 display:block;
-height:56px;
-width:56px;
-margin:0 3px;
-margin-top:6px;
+height:70px;
+width:70px;
+margin:0 22px;
+margin-top:3px;
 }
 .top5list li .imag img{
 width:100%;

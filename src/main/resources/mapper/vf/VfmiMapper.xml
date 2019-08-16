@@ -6,7 +6,7 @@
 
 
     <select id="getItems" parameterType="string" resultType="com.iresearch.svc.bean.ItemDemo">
-       select * from  vf_dm.dbo.dm_vf_brand_t5link_m  
+       select * from  externaldata.dbo.rpt_mi_product_top_m
        where date=convert(date,#{date}) and brandtype=#{brandtype} and type=#{type} order by brandrn asc ;
     </select>
 
@@ -19,7 +19,7 @@
                     t4_picpath t4link,
                     t5_picpath t5link
              from
-             vf_dm.dbo.dm_vf_cbs_top5_m t1
+              externaldata.dbo.rpt_mi_cbs_top_m t1
             where t1.type=#{type}
               and date=convert(date,#{date}) order by brandrn asc;
     </select>

@@ -6,7 +6,7 @@
 
 
     <select id="getItems" parameterType="string" resultType="com.iresearch.svc.bean.LeeproductItem">
-       select * from  lee_ods.dbo.rpt_mi_product_t10link_m
+       select * from  lee_ods.dbo.rpt_mi_product_top_m
        where date=convert(date,#{date})
          and type=#{type}
          and industry_en=#{industry_en}

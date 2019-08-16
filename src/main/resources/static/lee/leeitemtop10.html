@@ -3,29 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <title>VF Top5</title>
+	<style>
+		.tooltip {
+			position: relative;
+			display: inline-block;
+			/*border-bottom: 1px dotted black;*/
+		}
+
+		.tooltip .tooltiptext {
+			visibility: hidden;
+			width: 160px;
+			background-color: black;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px 0;
+			font-size:8px;
+
+			/* 定位 */
+			position: absolute;
+            left:55px;
+            top:10px;
+			z-index: 1;
+		}
+
+
+
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+		}
+
+
+	</style>
 <link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/leetopitem.css">
 <script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="mainarea">
-	<ul class="top5list" id="t1brand">
+	<div class="top5list" id="t1brand">
 
-	</ul>
-	<ul class="top5list" id="t2brand">
+	</div>
+	<div class="top5list" id="t2brand">
 
-	</ul>
-	<ul class="top5list" id="t3brand">
+	</div>
+	<div class="top5list" id="t3brand">
 
-	</ul>
-	<ul class="top5list" id="t4brand">
+	</div>
+	<div class="top5list" id="t4brand">
 
-	</ul>
-	<ul class="top5list" id="t5brand">
+	</div>
+	<div class="top5list" id="t5brand">
 
-	</ul>
-	<ul class="top5list" id="t6brand">
+	</div>
+	<div class="top5list" id="t6brand">
 
-	</ul>
+	</div>
 </div>
 
 <script src="http://svc.iresearch.cn/imp/js/leetopitem.js"></script>

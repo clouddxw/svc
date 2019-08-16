@@ -2,7 +2,7 @@ package com.iresearch.svc.bean;
 
 public class Showname {
 	private String show;
-	private String svcavgrk;
+	private int svcavgrk;
 
 	public String getShow() {
 		return show;
@@ -12,14 +12,12 @@ public class Showname {
 		this.show = show;
 	}
 
-	public String getSvcavgrk() {
+	public int getSvcavgrk() {
 		return svcavgrk;
 	}
 
-	public void setSvcavgrk(String svcavgrk) {
+	public void setSvcavgrk(int svcavgrk) {
 		this.svcavgrk = svcavgrk;
 	}
-
-
 
 }
