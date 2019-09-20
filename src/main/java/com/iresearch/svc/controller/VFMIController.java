@@ -4,6 +4,7 @@ package com.iresearch.svc.controller;
 
 import com.iresearch.svc.bean.Item;
 import com.iresearch.svc.bean.ItemDemo;
+import com.iresearch.svc.bean.VfMiPriceRange;
 import com.iresearch.svc.mapper.vf.VfmiMapper;
 import com.iresearch.svc.redis.RedisUtils;
 import org.slf4j.Logger;
@@ -34,7 +35,7 @@ public class VFMIController {
         String type=request.getParameter("type");
         String date=request.getParameter("date");
         String itemskey="vfmi_proitems"+brandtype+type+date;
-        logger.info(itemskey);
+        //logger.info(itemskey);
         List<ItemDemo> items=new ArrayList<>();
         if(redisUtils.hasKey(itemskey)){
             items=(List<ItemDemo>)redisUtils.get(itemskey);
@@ -54,12 +55,31 @@ public class VFMIController {
         String type=request.getParameter("type");
         String date=request.getParameter("date");
         String itemskey="vfmi_cbsitems"+type+date;
-        logger.info(itemskey);
+        //logger.info(itemskey);
         List<ItemDemo> items=new ArrayList<>();
         if(redisUtils.hasKey(itemskey)){
             items=(List<ItemDemo>)redisUtils.get(itemskey);
         }else{
             items=vfmimapper.getCbsItems(date, type);
+            if(!items.isEmpty()){
+                redisUtils.set(itemskey,items,3600);
+            }
+        }
+        return  items;
+    }
+
+    @GetMapping("getPirceRanges")
+    @ResponseBody
+    public Object getPirceRanges(HttpServletRequest request){
+        String category=request.getParameter("category");
+        String date=request.getParameter("date");
+        String itemskey="vfmi_pricerange"+category+date;
+        //logger.info(itemskey);
+        List<VfMiPriceRange> items=new ArrayList<>();
+        if(redisUtils.hasKey(itemskey)){
+            items=(List<VfMiPriceRange>)redisUtils.get(itemskey);
+        }else{
+            items=vfmimapper.getPirceRange(category, date);
             if(!items.isEmpty()){
                 redisUtils.set(itemskey,items,3600);
             }

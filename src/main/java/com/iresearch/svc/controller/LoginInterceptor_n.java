@@ -75,9 +75,7 @@ public class LoginInterceptor_n extends HandlerInterceptorAdapter {
             out = false;
         }else{
             String role=user.getRole();
-            logger.info(role);
             if(role.equals("normal")){
-                logger.info("2");
                 out = true;
             }else{
                 out = false;

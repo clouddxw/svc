@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <title>Outdoor apparel and footwear</title>
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/vf_pricerange.css">
+
+
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://svc.iresearch.cn/imp/js/browser_check.js"></script>
+    <script type="text/javascript" src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
+    <script src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
+    <script src="http://svc.iresearch.cn/imp/js/vf_pricerange_tab.js"></script>
+
+
+</head>
+<body>
+<div id="main_area">
+
+
+</div>
+<script>
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+
+    var type =getQueryString("type");
+    var date =getQueryString("date");
+    if (type=='outdoor'){
+        $("#main_area").load("http://svc.iresearch.cn/vf/pricerange/outdoor.html?date="+date);
+    }else if(type=='sports'){
+        $("#main_area").load("http://svc.iresearch.cn/vf/pricerange/sports.html?date="+date);
+    }else if(type=='menapparel'){
+        $("#main_area").load("http://svc.iresearch.cn/vf/pricerange/menapparel.html?date="+date);
+    }else if(type=='bags'){
+        $("#main_area").load("http://svc.iresearch.cn/vf/pricerange/bags.html?date="+date);
+    }
+
+</script>
+
+</body>
+</html>

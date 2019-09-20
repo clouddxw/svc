@@ -75,9 +75,7 @@ public class LoginInterceptor_v extends HandlerInterceptorAdapter {
             out = false;
         }else{
             String role=user.getRole();
-            logger.info(role);
             if(role.equals("admin") || role.equals("vip")){
-                logger.info("1");
                 out = true;
             }else{
                 out = false;

@@ -65,7 +65,7 @@ public class ShowcustomController {
             norm.setEnddate(enddatedefv);
             session.setAttribute("showcustomnorm", norm);
             String showname=new String(URLDecoder.decode(request.getParameter("showname")).getBytes("ISO-8859-1"),"UTF-8");
-            System.out.println(showname);
+            //System.out.println(showname);
 
             String scshowkey="scshow_"+showname+Normmap.normmap(norm);
             String sshowkey="sshow_"+showname+Normmap.normmap(norm);
@@ -179,7 +179,7 @@ public class ShowcustomController {
             String strbgdate=request.getParameter("bgdate");
             String strenddate=request.getParameter("enddaten");
             String brandname=request.getParameter("brandname");
-            System.out.println(playplat+showtypevn+showlevel+sponsortype+brandtypevn+sex+agegroup+citylevel+strbgdate+strenddate);
+            //System.out.println(playplat+showtypevn+showlevel+sponsortype+brandtypevn+sex+agegroup+citylevel+strbgdate+strenddate);
 
             java.sql.Date begindate = java.sql.Date.valueOf(strbgdate);
             java.sql.Date enddate = java.sql.Date.valueOf(strenddate);

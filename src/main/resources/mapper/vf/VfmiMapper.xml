@@ -25,6 +25,22 @@
     </select>
 
 
+    <select id="getPirceRange" parameterType="string" resultType="com.iresearch.svc.bean.VfMiPriceRange">
+
+             select brand,
+                    category,
+                    sales,
+                    items,
+                    link,
+                    price,
+                    discount
+             from
+              externaldata.dbo.rpt_mi_price_range t1
+            where t1.category=#{category}
+              and date=convert(date,#{date}) order by rn asc;
+    </select>
+
+
 
 
 
