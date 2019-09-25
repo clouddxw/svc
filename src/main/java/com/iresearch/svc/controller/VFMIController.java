@@ -2,9 +2,10 @@ package com.iresearch.svc.controller;
 
 
 
-import com.iresearch.svc.bean.Item;
 import com.iresearch.svc.bean.ItemDemo;
 import com.iresearch.svc.bean.VfMiPriceRange;
+import com.iresearch.svc.bean.VfMiTopitem;
+import com.iresearch.svc.bean.VfMiTopstore;
 import com.iresearch.svc.mapper.vf.VfmiMapper;
 import com.iresearch.svc.redis.RedisUtils;
 import org.slf4j.Logger;
@@ -68,18 +69,57 @@ public class VFMIController {
         return  items;
     }
 
-    @GetMapping("getPirceRanges")
+    @GetMapping("getMiTopItems")
     @ResponseBody
-    public Object getPirceRanges(HttpServletRequest request){
-        String category=request.getParameter("category");
+    public Object getMiTopItems(HttpServletRequest request){
+        String category=request.getParameter("category").replace("$","&");
         String date=request.getParameter("date");
-        String itemskey="vfmi_pricerange"+category+date;
+        String itemskey="vfmi_topitems"+category+date;
+        //logger.info(itemskey);
+        List<VfMiTopitem> items=new ArrayList<>();
+        if(redisUtils.hasKey(itemskey)){
+            items=(List<VfMiTopitem>)redisUtils.get(itemskey);
+        }else{
+            items=vfmimapper.getMiTopItems(category, date);
+            if(!items.isEmpty()){
+                redisUtils.set(itemskey,items,3600);
+            }
+        }
+        return  items;
+    }
+
+    @GetMapping("getMiTopStores")
+    @ResponseBody
+    public Object getMiTopStores(HttpServletRequest request){
+        String category=request.getParameter("category").replace("$","&");
+        String date=request.getParameter("date");
+        String itemskey="vfmi_topstores"+category+date;
+        //logger.info(itemskey);
+        List<VfMiTopstore> items=new ArrayList<>();
+        if(redisUtils.hasKey(itemskey)){
+            items=(List<VfMiTopstore>)redisUtils.get(itemskey);
+        }else{
+            items=vfmimapper.getMiTopStores(category, date);
+            if(!items.isEmpty()){
+                redisUtils.set(itemskey,items,3600);
+            }
+        }
+        return  items;
+    }
+
+
+    @GetMapping("getMiPirceRanges")
+    @ResponseBody
+    public Object getMiPirceRanges(HttpServletRequest request){
+        String category=request.getParameter("category").replace("$","&");
+        String date=request.getParameter("date");
+        String itemskey="vfmi_priceranges"+category+date;
         //logger.info(itemskey);
         List<VfMiPriceRange> items=new ArrayList<>();
         if(redisUtils.hasKey(itemskey)){
             items=(List<VfMiPriceRange>)redisUtils.get(itemskey);
         }else{
-            items=vfmimapper.getPirceRange(category, date);
+            items=vfmimapper.getMiPirceRanges(category, date);
             if(!items.isEmpty()){
                 redisUtils.set(itemskey,items,3600);
             }

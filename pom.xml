@@ -54,9 +54,26 @@
 
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
-            <artifactId>sqljdbc4</artifactId>
-            <scope>4.0</scope>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>6.5.4.jre10-preview</version>
+            <scope>test</scope>
         </dependency>
+
+
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>sqljdbc4</artifactId>
+            <scope>compile</scope>
+            <version>4.0</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>com.microsoft.sqlserver</groupId>-->
+            <!--<artifactId>mssql-jdbc</artifactId>-->
+            <!--<version>6.2.0.jre8</version>-->
+            <!--<scope>compile</scope>-->
+        <!--</dependency>-->
+
         <!--<dependency>-->
             <!--<groupId>org.springframework.boot</groupId>-->
             <!--<artifactId>spring-boot-starter-thymeleaf</artifactId>-->
@@ -92,18 +109,9 @@
             <version>1.1.0</version>
         </dependency>
         <dependency>
-            <groupId>com.microsoft.sqlserver.jdbc.SQLServerDriver</groupId>
-            <artifactId>sqljdbc42</artifactId>
-            <version>2.3</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/resources/lib/sqljdbc42.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons.collections.CollectionUtils</groupId>
-            <artifactId>commons-collections-3.2.2</artifactId>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
             <version>3.2.2</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/resources/lib/commons-collections-3.2.2.jar</systemPath>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-log4j2 -->
         <dependency>
@@ -119,17 +127,17 @@
 
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <includeSystemScope>true</includeSystemScope>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <!--<build>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<includeSystemScope>true</includeSystemScope>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</build>-->
 
 
 

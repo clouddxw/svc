@@ -25,7 +25,7 @@
     </select>
 
 
-    <select id="getPirceRange" parameterType="string" resultType="com.iresearch.svc.bean.VfMiPriceRange">
+    <select id="getMiTopItems" parameterType="string" resultType="com.iresearch.svc.bean.VfMiTopitem">
 
              select brand,
                     category,
@@ -38,6 +38,35 @@
               externaldata.dbo.rpt_mi_price_range t1
             where t1.category=#{category}
               and date=convert(date,#{date}) order by rn asc;
+    </select>
+
+
+    <select id="getMiTopStores" parameterType="string" resultType="com.iresearch.svc.bean.VfMiTopstore">
+
+
+             select    category_en,
+                       industry,
+                       store,
+                       sales,
+                       rk,
+                       yoy
+             from
+              [ExternalData].[dbo].[QBT_TopStore_Data_View] t1
+            where t1.category_en=#{category}
+              and date=convert(date,#{date}) order by rk asc;
+    </select>
+
+    <select id="getMiPirceRanges" parameterType="string" resultType="com.iresearch.svc.bean.VfMiPriceRange">
+
+             select    category_en,
+                       industry,
+                       price_range,
+                       sales_rate,
+                       sales_yoy
+             from
+              [ExternalData].[dbo].[QBT_PriceRange_View] t1
+            where t1.category_en=#{category}
+              and date=convert(date,#{date}) order by convert(int,replace(price_range,'-','')) asc;
     </select>
 
 

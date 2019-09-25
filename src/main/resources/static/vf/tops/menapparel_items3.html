@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="referrer" content="no-referrer">
     <title>Outdoor apparel and footwear</title>
+
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/vf_pricerange.css">
+    <link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/vfMitops.css">
 
 
     <script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
@@ -14,42 +15,30 @@
     <script type="text/javascript" src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
     <script src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
-    <script src="http://svc.iresearch.cn/imp/js/vfMiPriceranges_tab.js"></script>
+    <script src="http://svc.iresearch.cn/imp/js/vfMiTops_tab.js"></script>
+
 
 </head>
 <body>
 <div class="mainarea">
 
-    <div class="fbox3">
-        <div class="items">
-            <div class="titl">Women's bag</div>
+
+    <div class="fbox2">
 
 
-            <table id="stab1"></table>
 
-
-        </div>
-
-        <div class="items midd">
-            <div class="titl">Luggage</div>
-
-
-            <table id="stab2"></table>
-
-
-        </div>
 
         <div class="items">
-            <div class="titl">Backpack</div>
+            <div class="titl">Shirt</div>
 
 
-            <table id="stab3"></table>
+            <table id="tab7"></table>
 
 
         </div>
+
 
     </div>
-    <div class="title3st">Source: Qingbaotong</div>
 
 
 
@@ -57,16 +46,13 @@
 <script>
     $(function () {
         //1.初始化Table
-        var date =getQueryString("date")+"01";
-        var stab1init = sboottab('#stab1','Women\'s bag',date);
-        var stab2init = sboottab('#stab2','Luggage',date);
-        var stab3init = sboottab('#stab3','Backpack',date);
-        stab1init.Init();
-        stab2init.Init();
-        stab3init.Init();
+        var date =getQueryString("date");
+        var tab7init = boottab('#tab7','Shirt',date);
 
-
+        tab7init.Init();
     });
+
+
 
 
 </script>

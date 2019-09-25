@@ -1,18 +1,12 @@
 package com.iresearch.svc.bean;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class VfMiPriceRange {
-    String brand;
-    String category;
-    Double sales;
-    String items;
-    String link;
-    Integer price;
-    String discount;
+    String industry;
+    String category_en;
+    String price_range;
+    Double sales_rate;
+    Double sales_yoy;
 }

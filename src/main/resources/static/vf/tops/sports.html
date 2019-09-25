@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="referrer" content="no-referrer">
-    <title>Outdoor apparel and footwear</title>
+    <title>Sports apparel and footwear</title>
 
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/vf_pricerange.css">
+    <link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/vfMitops.css">
 
 
     <script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
@@ -15,16 +15,17 @@
     <script type="text/javascript" src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
     <script src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
-    <script src="http://svc.iresearch.cn/imp/js/vfMiPriceranges_tab.js"></script>
+    <script src="http://svc.iresearch.cn/imp/js/vfMiTops_tab.js"></script>
+
 
 
 </head>
 <body>
 <div class="mainarea">
-
-    <div class="fbox3">
+    <div class="title2st">Top Stores on Tmall</div>
+    <div class="sfbox3">
         <div class="items">
-            <div class="titl">Outdoor hardshell jacket</div>
+            <div class="titl">Sports T-shirt</div>
 
 
             <table id="stab1"></table>
@@ -33,7 +34,7 @@
         </div>
 
         <div class="items midd">
-            <div class="titl">Lightweight wind jacket</div>
+            <div class="titl">Sports hoodie</div>
 
 
             <table id="stab2"></table>
@@ -42,7 +43,7 @@
         </div>
 
         <div class="items">
-            <div class="titl">Outdoor causel apparel</div>
+            <div class="titl">Sneaker</div>
 
 
             <table id="stab3"></table>
@@ -51,10 +52,12 @@
         </div>
 
     </div>
-    <div class="fbox3">
+    <div class="sfbox2">
+
+
 
         <div class="items">
-            <div class="titl">Outdoor causel shoes</div>
+            <div class="titl">Canvas shoes</div>
 
 
             <table id="stab4"></table>
@@ -63,52 +66,35 @@
         </div>
 
 
-
-        <div class="items midd">
-            <div class="titl">Flash dry T-shirt</div>
-
-
-            <table id="stab5"></table>
-
-
-        </div>
-
-        <div class="items">
-            <div class="titl">Hiking shoes</div>
-
-
-            <table id="stab6"></table>
-
-
-        </div>
-
-
     </div>
+    <div class="title3st">Source: Qingbaotong</div>
+    <div class="title2st">Top Items on Tmall</div>
+    <iframe id="item_tabs1"  width="1200" height="650" frameborder="0" scrolling="no">
+
+    </iframe>
+
+    <iframe id="item_tabs2"  width="1200" height="650" frameborder="0" scrolling="no">
+
+    </iframe>
     <div class="title3st">Source: Qingbaotong</div>
 
 </div>
 <script>
-
     $(function () {
         //1.初始化Table
         var date =getQueryString("date")+"01";
-        var stab1init = sboottab('#stab1','Outdoor hardshell jacket',date);
-        var stab2init = sboottab('#stab2','Lightweight wind jacket',date);
-        var stab3init = sboottab('#stab3','Outdoor causel apparel',date);
-        var stab4init = sboottab('#stab4','Outdoor causel shoes',date);
-        var stab5init = sboottab('#stab5','Flash dry T-shirt',date);
-        var stab6init = sboottab('#stab6','Hiking shoes',date);
+        var stab1init = sboottab('#stab1','Sports T-shirt',date);
+        var stab2init = sboottab('#stab2','Sports hoodie',date);
+        var stab3init = sboottab('#stab3','Sneaker',date);
+        var stab4init = sboottab('#stab4','Canvas shoes',date);
         stab1init.Init();
         stab2init.Init();
         stab3init.Init();
         stab4init.Init();
-        stab5init.Init();
-        stab6init.Init();
-
+        document.getElementById("item_tabs1").src = "http://svc.iresearch.cn/vf/tops/sports_items1.html?date="+date;
+        document.getElementById("item_tabs2").src = "http://svc.iresearch.cn/vf/tops/sports_items2.html?date="+date;
 
     });
-
-
 
 </script>
 
