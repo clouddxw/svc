@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="no-referrer">
+<title>节目库</title>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
+<link href="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+<link href="http://svc.iresearch.cn/imp/css/showlib.css" rel="stylesheet">
+<link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/ajaxloading.css">
+
+<script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/browser_check.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+
+
+</head>
+<body>
+<div class="headerr">
+	<a th:href="@{/svc/index}"><div class="ir_log"><img th:src="@{/img/svclogo1.png}" style="width:100%;height:100%"></div></a>
+</div>
+
+
+
+<div class="bar1"> 
+<strong>&nbsp节目筛选</strong>
+<nav class="navbar navbar-default" role="navigation" style="float:right;height:50px;">
+   <div>
+      <ul class="nav navbar-nav">
+         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="normmenu"> Filter <strong class="caret"></strong> </a>
+         
+           <ul class="dropdown-menu dropdown-menu-right" style="min-width:920px;" data-stopPropagation="true" id="norm" >
+            </ul>
+         </li>
+      </ul>
+   </div>
+</nav>
+<div class="filtertag" >
+添加筛选条件
+</div>
+</div>
+
+
+<div class="tjshow" >
+	<div class="showdt" >
+		<div class="title" >推荐节目排行</div>
+		<div class="showdtl" >
+			<div class="imag" ></div>
+			<ul class="showtype" >
+				<li><span>终端：</span></li>
+				<li><span>平台：</span></li>
+				<li><span>类型：</span></li>
+				<li><span>首播：</span></li>
+				<li><span>导演：</span></li>
+				<li><span>明星：</span></li>
+				<li></li>
+				<li><span>匹配度：</span></li>
+                <li><span>SVC指数：</span></li>
+			</ul>
+		</div>
+	    <div class="showdtr" >
+	        <div class="tbtitle" >节目赞助品牌信息</div>
+	        <div class="bdtb">
+	        <table class="table table-striped" >
+    		<thead>
+    		</thead>
+    		<tbody id="showbdtb"></tbody>
+            </table>
+            </div>
+	    </div>
+	</div>
+	<div class="tjshowtt"></div>
+	<div id="tjshowlist"></div>
+</div>
+
+<div class="bar2"> 
+&nbsp节目预测
+<nav class="navbar navbar-default" role="navigation" style="float:right;height:50px;">
+   <div>
+      <ul class="nav navbar-nav">
+         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="tettt" style="font-size:16px;"> Filter <strong class="caret"></strong> </a>
+         
+           <ul class="dropdown-menu dropdown-menu-right" style="min-width:900px;"  id="ycfilter" data-stopPropagation="true" >
+               <li ><div class="norm_tag" >    竞争因素         </div>
+                   <div class="tips" title="*竞争因素：指节目播放时间每周播放的同类型的个数。按照艾瑞的数据库统计结果，建议数字在0-10之间。" style="float:left;width:20px;height:20px;margin-right:20px;"><img src="http://svc.iresearch.cn/img/tip03.png" style="height:100%;width:100%;"></div>
+                   <input name=""  value="5.12" id="jzpara" style="width:150px;height:30px;"><div id="jzpararm" class="rm undisp">*必填</div>
+               </li>
+               <li id="procostd"><div class="norm_tag">制作成本</div>
+                    <label><input name="procosty" type="checkbox" value="0" id="procosty1" checked="true">&lt3000万</label>
+                    <label><input name="procosty" type="checkbox" value="1" id="procosty2">3000万~6000万</label>
+                    <label><input name="procosty" type="checkbox" value="2" id="procosty3">6000万~8000万</label>
+                    <label><input name="procosty" type="checkbox" value="3" id="procosty4">&gt8000万</label><div id="procostrm" class="rm undisp">*必填</div>
+               </li>               
+               <li id="playplatd"><div class="norm_tag">播放平台</div>
+                    <label><input name="playplaty" type="checkbox" value="2" id="playplaty1" checked="true">腾讯</label>
+                    <label><input name="playplaty" type="checkbox" value="1" id="playplaty2">爱奇艺</label>
+                    <label><input name="playplaty" type="checkbox" value="4" id="playplaty3">优酷</label>
+                    <label><input name="playplaty" type="checkbox" value="3" id="playplaty4">搜狐</label>
+                    <label><input name="playplaty" type="checkbox" value="0" id="playplaty5">芒果</label><div id="playplatrm" class="rm undisp">*必填</div>
+               </li>
+               <li><div class="norm_tag">宣传费用</div>
+                    <label><input name="propcosty" type="checkbox" value="0" id="propcosty1" checked="true">&lt100万</label>
+                    <label><input name="propcosty" type="checkbox" value="1" id="propcosty2">100万~300万</label>
+                    <label><input name="propcosty" type="checkbox" value="2" id="propcosty3">300万~800万</label>
+                    <label><input name="propcosty" type="checkbox" value="3" id="propcosty4">&gt800万</label><div id="propcostrm" class="rm undisp">*必填</div>
+               </li>
+               <li><div class="norm_tag">节目类型</div>
+                    <label><input name="showtypey" type="checkbox" value="6" id="showtypey1" checked="true">谈话/脱口</label>
+                    <label><input name="showtypey" type="checkbox" value="5" id="showtypey2">生活观察类</label>
+                    <label><input name="showtypey" type="checkbox" value="9" id="showtypey3">综合游戏类</label>
+                    <label><input name="showtypey" type="checkbox" value="0" id="showtypey4">才艺选秀类</label>
+                    <label><input name="showtypey" type="checkbox" value="7" id="showtypey5">文化创意类</label>
+                    <label><input name="showtypey" type="checkbox" value="1" id="showtypey6">美食类</label>
+                    <label><input name="showtypey" type="checkbox" value="4" id="showtypey7">亲子/儿童</label>
+                    <label><input name="showtypey" type="checkbox" value="2" id="showtypey8">明星竞演类</label>
+                    <label><input name="showtypey" type="checkbox" value="8" id="showtypey9">喜剧类</label>
+                    <label><input name="showtypey" type="checkbox" value="3" id="showtypey10">其他</label><div id="showtyperm" class="rm undisp">*必填</div>
+               </li>
+               <li><div class="norm_tag">明星影响</div>
+                   <div class="tips" title="*明星影响：指节目播放时间每周播放的同类型的个数。按照艾瑞的数据库统计结果，建议数字在0-10之间。" style="float:left;width:20px;height:20px;margin-right:20px;"><img src="http://svc.iresearch.cn/img/tip03.png" style="height:100%;width:100%;"></div>
+                   <input name=""  value="75000" id="starpara" style="width:150px;height:30px;"> <div id="starpararm" class="rm undisp">*必填</div>                                      
+               </li>
+               <li><div class="norm_tag">播放档期</div>
+                    <label><input name="playtimey" type="checkbox" value="0" id="playtimey1" checked="true">贺岁档</label>
+                    <label><input name="playtimey" type="checkbox" value="1" id="playtimey2">平时</label>  
+                    <label><input name="playtimey" type="checkbox" value="2" id="playtimey3">暑期档</label><div id="playtimerm" class="rm undisp">*必填</div>
+               </li>
+               <li><div class="norm_tag">综N代</div>
+                    <label><input name="showisny" type="checkbox" value="1" id="showisny1" checked="true">是</label>
+                    <label><input name="showisny" type="checkbox" value="0" id="showisny2">否</label><div id="showisnrm" class="rm undisp">*必填</div>
+               </li>
+               <li><div class="norm_tag">是否独播</div>
+                    <label><input name="showisdby" type="checkbox" value="0" id="showisdby1" checked="true">独播</label>
+                    <label><input name="showisdby" type="checkbox" value="1" id="showisdby2">非独播</label><div id="showisdbrm" class="rm undisp">*必填</div>
+               </li>
+               <li><div class="norm_tag">播放终端</div>
+                    <label><input name="playtypey" type="checkbox" value="1" id="playtypey1" checked="true">纯网综艺</label>
+                    <label><input name="playtypey" type="checkbox" value="0" id="playtypey2">电视综艺</label><div id="playtyperm" class="rm undisp">*必填</div>
+               </li>
+               <li class="divider" style="height:2px;margin:0px;"></li>
+               <li>
+	              <form action="" onsubmit="return false" method="post" style="height:30px;width:60px;margin: 0 auto;">
+		               <input type="text" name="procost" id="procostvy" value=""   class="undisp"  >
+		               <input type="text" name="playplat" id="playplatvy" value=""   class="undisp"  >
+		               <input type="text" name="propcost" id="propcostvy" value=""   class="undisp"  >       
+		               <input type="text" name="showtype" id="showtypevy" value=""   class="undisp"  >
+		               <input type="text" name="playtime" id="playtimevy" value=""   class="undisp"  >
+		               <input type="text" name="showisn" id="showisnvy" value=""   class="undisp"  >
+		               <input type="text" name="showisdb" id="showisdbvy" value=""   class="undisp"  >   
+		               <input type="text" name="playtype" id="playtypevy" value=""   class="undisp"  >             
+		               <input type="submit" name="Submit" value="提交"   id="test1"
+		               onclick="getycpara();datacheck();"
+		               style="height:30px;width:60px;line-height:30px;text-align:center">
+		               <button id="test" class="undisp" >submit</button>
+		           </form>
+               </li>
+            </ul>
+         </li>
+      </ul>
+   </div>
+</nav>
+<div class="filtertag" >
+添加预测指标
+</div>
+</div>
+<div class="showyc" >
+	<div class="title">
+		节目级别预测结果
+	</div>
+	<div class="output" id="pyout">
+	</div>
+</div>
+
+<div id="loading" class="loadingdiv">
+        <img src="http://svc.iresearch.cn/img/loading.gif" alt="loading···" />
+</div>
+
+
+<div style="width:1190px;height:30px;margin:50px auto;position:relative;">
+ <div style="height:0px;width:1088px;border:1px #eee solid;margin:7px 0px;position:absolute;left:0px;top:4px;z-index:10"></div>
+ <div style="height:30px;max-width:350px;background:#fff;color:#555;padding:0px 5px;position:absolute;left:410px;top:0px;z-index:100">
+ 	<Strong >
+ 		<div style="float:left">Copyright&nbsp©2018</div>
+ 		<div style="float:left;height:20px;width:40px;"><img src="http://svc.iresearch.cn/img/Irlogo.jpg" style="width:100%;height:100%">
+    		</div>
+    		All rights reserved.
+    	</Strong>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/ajaxloading.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/showlib_onfun.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/showlib_prefun.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/filternorm.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/udfbox.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/keepcheck.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/showlibload.js"></script>
+
+</body>
+</html>

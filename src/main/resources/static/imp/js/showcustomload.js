@@ -4,9 +4,8 @@ $('#normcon').html(filnormcon[1]);
 setDate();
 
 var showname = getQueryString("showname");
-urlori="http://svc.iresearch.cn/";
 showname1=encodeURI(showname);
-urlori+='showcustom/get1st?showname='+showname1;
+urlori='http://svc.iresearch.cn/api/svc/vip/showcustom/get1st?showname='+showname1;
 
 $.ajax({
     url: urlori,
@@ -39,7 +38,7 @@ $.ajax({
 function getnorm() {
     //alert($('#formn').serialize());
     $.ajax({
-        url: "http://svc.iresearch.cn/showcustom/getnorm",
+        url: "http://svc.iresearch.cn/api/svc/vip/showcustom/getnorm",
         type: 'post',
         dataType: 'json',
         data: $('#formn').serialize(),

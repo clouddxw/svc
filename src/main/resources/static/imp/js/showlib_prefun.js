@@ -41,7 +41,7 @@ function  datacheck(tid)
 	 clicktrans("test");
 	 yccon=playtypeval+"-"+showtypeval+"-"+playplatval+"-"+procostval+"-"+propcostval+"-"+starparaval+"-"+playtimeval+"-"+showisnval+"-"+showisdbval+"-"+jzparaval;
      $.ajax({
-		    url: 'http://svc.iresearch.cn/showlib/getRF',
+		    url: 'http://svc.iresearch.cn/api/svc/vip/showlib/getRF',
 		    type: 'get',
 		    dataType: 'json',
 		    data:{

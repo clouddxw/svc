@@ -9,7 +9,7 @@ var bgdate =getQueryString("bgdate");
 var enddate =getQueryString("enddate").slice(0,6)+'01';
 
 $.ajax({
-    url: 'http://svc.iresearch.cn/VF/MI/getCbsTopItem',
+    url: 'http://svc.iresearch.cn/api/vf/mi/getCbsTopItem',
     type: 'get',
     dataType: 'json',
     data:{
@@ -35,7 +35,7 @@ function divitem(link,backcolor){
 
 
     Con='<li style="background:'+backcolor+'">'+
-		   '<div class="imag"><img src="http://svc.iresearch.cn/vf_mi_img/'+link+'"></div>'+
+		   '<img src="http://svc.iresearch.cn/vf_mi_img/'+link+'">'+
 		'</li>';
 	return Con;
 }

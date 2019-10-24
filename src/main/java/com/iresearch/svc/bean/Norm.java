@@ -2,8 +2,13 @@ package com.iresearch.svc.bean;
 
 import java.sql.Date;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Norm {
 	private String sex;
 	private String agegroup;
@@ -16,5 +21,4 @@ public class Norm {
 	private Date begindate;
 	private Date enddate;
 
-	
 }

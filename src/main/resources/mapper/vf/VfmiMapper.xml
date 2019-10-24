@@ -32,10 +32,11 @@
                     sales,
                     items,
                     link,
+                    tblink,
                     price,
                     discount
              from
-              externaldata.dbo.rpt_mi_price_range t1
+              externaldata.dbo.rpt_mi_top_items t1
             where t1.category=#{category}
               and date=convert(date,#{date}) order by rn asc;
     </select>

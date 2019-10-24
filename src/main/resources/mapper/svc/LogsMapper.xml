@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iresearch.svc.mapper.svc.LogsMapper">
+
+    <insert id="saveLogs" parameterType="com.iresearch.svc.bean.Logs">
+        insert into svc_operation_logs(date,project,model,name,method,parameter,consuming,ip,time)
+        values(#{date},#{project},#{model},#{name},#{method},#{parameter},#{consuming},#{ip},#{time})
+    </insert>
+
+</mapper>

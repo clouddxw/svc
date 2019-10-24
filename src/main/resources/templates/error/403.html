@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<title>404错误页面</title>
+<link href="http://svc.iresearch.cn/imp/css/error.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container" style=" margin-top:8%;">
+    <div class="panel margin-big-top">
+        <div class="text-center">
+            <br>
+            <h2 class="padding-top"> <stong>403错误！你没有权限访问</stong> </h2>
+            <div class="">
+                <div class="float-left">
+                    <img src="http://svc.iresearch.cn/img/error404-1.gif">
+                    <div class="alert"> 无权限？联系我们升级权限！ </div>
+                </div>
+                <div class="float-right">
+                    <img src="http://svc.iresearch.cn/img/error404-2.png" width="260">
+                </div>
+            </div>
+            <div class="padding-big" sec:authorize="hasRole('SVCADMIN')">
+                <a href="http://svc.iresearch.cn/svc/vip/index.html" class="button bg-yellow">返回普通版首页</a>
+            </div>
+            <div class="padding-big" sec:authorize="hasRole('SVCBASIC')">
+                <a href="http://svc.iresearch.cn/svc/basic/index.html" class="button bg-yellow">返回普通版首页</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

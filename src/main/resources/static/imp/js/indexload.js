@@ -1,3 +1,14 @@
+$(document).ready(function () {
+    $('#vip_scselect').select2();
+    $('#vip_bcselect').select2();
+    $('#vip_lkselect').select2();
+    $('#basic_scselect').select2();
+    $('#basic_bcselect').select2();
+    $('#basic_lkselect').select2();
+
+});
+
+
 function getTopWinow(){
     var p = window;
     while(p != p.parent){
@@ -7,7 +18,7 @@ function getTopWinow(){
 }
 
 $.ajax({
-    url: 'http://svc.iresearch.cn/index/getData',
+    url: 'http://svc.iresearch.cn/api/svc/index/getData',
     type: 'get',
     dataType: 'json',
     //data:data,
@@ -66,9 +77,12 @@ function dataList(data){
 	
 	$("#newsimg").html(newsImg);
 	$("#newslist").html(newsCon);
-	$("#scselect").html(showcCon);
-	$("#bcselect").html(brandcCon);
-	$("#lkselect").html(showlibCon);
+	$("#vip_scselect").html(showcCon);
+	$("#vip_bcselect").html(brandcCon);
+	$("#vip_lkselect").html(showlibCon);
+    $("#basic_scselect").html(showcCon);
+    $("#basic_bcselect").html(brandcCon);
+    $("#basic_lkselect").html(showlibCon);
 	
 	
 	

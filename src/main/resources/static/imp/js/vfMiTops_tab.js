@@ -4,7 +4,7 @@ function boottab(id,category,date) {
     //初始化Table
     oTableInit.Init = function () {
         $(id).bootstrapTable({
-            url: 'http://svc.iresearch.cn/VF/MI/getMiTopItems?category='+category+'&date='+date,         //请求后台的URL（*）
+            url: 'http://svc.iresearch.cn/api/vf/mi/getMiTopItems?category='+category+'&date='+date,         //请求后台的URL（*）
             method: 'get',                      //请求方式（*）
             striped: true,                      //是否显示行间隔色
             cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
@@ -25,25 +25,25 @@ function boottab(id,category,date) {
                     field: 'brand',
                     align: 'center',
                     valign: 'middle',
-                    width: '85',
-                    title: 'Brand'
+                    title: 'Brand',
+                    formatter:brandFormatter
                 }, {
                     field: 'sales',
-                    width: '50',
+                    width: '55',
                     align: 'center',
                     title: 'Sales<br>(M)',
                     formatter: salesFormatter,
                 },
                 {
                     field: 'price',
-                    width: '45',
+                    width: '55',
                     align: 'center',
                     valign: 'middle',
                     title: 'Price'
                 },
                 {
                     field: 'discount',
-                    width: '60',
+                    width: '80',
                     align: 'center',
                     title: 'Discount<br>(off)'
                 }
@@ -73,7 +73,7 @@ function sboottab(id,category,date) {
     //初始化Table
     oTableInit.Init = function () {
         $(id).bootstrapTable({
-            url: 'http://svc.iresearch.cn/VF/MI/getMiTopStores?category='+category+'&date='+date,         //请求后台的URL（*）
+            url: 'http://svc.iresearch.cn/api/vf/mi/getMiTopStores?category='+category+'&date='+date,         //请求后台的URL（*）
             method: 'get',                      //请求方式（*）
             striped: true,                      //是否显示行间隔色
             cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
@@ -93,18 +93,17 @@ function sboottab(id,category,date) {
                     field: 'store',
                     align: 'center',
                     valign: 'middle',
-                    width: '230',
+                    width: '200',
                     title: 'Store'
                 }, {
                     field: 'sales',
-                    width: '50',
                     align: 'center',
                     title: 'Sales<br>(M)',
                     formatter: salesFormatter,
                 },
                 {
                     field: 'yoy',
-                    width: '60',
+                    width: '80',
                     align: 'center',
                     valign: 'middle',
                     title: 'YoY',
@@ -136,6 +135,10 @@ function operateFormatter(value, row, index) {//赋予的参数
     return '<a class = "view"  href="javascript:void(0)"><div style="height: 90px;width: 90px;"><img style="height: 90px;" src="http://svc.iresearch.cn/vf_mi_img/'+value+'"></div> </a>'
 }
 
+function brandFormatter(value, row, index) {//赋予的参数
+    return '<a href="'+row.tblink+'" target="_blank"><div>'+value+'</div> </a>'
+}
+
 function salesFormatter(value, row, index) {//赋予的参数
     var out;
     if (value==null){
@@ -159,13 +162,13 @@ function yoyFormatter(value, row, index) {//赋予的参数
     var out;
 
     if (value==null){
-        out='<div style="height:36px;line-height:36px;font-weight:900">-</div>';
+        out='<span style="font-weight:900">-</span>';
     }else if(value<0){
         yoy=Math.round(value*100);
-        out='<div style="height:36px;line-height:36px;color:red;font-weight:900;">'+yoy+'%</div>'
+        out='<span style="color:red;font-weight:900;">'+yoy+'%</span>'
     }else{
         yoy=Math.round(value*100);
-        out='<div style="height:36px;line-height:36px;font-weight:900">'+yoy+'%</div>'
+        out='<span style="font-weight:900">'+yoy+'%</span>'
     }
     return out;
 }
@@ -181,7 +184,7 @@ window.operateEvents = {
             skin: 'layui-layer-nobg', //没有背景色
             shadeClose: true,
             scrollbar: false,
-            // offset:['200px','300px'],
+            offset:['110px',"400px"],
             content: '<img style="width:100%;height: 100%" src="http://svc.iresearch.cn/vf_mi_img/'+row.link+'"/>'
         });
     },

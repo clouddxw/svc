@@ -5,69 +5,63 @@ function getTopWinow(){
     }
     return p;
 };
-function loginCheck(){
-    var name = $("#loginUser").val();    //用户名
-    var pwd = $("#loginPwd").val();      //密码
-    var datas="";                  //返回来的结果
-    var diff;
-    var enddate;
-    var role;
-    $.ajax({
-        url: "login",
-        type: 'post',
-        dataType: 'json',
-        data:{
-            name:name,
-            passwd:pwd
-        },
-        jsonp: 'callback',
-        async: false,
-        success: function (data) {
-            datas = data.res;
-            diff = data.diff;
-            enddate = data.enddate;
-            role=data.role;
-        }
+
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
+
+var stat = getQueryString("stat");
+
+$(function (){if(stat=='onlineover'){
+
+    layer.alert("您的账号已在其他地区登录",function () {
+        window.location.href = "http://svc.iresearch.cn/login.html"
     });
-    // var endTime=new Date('06/30/2019');
-    // var now =new Date();
-    // var daydiff =Math.floor((endTime.getTime()-now.getTime())/(1000*60*60*24))+1;
-    var top = getTopWinow();
-    //alert(datas);
-    //console.log(datas);
-    if(datas == "nameFalse"){                 //用户名不正确
-        layer.tips('用户名不存在！', '#loginUser', {
-            tips: [2, '#FF3030'],
-            time: 2000
-        });
-    }else if(datas == "pwdFalse"){            //密码不正确
 
-        layer.tips('密码不正确	！', '#loginPwd', {
-            tips: [2, '#FF3030'],
-            time: 2000
-        });
-    }else if(datas == "Success"){
-        if(role == "normal" ){
-            top.location.href = 'http://svc.iresearch.cn/basic/index.html';
-        }else{
-            top.location.href = 'http://svc.iresearch.cn/vip/index.html';
-        }
-    }
-    else if(datas == "SuccessTw"){
-        alert('您的正式账号将在'+diff+'天后到期，届时只能访问部分数据。如果需要申请正式账号续期请联系IRS.SVC@iresearch.com.cn或咨询相关商务销售同事。');
-        if(role == "normal" ){
-            top.location.href = 'http://svc.iresearch.cn/basic/index.html';
-        }else{
-            top.location.href = 'http://svc.iresearch.cn/vip/index.html';
-        }
+}})
 
-    }else if(datas == "Te"){
-        alert('您的正式账号已于'+enddate+'到期，只能访问部分数据。如果需要申请正式账号续期请联系IRS.SVC@iresearch.com.cn或咨询相关商务销售同事。');
-        if(role == "normal" ){
-            top.location.href = 'http://svc.iresearch.cn/basic/index.html';
-        }else{
-            top.location.href = 'http://svc.iresearch.cn/vip/index.html';
-        }
-    }
+function loginCheck(){
+    var username = $("#loginUser").val();    //用户名
+    var password = $("#loginPwd").val();      //密码
+    // var datas="";                  //返回来的结果
+    // var diff;
+    // var enddate;
+    // var role;
+    $.ajax({
+        url: "http://svc.iresearch.cn/logining",
+        data:{
+            "username": username,//字段和html页面的要对应  id和name一致
+            "password": password,//字段和html页面的要对应
+            // "remember-me":remember,
+            // "imageCode": imageCode
+        },
+        dataType:"json",
+        type:'post',
+        async:false,
+        success:function (data) {
+            if (data.code == 402){
+                layer.alert(data.msg,function () {
+                    window.location.href = "http://svc.iresearch.cn/login.html"
+                });
+            }
+            if (data.code == 403){
+                layer.alert(data.msg,function () {
+                    window.location.href = "http://svc.iresearch.cn/login.html"
+                });
+            }
+
+            // if (data.code == 600){
+            //     layer.alert(data.msg,function () {
+            //         window.location.href = "http://svc.iresearch.cn/login.html"
+            //     });
+            // }
+
+            if(data.code == 200){
+                window.location.href = "http://svc.iresearch.cn/svc/index";
+            }
+        }});
+
 
 }

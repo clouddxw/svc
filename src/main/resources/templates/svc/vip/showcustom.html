@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="UTF-8">
+<meta name="referrer" content="no-referrer">
+<title>节目定制详情</title>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
+<link href="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+<link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/showcustom.css">
+<link rel="stylesheet" href="http://svc.iresearch.cn/imp/css/ajaxloading.css">
+
+
+<script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/browser_check.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.min.js"></script>
+
+
+</head>
+<body>
+<div class="headerr">
+	<a th:href="@{/svc/index}"><div class="ir_log"><img th:src="@{/img/svclogo1.png}" style="width:100%;height:100%"></div></a>
+</div>
+
+
+
+<div class="bar1"> 
+<span style="color:#555;font-size:30px;">节目定制详情</span>
+<nav class="navbar navbar-default" role="navigation" style="float:right;height:50px;">
+   <div>
+      <ul class="nav navbar-nav">
+         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="filtermenu" > Filter <strong class="caret"></strong> </a>
+         
+           <ul class="dropdown-menu dropdown-menu-right" style="min-width:920px;" data-stopPropagation="true" id="filter" >
+ 
+            </ul>
+         </li>
+         <li class="dropdown" ><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="normmenu"> Norm <strong class="caret"></strong> </a>
+           <ul class="dropdown-menu dropdown-menu-right" style="min-width:920px;" data-stopPropagation="true" id="normcon">
+            </ul>
+         </li>
+      </ul>
+   </div>
+</nav>
+<div class="btn-group" style="float:right;height:50px;margin-right:20px;">
+    <button type="button" class="btn " style="height:50px;width:70px;font-weight:bold;background:#dddddd;"  id="selectindex"
+    onClick="chgclassdisp('origindata','none');chgclassdisp('indexdata','block');
+    	chgbg('selectindex','#1d914d','#fff');chgbg('selectori','#dddddd','#222');
+    	settval('disppara','index');">指数</button>
+    <button type="button" class="btn " style="height:50px;width:70px;font-weight:bold;background:#1d914d;color:#fff" id="selectori"
+    onClick="chgclassdisp('indexdata','none');chgclassdisp('origindata','block');
+    	chgbg('selectori','#1d914d','#fff');chgbg('selectindex','#dddddd','#222');
+    	settval('disppara','origin');">原始值</button>
+</div>
+
+
+</div>
+
+<input id="disppara"  value="origin" style="display:none;">
+
+
+
+<!--      节目详情最大值                            -->
+
+<div class="showdeatil" id="showdt" style="margin:0 auto;margin-top:20px;">
+	<div class="box_l">
+	        <div class="box_l1"></div>
+	        <div class="box_l2"></div>
+	        <ul class="box_l3">
+	          <li><span>SVC综合指数排名</span>：</li>
+	          <li><span>节目流量等级</span>：</li>    
+	        <li><span>终端</span>：</li>
+	          <li><span>平台</span>：</li>
+	          <li><span>类型</span>：</li>
+	          <li><span>首播</span>：</li>
+	          <li><span>期数</span>：</li>
+	          <li><span>监测植入品牌数</span>：</li>  
+	        </ul>
+	</div>
+	<div class="box_r">
+	    <div class="box_r1">
+	        <div class="box_r1l"><img th:src="@{/img/star1.png}" style="height:40px;width:40px;float:left;margin:13px 20px;margin-left:-10px;"><span style="float:left;"></span>
+	          (SVC综合指数)<div id="dtsvcchart" style="float:left;width:70px;height:50px;margin-left:20px;margin-top:20px;"></div>
+	        </div>
+	        <div style="height:20px;font-size:14px;line-height:12px;color:#7e7e7e;">VS之后对比的原始值为NORM</div>
+	    </div>
+	    <ul class="box_r2"  >
+	        <li style="width:30px;line-height:20px;color:#7e7e7e;margin:0px;margin-left:20px;padding:20px 0px;">二<br/>级<br/>指<br/>数</li>
+	        <li style="color:#555;font-size:14px;"><span></span><br/>节目价值<div id="dtvalchart" style="width:120px;height:60px;"></div></li>
+	        <li style="color:#555;font-size:14px;"><span></span><br/>节目-品牌关联<div id="dtrelchart" style="width:120px;height:60px;"></div></li>
+	        <li style="color:#555;font-size:14px;"><span></span><br/>品牌资产提升<div id="dtprochart" style="width:120px;height:60px;"></div></li>
+	    </ul>
+	    <ul class="box_r3 origindata">
+	        <li style="width:30px;line-height:20px;color:#7e7e7e;margin-left:20px;margin-right:0px;padding:5px 0px;">三<br />级<br />指<br />数</li>
+	        <li><span class="v1" style="margin-right:5px;color:#1d914d"></span>收视热度<br/>
+	            <span class="v1" style="margin-right:5px;color:#1d914d">%</span>VS<span class="v2" style="margin:0px 5px;color:#7e7e7e">%</span>重复收视<br>
+	            <span class="v1" style="margin-right:5px;color:#1d914d"></span>口碑传播</li>
+	        <li><span class="v1" style="margin-right:5px;color:#1d914d">%</span>VS<span class="v2" style="margin:0px 5px;color:#7e7e7e">%</span>回忆度<br>
+	            <span class="v1" style="margin-right:5px;color:#1d914d">%</span>VS<span class="v2" style="margin:0px 5px;color:#7e7e7e">%</span>相关度<br>
+	        </li>
+	        <li><span class="v1" style="margin-right:5px;color:#1d914d">%</span>VS<span class="v2" style="margin:0px 5px;color:#7e7e7e">%</span>认知提升<br>
+	            <span class="v1" style="margin-right:5px;color:#1d914d">%</span>VS<span class="v2" style="margin:0px 5px;color:#7e7e7e">%</span>喜爱提升<br>
+	            <span class="v1" style="margin-right:5px;color:#1d914d">%</span>VS<span class="v2" style="margin:0px 5px;color:#7e7e7e">%</span>推荐提升</li>
+	    </ul>
+	    <ul class="box_r3 indexdata">
+	        <li style="width:30px;line-height:20px;color:#7e7e7e;margin-left:20px;margin-right:0px;padding:5px 0px;">三<br />级<br />指<br />数</li>
+	        <li><span class="v1" style="margin-right:5px;color:#1d914d"></span>收视热度<br/>
+	            <span class="v1" style="margin-right:5px;color:#1d914d"></span>重复收视<br>
+	            <span class="v1" style="margin-right:5px;color:#1d914d"></span>口碑传播</li>
+	        <li><span class="v1" style="margin-right:5px;color:#1d914d"></span>回忆度<br>
+	            <span class="v1" style="margin-right:5px;color:#1d914d"></span>相关度<br>
+	        </li>
+	        <li><span class="v1" style="margin-right:5px;color:#1d914d"></span>认知提升<br>
+	            <span class="v1" style="margin-right:5px;color:#1d914d"></span>喜爱提升<br>
+	            <span class="v1" style="margin-right:5px;color:#1d914d"></span>推荐提升</li>
+	    </ul>
+	</div>
+</div>
+
+<div class="showindexchart origindata" style="height:260px;width:1200px;margin:20px auto;margin-top:0px;">
+	<div id="sivalchartori" style="height:250px;width:380px;float:left;"></div>
+	<div id="sirelchartori" style="height:250px;width:380px;margin:0px 30px;float:left;"></div>
+	<div id="siprochartori" style="height:250px;width:380px;float:left;"></div>
+</div>
+<div class="showindexchart indexdata" style="height:260px;width:1200px;margin:20px auto;margin-top:0px;">
+	<div id="sivalchartindex" style="height:250px;width:380px;float:left;"></div>
+	<div id="sirelchartindex" style="height:250px;width:380px;margin:0px 30px;float:left;"></div>
+	<div id="siprochartindex" style="height:250px;width:380px;float:left;"></div>
+</div>
+
+<!-- ----------------------------------------节目详情加权值----------------------------------- -->
+
+
+<!--                                          节目品牌                                                                                                                                  -->
+<!--            节目品牌最大值                              -->
+<div class="showbrand" id="showbd">
+ <div class="showbrand_l" id="showbdl">
+  <div class="showbrand_l1">
+    <div class="showbrand_l1l">节目赞助品牌表现</div>
+    <div class="showbrand_l1r">其他<img th:src="@{/img/star2.png}" style="width:20px;height:20px;float:right;margin-right:25px;margin-top:15px;"></div>
+    <div class="showbrand_l1r">总冠名<img th:src="@{/img/star1.png}" style="width:20px;height:20px;float:right;margin-right:25px;margin-top:15px;"></div>
+  </div>
+<div class="brandtable" >
+		<ul class="bdtbth" >
+				<li id="bdtbthnum" style="width:160px">品牌数量:</li>
+				<li style="width:40px;"></li>
+				<li style="width:50px;">期数</li>
+				<li style="width:110px;">SVC综合指数</li>
+				<li style="width:80px;">节目价值</li>
+				<li style="width:110px;">节目品牌关联</li>
+				<li style="width:110px;">品牌资产提升</li>
+		</ul>
+		<div class="context">
+        <table class="table table-striped" >
+
+		<tbody id="brandtbcon"></tbody>
+
+        </table>
+		</div>
+</div>
+</div>
+ <div class="showbrand_r" id="showbdr" >
+
+  <div class ="branddetail origindata" id="branddtori">
+	<ul class="top1brandl" style="color:#7e7f7e;padding:0px 20px;margin-top:5px;">
+        <li class="uli1" style="height:90px;">
+            <div class="imag" style="witdh:70px;height:70px;margin:10px" ></div>
+            <div style="float:left;line-height:35px;margin:10px;font-size:25px;color:#222;">
+            	<div style="height:35px;font-size:15px;font-weight:normal;"></div>
+            </div>
+            <div style="float:right;margin-right:20px;line-height:30px;">
+            	<div style="height:30px;">SVC综合指数</div>
+            	<span style="font-size:35px;color:#da4353;line-height:60px;"></span>
+            	<div id="bddtsvchartori" style="height:60px;width:80px;margin-left:10px;float:right;"></div>
+            </div>
+        </li >
+        <li   style="height:200px;">
+        	<ul style="height:100%;width:50%;list-style:none;display:block;float:left;">
+        	    <li style="height:80px;">
+        	    	<div style="width:120px;line-height:40px;font-size:15px;float:left;color:#555;">
+        	    	   节目价值<br>
+        	    	   <span style="height:40px;line-height:10px;font-size:30px;color:#1d914d"></span></div>
+        	    	   <div id="bddtvalchartori" style="height:70px;width:70px;margin:5px;float:left;"></div>
+        	    </li>
+                <li style="height:38px;line-height:38px;">
+                    收视热度<span class="v1" style="margin-left:30px;color:#1d914d;font-size:20px;"></span>
+                </li>
+                <li style="height:38px;line-height:38px;">重复收视<span class="v1" style="margin:0px 8px;color:#1d914d;font-size:20px;">%</span>VS<span class="v2" style="margin:0px 5px;color:#7e7e7e;font-size:20px;">%</span></li>
+                <li style="height:38px;line-height:38px;">口碑传播<span class="v1" style="margin-left:30px;color:#1d914d;font-size:20px;"></span></li>
+        	</ul>
+        	<div id="bddtvalsubchartori" style="height:90%;width:50%;float:left;margin:10px 0px;"></div>
+        </li>
+       
+        <li  style="height:200px;">
+        	<ul style="height:100%;width:50%;list-style:none;display:block;float:left;">
+        	    <li style="height:80px;">
+        	    	<div style="width:120px;line-height:40px;font-size:15px;float:left;color:#555;">节目-品牌关联<br><span style="height:40px;line-height:10px;font-size:30px;color:#1d914d"></span></div>
+        	    	<div id="bddtrelchartori" style="height:70px;width:70px;margin:5px;float:left;"></div>
+        	    </li>
+                <li style="height:38px;line-height:38px;">回忆度<span class="v1" style="margin:0px 8px;color:#1d914d;font-size:20px;">%</span>VS<span class="v2" style="margin:0px 5px;color:#7e7e7e;font-size:20px;">%</span></li>
+                <li style="height:38px;line-height:38px;">相关度<span class="v1" style="margin:0px 8px;color:#1d914d;font-size:20px;">%</span>VS<span class="v2" style="margin:0px 5px;color:#7e7e7e;font-size:20px;">%</span></li>
+    
+        	</ul>
+        	<div id="bddtrelsubchartori" style="height:90%;width:50%;float:left;margin:10px 0px;"></div>
+        </li>
+       
+        <li   style="height:200px;">
+        	<ul style="height:100%;width:50%;list-style:none;display:block;float:left;">
+        	    <li style="height:80px;">
+        	    	<div style="width:120px;line-height:40px;font-size:15px;float:left;color:#555;">品牌资产提升<br><span style="height:40px;line-height:10px;font-size:30px;color:#1d914d"></span></div>
+        	    	<div id="bddtprochartori" style="height:70px;width:70px;margin:5px;float:left;"></div>
+        	    </li>
+                <li style="height:38px;line-height:38px;">认知提升
+                    <span class="v1" style="margin:0px 8px;color:#1d914d;font-size:20px;">%</span>
+                    VS<span class="v2" style="margin:0px 5px;color:#7e7e7e;font-size:20px;">%</span></li>
+                <li style="height:38px;line-height:38px;">喜爱提升
+                   <span class="v1" style="margin:0px 8px;color:#1d914d;font-size:20px;">%</span>
+                   VS<span class="v2" style="margin:0px 5px;color:#7e7e7e;font-size:20px;">%</span></li>
+                <li style="height:38px;line-height:38px;">推荐提升
+                	<span class="v1" style="margin:0px 8px;color:#1d914d;font-size:20px;">%</span>
+                	VS<span class="v2" style="margin:0px 5px;color:#7e7e7e;font-size:20px;">%</span></li>
+        	</ul>
+        	<div id="bddtprosubchartori" style="height:90%;width:50%;float:left;margin:10px 0px;"></div>
+        </li>
+      
+    </ul>
+    </div>
+    
+  <div class="branddetail indexdata" id="branddtindex" >
+	<ul class="top1brandl" style="color:#7e7f7e;padding:0px 20px;margin-top:5px;">
+        <li class="uli1" style="height:90px;">
+            <div class="imag" style="witdh:70px;height:70px;margin:10px" ></div>
+            <div style="float:left;line-height:35px;margin:10px;font-size:25px;color:#222;">
+            	<div style="height:35px;font-size:15px;font-weight:normal;"></div>
+            </div>
+            <div style="float:right;margin-right:20px;line-height:30px;">
+            	<div style="height:30px;">SVC综合指数</div>
+            	<span style="font-size:35px;color:#da4353;line-height:60px;"></span>
+            	<div id="bddtsvchartindex" style="height:60px;width:80px;margin-left:10px;float:right;"></div>
+            </div>
+        </li >
+        <li   style="height:200px;">
+        	<ul style="height:100%;width:50%;list-style:none;display:block;float:left;">
+        	    <li style="height:80px;">
+        	    	<div style="width:120px;line-height:40px;font-size:15px;float:left;color:#555;">
+        	    	   节目价值<br>
+        	    	   <span style="height:40px;line-height:10px;font-size:30px;color:#1d914d"></span></div>
+        	    	   <div id="bddtvalchartindex" style="height:70px;width:70px;margin:5px;float:left;"></div>
+        	    </li>
+                <li style="height:38px;line-height:38px;">
+                    收视热度<span class="v1" style="margin-left:30px;color:#1d914d;font-size:20px;"></span>
+                </li>
+                <li style="height:38px;line-height:38px;">重复收视<span class="v1" style="margin:0px 8px;color:#1d914d;font-size:20px;"></span></li>
+                <li style="height:38px;line-height:38px;">口碑传播<span class="v1" style="margin-left:30px;color:#1d914d;font-size:20px;"></span></li>
+        	</ul>
+        	<div id="bddtvalsubchartindex" style="height:180px;width:230px;float:left;margin:10px 0px;"></div>
+        </li>
+        <li  style="height:200px;">
+        	<ul style="height:100%;width:50%;list-style:none;display:block;float:left;">
+        	    <li style="height:80px;">
+        	    	<div style="width:120px;line-height:40px;font-size:15px;float:left;color:#555;">节目-品牌关联<br><span style="height:40px;line-height:10px;font-size:30px;color:#1d914d"></span></div>
+        	    	<div id="bddtrelchartindex" style="height:70px;width:70px;margin:5px;float:left;"></div>
+        	    </li>
+                <li style="height:38px;line-height:38px;">回忆度<span class="v1" style="margin:0px 8px;color:#1d914d;font-size:20px;"></span></li>
+                <li style="height:38px;line-height:38px;">相关度<span class="v1" style="margin:0px 8px;color:#1d914d;font-size:20px;"></span></li>
+    
+        	</ul>
+        	<div id="bddtrelsubchartindex" style="height:180px;width:230px;float:left;margin:10px 0px;"></div>
+        </li>
+       <li   style="height:200px;">
+        	<ul style="height:100%;width:50%;list-style:none;display:block;float:left;">
+        	    <li style="height:80px;">
+        	    	<div style="width:120px;line-height:40px;font-size:15px;float:left;color:#555;">品牌资产提升<br><span style="height:40px;line-height:10px;font-size:30px;color:#1d914d"></span></div>
+        	    	<div id="bddtprochartindex" style="height:70px;width:70px;margin:5px;float:left;"></div>
+        	    </li>
+                <li style="height:38px;line-height:38px;">认知提升
+                    <span class="v1" style="margin:0px 8px;color:#1d914d;font-size:20px;"></span></li>
+                <li style="height:38px;line-height:38px;">喜爱提升
+                   <span class="v1" style="margin:0px 8px;color:#1d914d;font-size:20px;"></span></li>
+                <li style="height:38px;line-height:38px;">推荐提升
+                	<span class="v1" style="margin:0px 8px;color:#1d914d;font-size:20px;"></span></li>
+        	</ul>
+        	<div id="bddtprosubchartindex" style="height:180px;width:230px;float:left;margin:10px 0px;"></div>
+        </li>
+    </ul>
+    </div>
+  </div>
+  
+
+
+  
+  </div>
+
+
+<!--            节目品牌加权值                              -->
+
+
+<div class="bar3" ><strong>节目口碑传播指数与收看人群画像</strong></div>
+
+<div  id="chartmax">
+<div class="index_chart">
+    <div id="bdindexmax">
+        
+    </div>
+    <div id="wbindexmax">
+    
+    </div>
+    <div id="wxindexmax">
+</div>    
+</div>
+<div class="proertychart">
+
+    <div id="sex_chartmax">
+
+    </div>
+    <div id="age_chartmax">
+
+    </div>
+    <div id="city_chartmax">
+
+    </div>
+</div>
+</div>
+
+
+
+<input id="storenormcondi" class="undisp" value="" >
+<input id="storedata"  class="undisp" value="" >
+
+<div id="loading" class="loadingdiv">
+        <img src="http://svc.iresearch.cn/img/loading.gif" alt="loading···" />
+</div>
+
+<div style="width:1200px;height:30px;margin:50px auto;position:relative;">
+   <div style="height:0px;width:1048px;border:1px #eee solid;margin:7px 0px;position:absolute;left:0px;top:4px;z-index:10"></div>
+   <div style="height:30px;max-width:350px;background:#fff;color:#555;padding:0px 5px;position:absolute;left:425px;top:0px;z-index:100">
+   	<Strong >
+   		<div style="float:left">Copyright&nbsp©2018</div>
+   		<div style="float:left;height:20px;width:40px;"><img src="http://svc.iresearch.cn/img/Irlogo.jpg" style="width:100%;height:100%">
+    		</div>
+    		All rights reserved.
+    	</Strong>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/ajaxloading.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/filternorm.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/udfbox.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/keepcheck.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/allshow_chart.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/svclinechart.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/customcharts.js"></script>
+<script type="text/javascript" src="http://svc.iresearch.cn/imp/js/showcustomload.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>

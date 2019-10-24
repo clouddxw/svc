@@ -13,6 +13,7 @@ public class VfMiTopitem {
     Double sales;
     String items;
     String link;
+    String tblink;
     Integer price;
     String discount;
 }

@@ -5,9 +5,8 @@ setDate();
 
 
 var showname=getQueryString("showname");
-urlori="http://svc.iresearch.cn/";
 showname1=encodeURI(showname);
-urlori+='showlib/get1st?showname='+showname1;
+urlori="http://svc.iresearch.cn/api/svc/vip/showlib/get1st?showname="+showname1;
 
 $.ajax({
     url: urlori,
@@ -39,7 +38,7 @@ $.ajax({
 function getnorm() {
     //alert($('#formn').serialize());
     $.ajax({
-        url: "http://svc.iresearch.cn/showlib/getnorm",
+        url: "http://svc.iresearch.cn/api/svc/vip/showlib/getnorm",
         type: 'post',
         dataType: 'json',
         data: $('#formn').serialize(),
@@ -145,7 +144,7 @@ function dataList1(data){
 
 
 function getshowsim(showname){
-	urlori='http://svc.iresearch.cn/showlib/getsim';
+	urlori='http://svc.iresearch.cn/api/svc/vip/showlib/getsim';
 	$.ajax({
 	    url: urlori,
 	    type: 'get',

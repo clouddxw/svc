@@ -6,7 +6,7 @@ setDate();
 
 
 $.ajax({
-    url: 'http://svc.iresearch.cn/showcomp/get1st',
+    url: 'http://svc.iresearch.cn/api/svc/vip/showcomp/get1st',
     type: 'get',
     dataType: 'json',
     //data:data,
@@ -34,7 +34,7 @@ $.ajax({
 function getnorm() {
     //alert($('#formn').serialize());
     $.ajax({
-        url: "http://svc.iresearch.cn/showcomp/getnorm",
+        url: "http://svc.iresearch.cn/api/svc/vip/showcomp/getnorm",
         type: 'post',
         dataType: 'json',
         data: $('#formn').serialize(),
@@ -322,7 +322,7 @@ function getshow(fid,id1,id2,disp){
 	var showname=$("#"+fid).val();
 //	var normcon=document.getElementById('storenormcondi').value;
 //	var normcondi=encodeURIComponent(normcon.replace(/"/g,""));
-    urlori='http://svc.iresearch.cn/showcomp/getshow';
+    urlori='http://svc.iresearch.cn/api/svc/vip/showcomp/getshow';
 	$.ajax({
 	    url: urlori,
 	    type: 'post',
@@ -352,7 +352,7 @@ function getbrand(fid,disp){
 	var brandname=$("#"+fid).val();
 	//var normcon=document.getElementById('storenormcondi').value;
 	//var normcondi=encodeURIComponent(normcon.replace(/"/g,""));
-    urlori='http://svc.iresearch.cn/showcomp/getbrand';
+    urlori='http://svc.iresearch.cn/api/svc/vip/showcomp/getbrand';
 	$.ajax({
 	    url: urlori,
 	    type: 'post',
@@ -373,7 +373,7 @@ function getbrand(fid,disp){
 }
 
 function getoneshow(showname,fid,disp){
-    urlori='http://svc.iresearch.cn/showcomp/getshowtype';
+    urlori='http://svc.iresearch.cn/api/svc/vip/showcomp/getshowtype';
 	$.ajax({
 	    url: urlori,
 	    type: 'post',

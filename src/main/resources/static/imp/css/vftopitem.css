@@ -5,6 +5,8 @@ padding:0
 width:600px;height:720px;background:#fff;
 }
 
+.table {table-layout:fixed;word-break:break-all;}
+
 .top5list{
 list-style:none;
 display:block;

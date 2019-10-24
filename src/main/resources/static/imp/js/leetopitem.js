@@ -65,7 +65,7 @@ var industry_en =getQueryString("industry_en");
 var industry2 =getQueryString("industry2");
 
 $.ajax({
-    url: 'http://svc.iresearch.cn/Lee/MI/getTopItem',
+    url: 'http://svc.iresearch.cn/api/lee/mi/getTopItem',
     type: 'get',
     dataType: 'json',
     data:{

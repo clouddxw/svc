@@ -41,7 +41,7 @@ if(bgdate=='quarter'){
 var brandtype =getQueryString("brandtype");
 
 $.ajax({
-    url: 'http://svc.iresearch.cn/VF/MI/getTopItem',
+    url: 'http://svc.iresearch.cn/api/vf/mi/getTopItem',
     type: 'get',
     dataType: 'json',
     data:{

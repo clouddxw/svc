@@ -1,6 +1,11 @@
 body{
     font-family: Microsoft Yahei
 }
+
+.main{
+    width: 1270px;
+    margin: 0 auto;
+}
         * {
             margin:0px;
             padding:0px;
@@ -78,4 +83,147 @@ body{
         text-decoration:none;
         color:#000;
         }
+
+.undisp{
+    display:none;
+}
+
+.toptitle{
+    width:1270px;height:50px;line-height:50px;background:#232325;color:#eee;font-weight:bold;margin:0 auto;
+}
+
+.toptitle img{
+    float:left;width:267px;height:30px;margin-top:10px;border-right:2px #eee solid;
+}
+
+
+
+.toptitle .title2{
+    margin-left:10px;
+}
+
+.toptitle .title3{
+    float:right;margin-right:10px;
+}
+
+.model {
+    width:1270px;height:340px;margin:0 auto;margin-top:30px;
+}
+
+.model .modelf1{
+    overflow: hidden;
+}
+
+.model .modelf2{
+    margin-top:40px;
+}
+
+
+.model .freemodel{
+    width:370px;height:150px;float:left;background:#f2f2f2;
+}
+
+
+.model .vipmodel{
+    width:370px;height:150px;float:left;background:#f2f2f2;
+}
+
+.model .basicmodel{
+    width:370px;height:150px;float:left;background:#f2f2f2;
+}
+
+.model .midd{
+    margin:0 79px;
+}
+
+
+.freemodel .title1st{
+    width:320px;height:40px;line-height:40px;margin:0 auto;margin-top:30px;font-weight:bolder;font-size:28px;text-align:center;
+}
+
+
+.model .desc{
+    width:320px;height:60px;line-height:20px;margin:0 auto;color:#8d8d8d;text-align:center;font-size:13px;font-weight:bold;
+}
+
+.model .show .title1st{
+    color:#1d914d;
+}
+
+.model .brand .title1st{
+    color:#4372c3;
+}
+
+.model .imgdiv{
+    float:left;width:30px;height:26px;margin-top:3px;margin-left:15px;
+}
+
+.model .searchbox{
+    max-width:270px;height:50px;margin-left:80px;margin-top:-25px;
+}
+
+.searchbox .textr{
+    float:left;max-width:200px;height:30px;margin:0;margin-right:20px;
+}
+
+.searchbox .textr .inputr{
+    width:180px;height:30px;margin:0
+}
+
+.searchbox .textr .submitr{
+    margin-top:2px;width:50px;height:26px;text-align:center
+}
+
+
+.model .titles{
+    width:320px;height:40px;margin:0 auto;margin-top:30px;line-height:40px;font-weight:bolder;font-size:28px
+}
+
+.model .titles .title1st{
+    float:left;width:230px;height:40px;padding-right:40px;text-align:center
+}
+
+.vipmodel.showcomp .titles{
+    color:#da4353;
+}
+
+.vipmodel.showcustom .titles{
+    color:#9fd368;
+}
+
+.vipmodel.brandcustom .titles{
+    color:#32b0f0;
+}
+
+.vipmodel.showlib .titles{
+    color:#e9563e;
+}
+
+.basicmodel .titles{
+    color:#A9A9A9;
+}
+
+
+
+.booter{
+    width:1270px;height:30px;margin:50px auto;position:relative;
+}
+
+.booter .liner{
+    height:0px;width:1268px;border:1px #eee solid;margin:7px 0px;position:absolute;left:0px;top:4px;z-index:10;
+}
+
+.booter .icons{
+    height:30px;max-width:350px;background:#fff;color:#555;padding:0px 5px;position:absolute;left:480px;top:0px;z-index:100;
+}
+
+.booter .icons .textr{
+    float:left;
+}
+
+.booter .icons .imgdiv{
+    float:left;height:20px;width:40px;
+}
+
+
 

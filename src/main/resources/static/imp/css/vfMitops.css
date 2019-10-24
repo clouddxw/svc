@@ -4,6 +4,8 @@
     font-family: Arial;
 }
 
+.table {table-layout:fixed;word-break:break-all;}
+
 
 .title2st{
     height:60px;
@@ -100,3 +102,8 @@
     color:#fff;
 }
 
+
+.imgtip{
+    font-style: italic;
+    color: #6e6e6e;
+}

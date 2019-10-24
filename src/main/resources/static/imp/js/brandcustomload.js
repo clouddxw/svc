@@ -5,9 +5,9 @@ setDate();
 
 var brandname = getQueryString("brandname");
 
-urlori="http://svc.iresearch.cn/";
+
 brandname1=encodeURI(brandname);
-urlori+='brandcustom/get1st?brandname='+brandname1;
+urlori='http://svc.iresearch.cn/api/svc/vip/brandcustom/get1st?brandname='+brandname1;
 
 $.ajax({
     url: urlori,
@@ -41,7 +41,7 @@ $.ajax({
 function getnorm() {
     //alert($('#formn').serialize());
     $.ajax({
-        url: "http://svc.iresearch.cn/brandcustom/getnorm",
+        url: "http://svc.iresearch.cn/api/svc/vip/brandcustom/getnorm",
         type: 'post',
         dataType: 'json',
         data: $('#formn').serialize(),
@@ -287,7 +287,7 @@ function dataList1(showname,data) {
 
 
 function  getshow(showname){
-	urlori='http://svc.iresearch.cn/brandcustom/getshowdt';
+	urlori='http://svc.iresearch.cn/api/svc/vip/brandcustom/getshowdt';
 	$.ajax({
 	    url: urlori,
 	    type: 'post',

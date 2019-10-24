@@ -5,7 +5,7 @@ function sboottab(id,category,date) {
     //初始化Table
     oTableInit.Init = function () {
         $(id).bootstrapTable({
-            url: 'http://svc.iresearch.cn/VF/MI/getMiPirceRanges?category='+category+'&date='+date,         //请求后台的URL（*）
+            url: 'http://svc.iresearch.cn/api/vf/mi/getMiPirceRanges?category='+category+'&date='+date,         //请求后台的URL（*）
             method: 'get',                      //请求方式（*）
             striped: true,                      //是否显示行间隔色
             cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）

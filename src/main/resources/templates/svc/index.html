@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" th:src="@{/imp/js/browser_check.js}"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet"/>
+    <link th:href="@{/imp/css/index.css}" rel="stylesheet"/>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+
+
+    <title>首页</title>
+</head>
+<body>
+
+  <div class="main" id="main">
+        <div class="toptitle">
+            <img th:src="@{/img/svclogo.png}">
+            <span class="title2">节目赞助效果评估系统（综艺版）</span>
+            <span class="title3">SVC指标体系说明</span>
+        </div>
+
+    	<div class="newsrelease" id="newsrelease" >
+            <ul id="newslist">
+                <li th:each="News,NewsStat:${newslist}" th:class="${NewsStat.index==0}?'changeColor'">
+                    <a th:href="${News.titlelink}" target="_blank" th:style="${NewsStat.index==0}?'text-decoration:none'">
+                        <span th:text="${News.title1}" class="v1">title1</span>
+                        <span class="v2">：</span>[[${News.title2}]]
+                    </a>
+                </li>
+            </ul>
+            <div id="newsimg">
+                <a th:each="News,NewsStat:${newslist}" th:href="${News.titlelink}" target="_blank" style="text-decoration:none">
+                    <div th:class="'banner-slide slide'+${NewsStat.index}"><img th:src="'http://svc.iresearch.cn/'+${News.imglink}" th:alt="${NewsStat.index}"></div>
+                </a>
+
+            </div>	
+		</div>
+
+<div class="model" >
+    <div class="modelf1 mr">
+        <a th:href="@{/svc/vip/allshow}" target="_blank">
+            <div class="freemodel show">
+                <div class="title1st" >节目排名与详情</div>
+                <div class="desc">
+                    丰富norm选择下的节目SVC综合指数排名，以及各个节目及其赞助品牌的SVC各级细分指数详情
+                </div>
+            </div>
+        </a>
+        <a th:href="@{/svc/vip/allbrand}" target="_blank">
+            <div class="freemodel brand midd" >
+                <div class="title1st">品牌排名与详情</div>
+                <div class="desc">
+                    丰富norm选择下的品牌SVC综合指数排名，以及各个品牌及其赞助节目的SVC各级细分指数详情
+                </div>
+            </div>
+        </a>
+        <a th:href="@{/svc/vip/showcomp}" target="_blank" sec:authorize="hasAnyRole('SVCADMIN','SVCVIP')">
+            <div class="vipmodel showcomp" >
+                <div class="titles">
+                        <div class="imgdiv" ><img th:src="@{/img/greenD.png}" ></div>
+                        <div class="title1st">节目/品牌对比</div>
+                </div>
+                <div  class="desc">
+                    多个节目或者品牌的对比分析
+                </div>
+            </div>
+        </a>
+        <a th:href="@{/svc/basic/allshow}" target="_blank" sec:authorize="hasRole('SVCBASIC')">
+            <div class="freemodel show">
+                <div class="title1st" >节目排名与详情</div>
+                <div class="desc">
+                    丰富norm选择下的节目SVC综合指数排名，以及各个节目及其赞助品牌的SVC各级细分指数详情
+                </div>
+            </div>
+        </a>
+        <a th:href="@{/svc/basic/allbrand}" target="_blank" sec:authorize="hasRole('SVCBASIC')">
+            <div class="freemodel brand midd" >
+                <div class="title1st">品牌排名与详情</div>
+                <div class="desc">
+                    丰富norm选择下的品牌SVC综合指数排名，以及各个品牌及其赞助节目的SVC各级细分指数详情
+                </div>
+            </div>
+        </a>
+        <a th:href="@{/svc/versioncontrast}" sec:authorize="hasRole('SVCBASIC')">
+            <div class="basicmodel showcomp" >
+                <div class="titles">
+                    <div class="imgdiv"><img th:src="@{/img/greyD.png}" ></div>
+                    <div class="title1st">节目/品牌对比</div>
+                </div>
+                <div class="desc">
+                    多个节目或者品牌的对比分析
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="modelf2">
+        <div class="vipmodel showcustom" sec:authorize="hasAnyRole('SVCADMIN','SVCVIP') ">
+            <div class="titles">
+                <div class="imgdiv"><img th:src="@{/img/greenD.png}" ></div>
+                <div class="title1st">定制节目详情</div>
+            </div>
+            <div class="desc">
+                定制节目的SVC指数原始值 、周度趋势、和权益监播
+            </div>
+            <div class="searchbox">
+                <form  th:action="@{/svc/vip/showcustom}" target="_blank" method="get">
+                    <div class="textr">
+                        <select id='vip_scselect' name="showname" class="inputr">
+                            <option th:each="Showname:${customshow}" th:value="${Showname.show}">[[${Showname.show}]]</option>
+                        </select>
+                    </div>
+                    <button type="submit"  class="btn btn-default"  style="margin-top:2px;width:50px;height:26px;text-align:center" >搜索</button>
+                </form>
+            </div>
+        </div>
+        <div class="vipmodel brandcustom midd" sec:authorize="hasAnyRole('SVCADMIN','SVCVIP')">
+            <div class="titles">
+                <div class="imgdiv"><img th:src="@{/img/greenD.png}" ></div>
+                <div class="title1st">定制品牌详情</div>
+            </div>
+            <div class="desc">
+                定制品牌的SVC指数原始值 、周度趋势、和权益监播
+            </div>
+            <div class="searchbox">
+                <form th:action="@{/svc/vip/brandcustom}" target="_blank" method="get">
+                    <div class="textr">
+                        <select id='vip_bcselect' name="brandname" class="inputr">
+                            <option th:each="Brandname:${custombrand}" th:value="${Brandname.brand}" >[[${Brandname.brand}]]</option>
+                        </select>
+                    </div>
+                    <button type="submit"  class="btn btn-default"  style="margin-top:2px;width:50px;height:26px;text-align:center">搜索</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="vipmodel showlib" sec:authorize="hasAnyRole('SVCADMIN','SVCVIP')">
+            <div class="titles">
+                <div class="imgdiv"><img th:src="@{/img/greenD.png}" ></div>
+                <div class="title1st">节目库</div>
+            </div>
+            <div class="desc">
+                基于丰富的标签体系，找到理想的赞助节目
+            </div>
+            <div class="searchbox">
+                <form  th:action="@{/svc/vip/showlib}" target="_blank" method="get">
+                    <div class="textr">
+                        <select id='vip_lkselect' name="showname" class="inputr">
+                            <option th:each="Showname:${allshow}" th:value="${Showname.show}" >[[${Showname.show}]]</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-default"  style="margin-top:2px;width:50px;height:26px;text-align:center">搜索</button>
+                </form>
+            </div>
+        </div>
+        <a th:href="@{/svc/versioncontrast}"  sec:authorize="hasRole('SVCBASIC')">
+            <div class="basicmodel showcustom">
+                <div class="titles">
+                    <div class="imgdiv"><img th:src="@{/img/greyD.png}"></div>
+                    <div class="title1st">定制节目详情</div>
+                </div>
+                <div class="desc">
+                    定制节目的SVC指数原始值 、周度趋势、和权益监播
+                </div>
+                <div class="searchbox">
+                    <form  th:action="@{/svc/versioncontrast}"  method="get">
+                        <div class="textr">
+                            <select id='basic_scselect' name="showname" class="inputr">
+                                <option th:each="Showname:${customshow}" th:value="${Showname.show}" >[[${Showname.show}]]</option>
+                            </select>
+                        </div>
+                        <button type="submit"  class="btn btn-default"  style="margin-top:2px;width:50px;height:26px;text-align:center">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </a>
+        <a th:href="@{/svc/versioncontrast}" sec:authorize="hasRole('SVCBASIC')">
+            <div class="basicmodel brandcustom midd">
+                <div class="titles">
+                    <div class="imgdiv"><img th:src="@{/img/greyD.png}"></div>
+                    <div class="title1st">定制品牌详情</div>
+                </div>
+                <div class="desc">
+                    定制品牌的SVC指数原始值 、周度趋势、和权益监播
+                </div>
+                <div class="searchbox">
+                    <form th:action="@{/svc/versioncontrast}"  method="get">
+                        <div class="textr">
+                            <select id='basic_bcselect' name="brandname" class="inputr">
+                                <option th:each="Brandname:${custombrand}" th:value="${Brandname.brand}" >[[${Brandname.brand}]]</option>
+                            </select>
+                        </div>
+                        <button type="submit"  class="btn btn-default"  style="margin-top:2px;width:50px;height:26px;text-align:center">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </a>
+        <a th:href="@{/svc/versioncontrast}" sec:authorize="hasRole('SVCBASIC')">
+            <div class="basicmodel showlib">
+                <div class="titles">
+                    <div class="imgdiv"><img th:src="@{/img/greyD.png}" ></div>
+                    <div class="title1st">节目库</div>
+                </div>
+                <div class="desc">
+                    基于丰富的标签体系，找到理想的赞助节目
+                </div>
+                <div class="searchbox">
+                    <form  th:action="@{/svc/versioncontrast}"  method="get">
+                        <div class="textr">
+                            <select id='basic_lkselect' name="showname" class="inputr">
+                                <option th:each="Showname:${allshow}" th:value="${Showname.show}" >[[${Showname.show}]]</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-default"  style="margin-top:2px;width:50px;height:26px;text-align:center" >搜索</button>
+                    </form>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="booter" >
+    <div class="liner" ></div>
+    <div class="icons">
+        <Strong>
+            <div class="textr">Copyright&nbsp©2018</div>
+            <div class="imgdiv"><img th:src="@{/img/Irlogo.jpg}">
+            </div>
+            All rights reserved.
+        </Strong>
+    </div>
+</div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#vip_scselect').select2();
+        $('#vip_bcselect').select2();
+        $('#vip_lkselect').select2();
+        $('#basic_scselect').select2();
+        $('#basic_bcselect').select2();
+        $('#basic_lkselect').select2();
+
+    });
+</script>
+
+<!--<script th:src="@{/imp/js/indexload.js}"></script>-->
+<script th:src="@{/imp/js/img_carousel.js}"></script>
+
+</body>
+</html>

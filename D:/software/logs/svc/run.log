@@ -1,4 +1,0 @@
-[2019-03-07 10:23:24,718][http-nio-9095-exec-1][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
-[2019-03-07 10:23:24,733][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:524] Initializing Servlet 'dispatcherServlet'
-[2019-03-07 10:23:24,741][http-nio-9095-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:546] Completed initialization in 8 ms
-[2019-03-07 10:23:49,160][Thread-68][INFO][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor:208] Shutting down ExecutorService 'applicationTaskExecutor'

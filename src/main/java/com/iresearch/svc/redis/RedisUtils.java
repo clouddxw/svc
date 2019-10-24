@@ -29,7 +29,6 @@ import org.springframework.util.CollectionUtils;
  */
 
 @Component
-
 public final class RedisUtils {
 
 
@@ -166,6 +165,8 @@ public final class RedisUtils {
         return key == null ? null : redisTemplate.opsForValue().get(key);
 
     }
+
+
 
 
     /**
@@ -830,8 +831,6 @@ public final class RedisUtils {
 
      * @param value 值
 
-     * @param time 时间(秒)
-
      * @return
 
      */
@@ -900,7 +899,6 @@ public final class RedisUtils {
 
      * @param value 值
 
-     * @param time 时间(秒)
 
      * @return
 
@@ -1028,5 +1026,11 @@ public final class RedisUtils {
         }
 
     }
+
+
+
+
+
+
 
 }

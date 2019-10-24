@@ -6,7 +6,7 @@ setDate();
 
 
 $.ajax({
-    url: 'http://svc.iresearch.cn/basic/allshow/get1st',
+    url: 'http://svc.iresearch.cn/api/svc/basic/allshow/get1st',
     type: 'get',
     dataType: 'json',
     //data:data,
@@ -35,7 +35,7 @@ $.ajax({
 function getnorm() {
     //alert($('#formn').serialize());
     $.ajax({
-        url: "http://svc.iresearch.cn/basic/allshow/getnorm",
+        url: "http://svc.iresearch.cn/api/svc/basic/allshow/getnorm",
         type: 'post',
         dataType: 'json',
         data: $('#formn').serialize(),
@@ -368,7 +368,7 @@ function divshowcustom(show,customshows){
         var con;
         if(customshows.indexOf(show.show)!=-1){
             con='<a href="" class="btn btn-danger disabled" role="button">节目定制监测</a>'
-            //con='<a href="http://svc.iresearch.cn/vip/showcustom.html?showname='+show.show+'" target="_blank" class="btn btn-danger" role="button">节目定制监测</a>'
+            //con='<a href="http://svc.iresearch.cn/svc/vip/showcustom.html?showname='+show.show+'" target="_blank" class="btn btn-danger" role="button">节目定制监测</a>'
         }else{
             con='<a href="" class="btn btn-danger disabled" role="button">节目定制监测</a>'
         }
@@ -384,7 +384,7 @@ function divbrandcustom(brand,custombrands){
         var con;
         if(custombrands.indexOf(brand.brand)!=-1){
             con='<a href="" class="btn btn-danger disabled" role="button">品牌定制监测</a>'
-            //con='<a href="http://svc.iresearch.cn/vip/brandcustom.html?brandname='+brand.brand+'" target="_blank" class="btn btn-danger" role="button">品牌定制监测</a>'
+            //con='<a href="http://svc.iresearch.cn/svc/vip/brandcustom.html?brandname='+brand.brand+'" target="_blank" class="btn btn-danger" role="button">品牌定制监测</a>'
         }else{
             con='<a href="" class="btn btn-danger disabled" role="button">品牌定制监测</a>'
         }
@@ -601,7 +601,7 @@ function dataList1(showname,data) {
 
 function  getshow(showname){
 	$.ajax({
-	    url: 'http://svc.iresearch.cn/basic/allshow/getshow',
+	    url: 'http://svc.iresearch.cn/api/svc/basic/allshow/getshow',
 	    type: 'post',
 	    dataType: 'json',
         data:{
@@ -650,7 +650,7 @@ function  searchshow(){
 //	var normcon=document.getElementById('storenormcondi').value;
 //	var normcondi=encodeURIComponent(normcon.replace(/"/g,""));
 	$.ajax({
-	    url: 'http://svc.iresearch.cn/basic/allshow/getshow',
+	    url: 'http://svc.iresearch.cn/api/svc/basic/allshow/getshow',
 	    type: 'post',
 	    dataType: 'json',
 	    data:{
